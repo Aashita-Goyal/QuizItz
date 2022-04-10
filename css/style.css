@@ -286,7 +286,6 @@ h5 {
   }
 
   .toggleNav{
-    margin: 2px;
     border: 3px solid black;
     text-align: justify;
     background-color: #864879;
@@ -339,7 +338,7 @@ h5 {
 
 
 
-@media (min-width: 1254px) {
+@media (min-width: 1366px) {
   * {
     margin: 0;
     padding: 0;
@@ -356,7 +355,7 @@ h5 {
   }
 
   .nav-item {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .nav-link {
@@ -378,7 +377,7 @@ h5 {
 
   .sidenav {
     height: 100%;
-    width: 400px;
+    width: 340px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -417,7 +416,7 @@ h5 {
     background-color: #864879;
     margin: 20px 0;
     width: 85%;
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
   .toggleNav:hover{
