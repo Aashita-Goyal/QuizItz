@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Home Page</title>
+  <title>Title</title>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="stylesheet" href="../css/style1.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,9 +30,14 @@
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="#">Home</a>
-      <a href="#">Subjects</a>
-      <a href="#">Create</a>
-      <a href="#">Attempt</a>
+      <a href="#">Branches</a>
+      <a href="#">Create Quiz</a>
+      <a href="#">Attempt Quiz</a>
+      <a href="#">Placement Quiz</a>
+      <a href="#">Read Study Material</a>
+      <a href="#">Upload Study Material</a>
+      <a href="#">Flashcards</a>
+      <a href="#">Other Games</a>
       <a href="#">Profile</a>
       <a href="#">About Us</a>
       <a href="#">Help</a>
@@ -41,7 +46,7 @@
     <span style="font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; </span>
     <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.width = "280px";
       }
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
@@ -65,23 +70,18 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">
-            <p class="text-light mt-2">Contact</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">
-            <p class="text-light mt-2">Help</p>
+          <a class="nav-link" href="about.html">
+            <p class="text-light mt-2">Branches</p>
           </a>
         </li>
       </ul>
       <ul ul class="nav justify-content-end">
-        <li class="nav-item">
+        <!--<li class="nav-item">
           <a class="nav-link" href="">
             <p class="text-light mt-2">Settings<i class="fa-solid fa-gear p-2"></i></p>
-            <!--<img src="https://img.icons8.com/small/128/000000/settings.png" class="icons" />-->
+            <img src="https://img.icons8.com/small/128/000000/settings.png" class="icons" />
           </a>
-        </li>
+        </li>-->
         <li class="nav-item">
           <a class="nav-link" href="profile.html">
             <p class="text-light mt-2">Profile<i class="fa-solid fa-user p-2"></i></p>
@@ -105,10 +105,10 @@
   <!--Footer-->
   <footer>
     <div class="container-fluid p-lg-3">
-      <h5 class="ps-2">Follow Us</h5>
-      <a href=""><img src="https://img.icons8.com/ios-glyphs/60/000000/facebook-new.png" class="icons" /></a>
-      <a href=""><img src="https://img.icons8.com/ios-glyphs/50/000000/instagram-new.png" class="icons" /></a>
-      <a href=""><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" class="icons" /></a>
+      <h5 class="ps-2 mt-5">Follow Us</h5>
+      <a href="" class="icons"><i class="fa-brands fa-facebook-f" style="color: white"></i></a>
+      <a href="" class="icons"><i class="fa-brands fa-instagram" style="color: white"></i></a>
+      <a href="" class="icons"><i class="fa-brands fa-twitter" style="color: white"></i></a>
       <br>
       <p class="pt-lg-0">© 2022 QuizItz Inc</p>
     </div>
