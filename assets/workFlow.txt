@@ -1,0 +1,85 @@
+****GENERAL****
+//see colors
+//responsiveness
+//footer
+
+
+****WORK TO DO IN home.html****
+//edit navbar content's fonts
+//edit toggle menu, color
+//Navbar edit
+//carousel width
+//left container arrangement
+
+
+
+
+****Login Page****
+//forgot password, register - hyperlinks - REMOVE underline
+//login page user icon edit
+
+
+
+
+
+TELL SAKSHI AND APARNA
+//save links of images you are adding
+
+
+
+
+
+
+
+
+
+
+//PAGES DONE
+Index
+Contact
+About
+Login
+register
+
+
+//PAGES LEFT
+Home
+Branch/subject page
+Create quiz page
+Attempt quiz page
+Study material page
+Profile page
+Placement material page (will inlcude placement quiz and material) 
+Topics page
+Settings page
+
+Any other page you find necessary
+
+
+
+
+
+
+
+
+
+
+
+//10th march - aditi, aashita
+* decide pages' layout
+* home page corrections
+* theme change
+* php
+* register page corrections ✔️
+* about page ✔️
+* contact page ✔️
+
+
+
+
+
+
+
+
+
+Add responsiveness everywheree
