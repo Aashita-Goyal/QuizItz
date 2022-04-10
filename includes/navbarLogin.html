@@ -28,25 +28,29 @@
   <nav class="navbar navbar-expand-md bg-gradient-secondary" id="grad">
     <div class="padLogo padLogo-light ps-4"></div>
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">Home</a>
-      <a href="#">Branches</a>
-      <a href="#">Create Quiz</a>
-      <a href="#">Attempt Quiz</a>
-      <a href="#">Placement Quiz</a>
-      <a href="#">Read Study Material</a>
-      <a href="#">Upload Study Material</a>
-      <a href="#">Flashcards</a>
-      <a href="#">Other Games</a>
-      <a href="#">Profile</a>
-      <a href="#">About Us</a>
-      <a href="#">Help</a>
-      <a href="#">Contact</a>
+      <div class="closeSide">
+        <a href="#" class="closeMenu"></a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Menu &times; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </a>
+      <!-- &times;  - X sign-->
+     </div>
+      <a href="#" class="toggleNav">Home</a>
+      <a href="#" class="toggleNav">Branches</a>
+      <a href="#" class="toggleNav">Create Quiz</a>
+      <a href="#" class="toggleNav">Attempt Quiz</a>
+      <a href="#" class="toggleNav">Placement Quiz</a>
+      <a href="#" class="toggleNav">Read Study Material</a>
+      <a href="#" class="toggleNav">Upload Study Material</a>
+      <a href="#" class="toggleNav">Flashcards</a>
+      <a href="#" class="toggleNav">Other Games</a>
+      <a href="#" class="toggleNav">Profile</a>
+      <a href="#" class="toggleNav">About Us</a>
+      <a href="#" class="toggleNav">Help</a>
+      <a href="#" class="toggleNav">Contact</a>
     </div>
     <span style="font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; </span>
     <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "280px";
+        document.getElementById("mySidenav").style.width = "300px";
       }
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";

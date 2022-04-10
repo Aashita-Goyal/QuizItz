@@ -149,7 +149,6 @@ h5 {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #B67C9A;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -165,7 +164,7 @@ h5 {
   }
 
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: gray;
   }
 
   .sidenav .closebtn {
@@ -174,6 +173,17 @@ h5 {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+  }
+
+  .toggleNav{
+    margin: 2px;
+    border: 3px solid black;
+    text-align: justify;
+    background-color: #864879;
+  }
+
+  #mySidenav{
+      background-color: white;
   }
 
 
@@ -241,6 +251,7 @@ h5 {
     background-color: #ebf2ff;
   }
 
+
   .sidenav {
     height: 100%;
     width: 0;
@@ -251,7 +262,6 @@ h5 {
     background-color: #B67C9A;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
   }
 
   .sidenav a {
@@ -275,6 +285,23 @@ h5 {
     margin-left: 50px;
   }
 
+  .toggleNav{
+    margin: 2px;
+    border: 3px solid black;
+    text-align: justify;
+    background-color: #864879;
+  }
+
+  .toggleNav:hover{
+      background-color: gray;
+      color: #ebf2ff;
+  }
+
+  #mySidenav{
+      background-color: lightgray;
+  }
+
+  
 
 
 
