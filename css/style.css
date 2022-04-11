@@ -13,7 +13,11 @@ body {
 /*Navbar*/
 .navbar {
   width: 100%;
+<<<<<<< HEAD
   background-color: #3F3351;
+=======
+  background-color: #211522;
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
   color: #ebf2ff;
   padding: 0px;
   margin: 0px;
@@ -75,7 +79,11 @@ body {
 
 .container-fluid {
   text-align: center;
+<<<<<<< HEAD
   background-color: #3F3351;
+=======
+  background-color: #211522;
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
   color: rgb(0, 0, 0);
   padding-top: 50px;
   padding-bottom: 50px;
@@ -113,7 +121,11 @@ h5 {
 
   .navbar {
     width: 100%;
+<<<<<<< HEAD
     background-color: #3F3351;
+=======
+    background-color: #211522;
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
     color: #ebf2ff;
     padding: 0px;
     margin: 0px;
@@ -149,7 +161,10 @@ h5 {
     z-index: 1;
     top: 0;
     left: 0;
+<<<<<<< HEAD
     background-color: #B67C9A;
+=======
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -165,7 +180,11 @@ h5 {
   }
 
   .sidenav a:hover {
+<<<<<<< HEAD
     color: #f1f1f1;
+=======
+    color: gray;
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
   }
 
   .sidenav .closebtn {
@@ -176,6 +195,20 @@ h5 {
     margin-left: 50px;
   }
 
+<<<<<<< HEAD
+=======
+  .toggleNav{
+    margin: 2px;
+    border: 3px solid black;
+    text-align: justify;
+    background-color: #864879;
+  }
+
+  #mySidenav{
+      background-color: white;
+  }
+
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
 
 
 
@@ -183,7 +216,11 @@ h5 {
 
   .container-fluid {
     text-align: center;
+<<<<<<< HEAD
     background-color: #3F3351;
+=======
+    background-color: #211522;
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
     color: rgb(0, 0, 0);
     padding-top: 50px;
     padding-bottom: 50px;
@@ -195,6 +232,8 @@ h5 {
     color: white;
   }
 }
+
+
 
 
 
@@ -216,7 +255,11 @@ h5 {
 
   .navbar {
     width: 100%;
+<<<<<<< HEAD
     background-color: #3F3351;
+=======
+    background-color: #211522;
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
     color: #ebf2ff;
   }
 
@@ -239,6 +282,10 @@ h5 {
     background-color: #ebf2ff;
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
   .sidenav {
     height: 100%;
     width: 0;
@@ -249,7 +296,10 @@ h5 {
     background-color: #B67C9A;
     overflow-x: hidden;
     transition: 0.5s;
+<<<<<<< HEAD
     padding-top: 60px;
+=======
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
   }
 
   .sidenav a {
@@ -273,6 +323,25 @@ h5 {
     margin-left: 50px;
   }
 
+<<<<<<< HEAD
+=======
+  .toggleNav{
+    border: 3px solid black;
+    text-align: justify;
+    background-color: #864879;
+  }
+
+  .toggleNav:hover{
+      background-color: gray;
+      color: #ebf2ff;
+  }
+
+  #mySidenav{
+      background-color: lightgray;
+  }
+
+  
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
 
 
 
@@ -280,7 +349,11 @@ h5 {
 
   .container-fluid {
     text-align: center;
+<<<<<<< HEAD
     background-color: #3F3351;
+=======
+    background-color: #211522;
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
     color: rgb(0, 0, 0);
     padding-top: 50px;
     padding-bottom: 50px;
@@ -293,8 +366,14 @@ h5 {
 
 
   .icons {
+<<<<<<< HEAD
     width: 20px;
     height: 20px;
+=======
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
   }
 
 }
@@ -306,6 +385,7 @@ h5 {
 
 
 
+<<<<<<< HEAD
 @media (min-width: 1254px) {
   * {
     margin: 0;
@@ -403,3 +483,10 @@ h5 {
   
 
 }
+=======
+
+
+/*
+@media (min-width: 1366px) {}
+*/
+>>>>>>> cf42abded98853b4e072c1a5dee4f980539b79b1
