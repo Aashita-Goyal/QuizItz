@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(https://wallpapertag.com/wallpaper/full/7/8/b/350830-best-website-background-1920x1080.jpg);
+    /* background-image: url(https://wallpapercave.com/wp/wp2672827.jpg); */
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  .login-form {
+    background: #fff;
+    width: 500px;
+    margin: 65px auto;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  .login-form h1 {
+    padding: 35px 35px 0 35px;
+    font-weight: 300;
+    text-align: center;
+    color: #803372;
+  }
+  
+  .login-form .content {
+    padding: 35px;
+  }
+  
+  .login-form .input-field {
+    padding: 12px 5px;
+  }
+  
+  .login-form .input-field input {
+    font-size: 16px;
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+    padding: 10px 1px;
+    border: 0;
+    border-bottom: 1px solid #747474;
+    outline: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  
+  .login-form a.link {
+    text-decoration: none;
+    color: #803372;
+    letter-spacing: 0.2px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .login-form a.link:hover{
+      color: blue;
+  }
+
+  .login-form .action {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+  
+  .login-form .action button {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #472c49;
+    color: rgb(255, 255, 255);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  
+  .login-form .action button:hover {
+    background: #000000;
+    color: white;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    }
+
+    .input-field textarea{
+      width: 420px;
+    }
