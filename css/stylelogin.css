@@ -127,6 +127,9 @@ body {
 
 
 
+  
+
+
 
     @media (min-width: 1024px) {
 
@@ -232,6 +235,26 @@ body {
     
         .input-field textarea{
           width: 420px;
+        }
+
+        .link{
+          padding-left: 50px;
+        }
+
+        .link-login{
+          padding-left: 70px;
+        }
+
+        .login-form a.link-login {
+          text-decoration: none;
+          color: #803372;
+          letter-spacing: 0.2px;
+          display: inline-block;
+          margin-top: 20px;
+        }
+        
+        .login-form a.link-login:hover{
+            color: blue;
         }
       
     }
