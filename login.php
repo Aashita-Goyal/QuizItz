@@ -9,7 +9,7 @@
 
 <body>
   <div class="login-form" style="margin-top: 100px;">
-    <form>
+    <form method="post" action="./scripts/loginscript.php">
       <h1>Sign In</h1>
       <br>
       <img
@@ -18,15 +18,15 @@
       <br>
       <div class="content">
         <div class="input-field">
-          <input type="email" placeholder="Email" autocomplete="nope">
+          <input type="email" placeholder="Email" autocomplete="off" name="email">
         </div>
         <div class="input-field">
-          <input type="password" placeholder="Password" autocomplete="new-password">
+          <input type="password" placeholder="Password" autocomplete="new-password" name="password">
         </div>
-        <a href="register.html" class="link">Don't have account? Register</a>
+        <a href="register.php" class="link" style="text-align: center;">Don't have account? Register</a>
       </div>
       <div class="action">
-        <button>Sign In</button>
+        <input type="submit" value="Sign In" class="button">
       </div>
     </form>
   </div>

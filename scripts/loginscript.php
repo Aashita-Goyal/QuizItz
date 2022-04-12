@@ -10,7 +10,7 @@
         ?>
 <script>
     window.alert("User does not exists!");
-    window.location.href = "http://localhost/MyQuizItzWebsite/login.php";</script>
+    window.location.href = "http://localhost/QuizItz/login.php";</script>
 <?php
     } else {
     $query = "SELECT password FROM user WHERE email = '$email'";
@@ -24,13 +24,13 @@
         $_SESSION['email'] = $result['email'];
 ?>
 <script>window.alert("Welcome to QuizItz...");
-    window.location.href = "http://localhost/MyQuizItzWebsite/home.php";
+    window.location.href = "http://localhost/QuizItz/home.php";
 </script>
 <?php
     } else {
     ?>
 <script> window.alert("Incorrect password!");
-    window.location.href = "http://localhost/MyQuizItzWebsite/login.php";</script>
+    window.location.href = "http://localhost/QuizItz/login.php";</script>
 <?php
     } 
 }

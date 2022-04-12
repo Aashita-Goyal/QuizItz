@@ -69,7 +69,7 @@
     flex-direction: row;
   }
   
-  .login-form .action button {
+  .login-form .action input {
     width: 100%;
     border: none;
     padding: 18px;
