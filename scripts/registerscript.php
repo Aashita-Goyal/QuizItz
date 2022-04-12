@@ -19,7 +19,7 @@
             {
                 ?>
 <script>window.alert("Registration successful!");
-    window.location.href = "http://localhost/MyQuizItzWebsite/login.php";</script>
+    window.location.href = "http://localhost/QuizItz/login.php";</script>
 <?php
             } else {
                 die(mysqli_error($con));
@@ -27,12 +27,12 @@
         } else {
             ?>
 <script>window.alert("Password not matched!");
-    window.location.href = "http://localhost/MyQuizItzWebsite/register.php";</script>
+    window.location.href = "http://localhost/QuizItz/register.php";</script>
 <?php
         }
     } else {
     ?>
 <script>window.alert("User already exists!");
-    window.location.href = "http://localhost/MyQuizItzWebsite/login.php";</script>
+    window.location.href = "http://localhost/QuizItz/login.php";</script>
 <?php
 }

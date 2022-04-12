@@ -13,17 +13,17 @@
             <h1>Contact Us</h1>
             <div class="content">
                 <div class="input-field">
-                    <input type="email" placeholder="Email" autocomplete="nope">
+                    <input type="email" placeholder="Email" autocomplete="off">
                 </div>
                 <div class="input-field">
                     <label>Message</label>
                     <br>
                     <br>
-                    <textarea placeholder=" Write here... " rows=5 cols=50></textarea>
+                    <textarea placeholder=" Write your message here... " rows=5 cols=50></textarea>
                 </div>
             </div>
             <div class="action">
-                <button>Submit</button>
+                <input type="submit" value="Submit" class="button">
             </div>
         </form>
     </div>
