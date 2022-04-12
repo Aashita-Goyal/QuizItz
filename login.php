@@ -21,11 +21,7 @@
         <div class="input-field">
           <input type="password" placeholder="Password" autocomplete="new-password" name="password">
         </div>
-<<<<<<< HEAD:signin.html
-        <a href="signup.html" class="link">Don't have account? Register</a>
-=======
         <a href="register.php" class="link" style="text-align: center;">Don't have account? Register</a>
->>>>>>> a56677abee10fbe45ed6d86b661af7ae3a8d0fa3:login.php
       </div>
       <div class="action">
         <input type="submit" value="Sign In" class="button">

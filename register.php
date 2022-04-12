@@ -26,7 +26,7 @@
         <div class="input-field">
             <input type="password" placeholder="Confirm Password" autocomplete="new-password" name="confirmpassword" required="true">
           </div>
-        <a href="register.html" class="link">Already have an account? Login</a>
+        <a href="login.php" class="link">Already have an account? Login</a>
       </div>
       <div class="action">
       <input type="submit" value="Sign Up" class="button">
