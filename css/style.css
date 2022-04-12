@@ -5,206 +5,129 @@
   /* To Box Model */
 }
 
-body {
-    font-family: 'Merriweather', serif;
-    background-color: #ebf2ff;
-  }
-  
-  /*Navbar*/
-  .navbar {
-    width: 100%;
-    background-color: #211522;
-    color: #ebf2ff;
-    padding: 0px;
-    margin: 0px;
-  }
-  
-  .nav-item {
-    font-size: small;
-  }
-  
-  .nav-link {
-    color: #ebf2ff;
-  }
-  
-  .logo {
-    background: linear-gradient(to right, #73436D, #B67C9A, #864879, #C197D2);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-  
-  .padLogo {
-    background-color: #ebf2ff;
-  }
-  
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #B67C9A;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #000000;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /*Footer*/
-  
-  .container-fluid {
-    text-align: center;
-    background-color: #211522;
-    color: rgb(0, 0, 0);
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  .container-fluid p,
-  h5 {
-    color: white;
-    margin: 40px;
-  }
-  
-  .icons {
-    width: 15px;
-    height: 15px;
-  }
+/*Navbar*/
 
-
-
-
-
-@media (min-width: 768px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* To Box Model */
-  }
-
-  body {
-    font-family: 'Merriweather', serif;
-    background-color: #ebf2ff;
-  }
-
-  /*Navbar*/
-
-  .navbar {
-    width: 100%;
-    background-color: #211522;
-    color: #ebf2ff;
-    padding: 0px;
-    margin: 0px;
-  }
-
-  .nav-item {
-    font-size: xx-small;
-    margin-top: 10px;
-    font-size: 10px;
-  }
-
-  .nav-link {
-    color: #ebf2ff;
-  }
-
-  .logo {
-    background: linear-gradient(to right, #73436D, #B67C9A,
-        #864879, #C197D2);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-
-  .padLogo {
-    background-color: #ebf2ff;
-    padding: 0px;
-    margin: 0px;
-  }
-
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #000000;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .sidenav a:hover {
-    color: gray;
-  }
-
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-
-  .toggleNav{
-    margin: 2px;
-    border: 3px solid black;
-    text-align: justify;
-    background-color: #864879;
-  }
-
-  #mySidenav{
-      background-color: white;
-  }
-
-
-
-
-  /*Footer*/
-
-  .container-fluid {
-    text-align: center;
-    background-color: #211522;
-    color: rgb(0, 0, 0);
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 40px;
-  }
-
-  .container-fluid p,
-  h5 {
-    color: white;
-  }
+.navbar {
+  width: 100%;
+  background-color: #211522;
+  color: #ebf2ff;
 }
+
+.nav-item {
+  font-size: 7px;
+  padding: 0;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.nav-link {
+  color: #ebf2ff;
+}
+
+
+.logo {
+  background: linear-gradient(to right, #73436D, #B67C9A,
+      #864879, #C197D2);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 12px;
+}
+
+.padLogo {
+  background-color: #ebf2ff;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.toggleNav{
+  border: 3px solid black;
+  text-align: justify;
+  background-color: #864879;
+  margin: 2px;
+}
+
+.toggleNav:hover{
+    background-color: gray;
+    color: #ebf2ff;
+}
+
+#mySidenav{
+    background-color: lightgray;
+}
+
+.closebtn:hover{
+  color:#73436D !important;
+  font-size: 30px !important;
+}
+
+
+
+
+/*Footer*/
+
+
+.container-fluid {
+  text-align: center;
+  background-color: #211522;
+  color: rgb(0, 0, 0);
+  padding-top: 1px;
+  padding-bottom: 20px;
+}
+
+.container-fluid p,
+h5 {
+  color: white;
+}
+
+
+.icons {
+  width: 20px;
+  height: 20px;
+  width: 80px;
+  height: 80px;
+  padding: 2px;
+}
+
+
+
+
+
+
+@media (min-width: 786px) {
+
+}
+
 
 
 
@@ -240,17 +163,22 @@ body {
     color: #ebf2ff;
   }
 
+  .nav-link :hover {
+    font-size: 20px;
+    text-shadow: 2px 2px black;
+  }
+
   .logo {
     background: linear-gradient(to right, #73436D, #B67C9A,
         #864879, #C197D2);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    font-size: 35px;
   }
 
   .padLogo {
     background-color: #ebf2ff;
   }
-
 
   .sidenav {
     height: 100%;
@@ -262,6 +190,7 @@ body {
     background-color: #B67C9A;
     overflow-x: hidden;
     transition: 0.5s;
+    padding-top: 60px;
   }
 
   .sidenav a {
@@ -289,6 +218,7 @@ body {
     border: 3px solid black;
     text-align: justify;
     background-color: #864879;
+    margin: 2px;
   }
 
   .toggleNav:hover{
@@ -300,6 +230,12 @@ body {
       background-color: lightgray;
   }
 
+  .closebtn:hover{
+    color:#73436D !important;
+    font-size: 30px !important;
+  }
+
+
   
 
 
@@ -308,6 +244,7 @@ body {
 
   .container-fluid {
     text-align: center;
+    background-color: #3F3351;
     background-color: #211522;
     color: rgb(0, 0, 0);
     padding-top: 50px;
@@ -321,6 +258,8 @@ body {
 
 
   .icons {
+    width: 20px;
+    height: 20px;
     width: 80px;
     height: 80px;
     padding: 2px;
@@ -337,6 +276,3 @@ body {
 
 
 
-/*
-@media (min-width: 1366px) {}
-*/
