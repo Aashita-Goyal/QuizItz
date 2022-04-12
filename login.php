@@ -22,7 +22,7 @@
       <br />
       <div class="content">
         <div class="input-field">
-          <input type="email" placeholder="Email" autocomplete="off" name="email">
+          <input type="email" placeholder="Email" autocomplete="off" name="email" pattern="[a-zA-z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}">
         </div>
         <div class="input-field">
           <input type="password" placeholder="Password" autocomplete="new-password" name="password">
