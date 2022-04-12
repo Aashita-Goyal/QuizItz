@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Contact Page</title>
     <link rel="stylesheet" href="./css/stylelogin.css">
 </head>
+
 <body background="https://th.bing.com/th/id/OIP.rxAD3cZ1tYSb0S2T3uSb0QHaE8?pid=ImgDet&w=900&h=600&rs=1">
     <div class="login-form" style="margin-top: 100px;">
         <form>
@@ -26,4 +28,5 @@
         </form>
     </div>
 </body>
+
 </html>

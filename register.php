@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <title>Register Page</title>
   <link rel="stylesheet" href="./css/stylelogin.css">
 </head>
+
 <body>
   <div class="login-form" style="margin-top: 20px;">
     <form method="post" action="./scripts/registerscript.php">
       <h1>Sign Up</h1>
       <br>
-      <img src="https://th.bing.com/th/id/R.7ea4af7d8401d2b43ee841bfa2abe89d?rik=xidyUKdveUKULQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-download-icons-logos-emojis-users-2240.png&ehk=2%2bOqgdMZqFkKaBclc%2fPL9B86vLju3iBGiFmH64kXaTM%3d&risl=&pid=ImgRaw&r=0" alt="Avatar"
-        class="center">
-      <br>
+     <!-- <image src="https://th.bing.com/th/id/R.7ea4af7d8401d2b43ee841bfa2abe89d?rik=xidyUKdveUKULQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-download-icons-logos-emojis-users-2240.png&ehk=2%2bOqgdMZqFkKaBclc%2fPL9B86vLju3iBGiFmH64kXaTM%3d&risl=&pid=ImgRaw&r=0" 
+        alt="Avatar"
+        class="center" /> -->
+        <img src="./assets/Images/avatar.png" 
+        alt="Avatar"
+        class="center"
+        />
+      <br />
       <div class="content">
       <div class="input-field"> 
           <input type="text" placeholder="Name" autocomplete="off" name="name" required="true" pattern="[A-Za-z]{3,}" title="Enter valid name">
@@ -26,7 +33,7 @@
         <div class="input-field">
             <input type="password" placeholder="Confirm Password" autocomplete="new-password" name="confirmpassword" required="true">
           </div>
-        <a href="login.php" class="link">Already have an account? Login</a>
+        <a href="login.html" class="link">Already have an account? Login</a>
       </div>
       <div class="action">
       <input type="submit" value="Sign Up" class="button">
@@ -34,6 +41,7 @@
     </form>
   </div>
 </body>
+
 </html>
 
 
