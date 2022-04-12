@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Register Page</title>
   <link rel="stylesheet" href="./css/stylelogin.css">
 </head>
-
 <body>
   <div class="login-form" style="margin-top: 20px;">
     <form method="post" action="./scripts/registerscript.php">
@@ -36,7 +34,6 @@
     </form>
   </div>
 </body>
-
 </html>
 
 
