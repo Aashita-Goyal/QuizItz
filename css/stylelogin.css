@@ -88,7 +88,7 @@ body {
   transition: all .3s;
 }
 
-.login-form .action button:hover {
+.login-form .action input:hover {
   background: #000000;
   color: white;
 }
@@ -125,6 +125,9 @@ body {
 
 
 
+
+
+  
 
 
 
@@ -232,6 +235,26 @@ body {
     
         .input-field textarea{
           width: 420px;
+        }
+
+        .link{
+          padding-left: 50px;
+        }
+
+        .link-login{
+          padding-left: 70px;
+        }
+
+        .login-form a.link-login {
+          text-decoration: none;
+          color: #803372;
+          letter-spacing: 0.2px;
+          display: inline-block;
+          margin-top: 20px;
+        }
+        
+        .login-form a.link-login:hover{
+            color: blue;
         }
       
     }
