@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Login Page</title>
   <link rel="stylesheet" href="./css/stylelogin.css">
 </head>
+
 <body>
   <div class="login-form" style="margin-top: 100px;">
     <form method="post" action="./scripts/loginscript.php">
@@ -29,4 +31,5 @@
     </form>
   </div>
 </body>
+
 </html>
