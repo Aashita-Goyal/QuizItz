@@ -27,7 +27,7 @@
         <div class="input-field">
           <input type="password" placeholder="Password" autocomplete="new-password" name="password" pattern="^[a-zA-Z0-9_\-\.]{3,}@[A-Za-z]{3,}.[A-Za-z]{2,}$" title="Enter a valid email">
         </div>
-        <a href="register.html" class="link-login">Don't have account? Register</a>
+        <a href="register.php" class="link-login">Don't have account? Register</a>
       </div>
       <div class="action">
         <input type="submit" value="Sign In" class="button">

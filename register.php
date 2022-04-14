@@ -33,7 +33,7 @@
         <div class="input-field">
             <input type="password" placeholder="Confirm Password" autocomplete="new-password" name="confirmpassword" required="true" pattern="^[A-Z][a-z0-9@_\.]{8,}$" title="A minimum 8 characters password contains first character as uppercase and then combinations of lowercase letter, number and special characters includes @ or _">
           </div>
-        <a href="login.html" class="link">Already have an account? Login</a>
+        <a href="login.php" class="link">Already have an account? Login</a>
       </div>
       <div class="action">
       <input type="submit" value="Sign Up" class="button">
