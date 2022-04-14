@@ -25,13 +25,13 @@
           <input type="text" placeholder="Name" autocomplete="off" name="name" required="true" pattern="^[A-Za-z]{2,}$" title="Enter a valid name">
         </div>
         <div class="input-field">
-          <input type="email" placeholder="Email" autocomplete="off" name="email" required="true" pattern="^[a-zA-Z0-9_\-\.]{3,}@[A-Za-z]{3,}.[A-Za-z]{2,}$">
+          <input type="email" placeholder="Email" autocomplete="off" name="email" required="true" pattern="^[a-zA-Z0-9_\-\.]{3,}@[A-Za-z]{3,}.[A-Za-z]{2,}$" title="Enter a valid email">
         </div>                                                                                             
         <div class="input-field">
-          <input type="password" placeholder="Password" autocomplete="new-password" name="password" required="true">
+          <input type="password" placeholder="Password" autocomplete="new-password" name="password" required="true" pattern="^[A-Z][a-z0-9@_\.]{8,}$" title="A minimum 8 characters password contains first character as uppercase and then combinations of lowercase letter, number and special characters includes @ or _"> 
         </div>
         <div class="input-field">
-            <input type="password" placeholder="Confirm Password" autocomplete="new-password" name="confirmpassword" required="true">
+            <input type="password" placeholder="Confirm Password" autocomplete="new-password" name="confirmpassword" required="true" pattern="^[A-Z][a-z0-9@_\.]{8,}$" title="A minimum 8 characters password contains first character as uppercase and then combinations of lowercase letter, number and special characters includes @ or _">
           </div>
         <a href="login.html" class="link">Already have an account? Login</a>
       </div>
