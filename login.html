@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="login-form" style="margin-top: 100px;">
+  <div class="login-form" id="login-form-image" > <!--style="margin-top: 100px;"-->
     <form method="post" action="./scripts/loginscript.php">
       <h1>Sign In</h1>
       <br>
@@ -22,10 +22,10 @@
       <br />
       <div class="content">
         <div class="input-field">
-          <input type="email" placeholder="Email" autocomplete="off" name="email" pattern="[a-zA-z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}">
+          <input type="email" placeholder="Email" autocomplete="off" name="email" pattern="[a-zA-z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}" class="input-text">
         </div>
         <div class="input-field">
-          <input type="password" placeholder="Password" autocomplete="new-password" name="password">
+          <input type="password" placeholder="Password" autocomplete="new-password" name="password" class="input-text">
         </div>
         <a href="register.php" class="link-login">Don't have account? Register</a>
       </div>

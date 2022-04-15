@@ -144,13 +144,39 @@ body {
       }
       
       body {
-        background-image: url(https://wallpapertag.com/wallpaper/full/7/8/b/350830-best-website-background-1920x1080.jpg);
-        /* background-image: url(https://wallpapercave.com/wp/wp2672827.jpg); */
+        /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmevr7YgGfhP1zSlVYtqzitM1N8q_KI965Q&usqp=CAU);
+        background-size: contain;
+         background-image: url(https://wallpapercave.com/wp/wp2672827.jpg); */
         font-family: 'Rubik', sans-serif;
       }
-      
+
+       body { 
+        background: url(https://i.pinimg.com/736x/d1/b0/83/d1b083ac9d9344250908137e08d6eb20.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        /* Images
+        https://images.wallpapersden.com/image/download/cloudy-mountains_a2toaWWUmZqaraWkpJRmbmdlrWZlbWU.jpg
+
+        https://w.wallhaven.cc/full/2e/wallhaven-2evz6x.png ----- contact image
+
+        bubbles - https://images.unsplash.com/photo-1594165681163-1b85559cf250?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80
+
+        door - https://images.unsplash.com/photo-1524562787295-1608217aa823?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80
+
+        lavender - https://wallpapercave.com/wp/wp7334578.jpg
+
+        study room - https://st.hzcdn.com/simgs/pictures/kabinety/kraski-tikkurila-dlya-rabochih-mest-tikkurila-russia-img~9031fb7309c3a7fd_14-1322-1-df27c6d.jpg
+
+        study table - https://i.pinimg.com/originals/5c/2b/21/5c2b21f66c619957a09624ce0be2c834.jpg
+        */
+
+      }
+
       .login-form {
-        background: #fff;
+        background: transparent;
         width: 500px;
         margin: 65px auto;
         display: -webkit-box;
@@ -164,7 +190,8 @@ body {
         padding: 35px 35px 0 35px;
         font-weight: 300;
         text-align: center;
-        color: #803372;
+        color:antiquewhite;
+        /* color: #803372; */
       }
       
       .login-form .content {
@@ -239,6 +266,7 @@ body {
     
         .input-field textarea{
           width: 420px;
+          background: transparent;
         }
 
         .link{
@@ -251,7 +279,8 @@ body {
 
         .login-form a.link-login {
           text-decoration: none;
-          color: #803372;
+          color: #747474;
+          /* color: #803372; */
           letter-spacing: 0.2px;
           display: inline-block;
           margin-top: 20px;
