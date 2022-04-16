@@ -70,7 +70,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="login.php">
-          <p class="text-light mt-2">Login<i class="fa-solid fa-arrow-right-from-bracket p-2"></i></p>
+          <p class="text-light mt-2">Login<i class="fa-solid fa-right-to-bracket"></i></p>
 
           <!--<img src="https://img.icons8.com/ios/100/000000/shutdown--v1.png" class="icons" />-->
         </a>
