@@ -182,7 +182,7 @@ body {
         display: -webkit-box;
         display: flex;
         flex-direction: column;
-        border-radius: 5px;
+        border-radius: 30px;
         box-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
       }
       
@@ -200,6 +200,7 @@ body {
       
       .login-form .input-field {
         padding: 12px 5px;
+        border-radius: 30px;
       }
       
       .login-form .input-field input {
@@ -213,6 +214,7 @@ body {
         outline: none;
         -webkit-transition: all .2s;
         transition: all .2s;
+        border-radius: 20px;
       }
       
       .login-form a.link {
