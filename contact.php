@@ -1,3 +1,15 @@
+<?php
+    require './db/dbconn.php';
+    $msg = "";
+    if(isset($_POST['submit']))
+    {
+        $email = mysqli_real_escape_string($con, $_POST['email']);
+        $message = mysqli_real_escape_string($con, $_POST['message']);
+        mysqli_query($con, "insert into contact('email', 'message') values($email, $message)");
+        $msg = "Data sent successfully!";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,21 +34,21 @@
 
 <body class="contact-body">
     <div class="login-form" style="margin-top: 100px;">
-        <form>
+        <form method="post" action="">
             <h1 class="contact-head">Contact Us</h1>
             <div class="content">
                 <div class="input-field">
-                    <input type="email" placeholder=" Email " autocomplete="off" class="contect-input">
+                    <input type="email" placeholder=" Email " name="email" autocomplete="off" class="contect-input" pattern="[a-zA-z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}" class="input-text">
                 </div>
                 <br>
                 <div class="input-field">
                     <label>Message</label>
                     <br>
-                    <textarea placeholder=" Write your message here... " rows=5 cols=50></textarea>
+                    <textarea type="message" name="message" placeholder=" Write your message here... " rows=5 cols=50></textarea>
                 </div>
             </div>
             <div class="action">
-                <input type="submit" value="Submit" class="button">
+                <input type="submit" value="Submit" name="submit" class="button">
             </div>
         </form>
     </div>

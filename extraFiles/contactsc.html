@@ -1,0 +1,29 @@
+<?php
+    session_start();
+    require '../db/dbconn.php';
+    if(!empty($_POST["send"]))
+    {
+        $email=$_POST["email"];
+        $message=$_POST["message"];
+        $query = "Select * from contact where email = '$email '";
+        $query_result = mysqli_query($con,$query);
+        $toEmail="admin@gmail.com";
+        if(mail($toemail, $message))
+        {
+        ?>
+        <script>
+            window.alert("Message sent successfully");
+            window.location.href = "http://localhost/QuizItz/contact.php";
+        </script>
+    <?php
+        }
+        else 
+        {
+    ?>
+        <script> 
+            window.alert("Message not sent");
+            window.location.href = "http://localhost/QuizItz/contact.php";
+        </script>
+    <?php
+        }
+    }
