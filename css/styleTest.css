@@ -194,13 +194,14 @@ body {
     }
   
     .bg2 {
-      background-color: #ede1e7;
+      /* background-color: #ede1e7; */
+      background-color:#d1d1d1
     }
   
     .cta {
       margin: 100px auto;
       width: 80%;
-      background: linear-gradient(to bottom, #9999ff 0%, #ffccff 100%);
+      /* background: linear-gradient(to bottom, #9999ff 0%, #ffccff 100%); */
       background-position: center;
       background-size: cover;
       border-radius: 10px;
@@ -252,11 +253,121 @@ body {
       margin: 15px;
     }
 
-
     .div-two{
-      font-size: 30px;
-      font-weight: 600;
-      text-align: center;
+      display: flex;
+      margin: 10px;
+      margin-left: 150px;
+      /* border: 8px solid gray;
+      padding: 50px 0;  */
     }
+
+    .div-two-text{
+      font-size: 40px;
+      font-weight: 600;
+      color: goldenrod;
+      font: bolder;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      padding-top: 300px;
+      margin: 20px;
+
+    }
+
+    .div-two-subtext{
+      text-align: center;
+      font-size: x-large;
+    }
+
+    .div-two img{
+      height: 600px;
+    }
+
+    
+
+    .motto{
+      width: 50%;
+    } 
+
+
+
+
+    /* .div-two:hover{
+      display: flex;
+      margin: 20px;
+      border: 5px solid black; 
+    } */
+
+    /* marquee{
+      color: black; 
+      font-family: Book Antiqua;
+      background-color: lightgrey;
+    } */
+
+
+  
+
+    /* .div-two-middle{
+      background-color: #211522;
+      width: 50%;
+      color: #d1d1d1;
+    }*/
+
+    /* #triangle1{
+      width: 0;
+      height: 0;
+      border-left: 150px solid transparent;
+      border-right: 125px solid transparent;
+      border-bottom: 75px solid goldenrod;
+      transform: rotate(117deg);
+      position: absolute;
+      left: 546px;
+      top: 833px;
+    }
+
+    #triangle2{
+      width: 0;
+      height: 0;
+      border-left: 128px solid transparent;
+      border-right: 150px solid transparent;
+      border-bottom: 75px solid goldenrod;
+      transform: rotate(243deg);
+      position: absolute;
+      left: 625px;
+      top: 774px;
+      
+    }
+    #triangle3{
+      width: 0;
+      height: 0;
+      border-left: 125px solid transparent;
+      border-right: 125px solid transparent;
+      border-bottom: 75px solid goldenrod;
+      transform: rotate(0deg);
+      position: absolute;
+      left: 600px;
+      top: 860px;
+    }
+
+
+    #triangle1:hover{
+      border-left: 190px solid transparent;
+      border-right: 165px solid transparent;
+      border-bottom: 100px solid black;
+    }
+
+    #triangle2:hover{
+      border-left: 168px solid transparent;
+      border-right: 190px solid transparent;
+      border-bottom: 100px solid black;
+    }
+
+    #triangle3:hover{
+      border-left: 165px solid transparent;
+      border-right: 165px solid transparent;
+      border-bottom: 100px solid black;
+    } */
+
+    
+
+    
       
     }
