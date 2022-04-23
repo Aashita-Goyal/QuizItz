@@ -297,6 +297,10 @@ img{
   transition: .3s;
 }
 
+.steps__card-number h3{
+  text-align: center;
+}
+
 .steps__card-title{
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);

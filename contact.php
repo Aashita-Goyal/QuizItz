@@ -6,7 +6,7 @@
         $email = mysqli_real_escape_string($con, $_POST['email']);
         $message = mysqli_real_escape_string($con, $_POST['message']);
         mysqli_query($con, "insert into contact('email', 'message') values($email, $message)");
-        $msg = "Data sent successfully!";
+        ;
     }
 ?>
 

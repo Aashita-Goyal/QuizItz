@@ -621,6 +621,10 @@ input::placeholder{
     input::placeholder{
       padding-left: 15px;
     }
+
+    /* input{
+      padding-left: 15px;
+    } */
     
     .content .input-field{
       font-size: 23px;
