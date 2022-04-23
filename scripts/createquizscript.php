@@ -19,6 +19,12 @@
             $query = "INSERT INTO `quiz` (`branch`, `topic`, `keywords`, `totalQuestions`) VALUES ('$branch', '$topic', '$keywords', '$totalques')";
             $query_result = mysqli_query($con, $query);
 
+            if($query_result){
+                echo "Quiz data uploaded succesfully!";
+            }else{
+                echo "Details not uploaded";
+            }
+
           
         }
         else{

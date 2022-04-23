@@ -121,7 +121,7 @@
 
             <div class="quiz__button">
               <div class="quiz__start">
-              <button type="button" class="btn btn-dark" name="startEntering">Start Entering Questions</button>
+              <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Start Entering Questions</button></a>
               </div>
             </div>
           </form>
@@ -131,11 +131,11 @@
       </div>
 
       <div class="question__details">
-        <p>Enter Quiz details</p>
+        <p id="quesno">Enter Quiz details</p>
         <div class="question__details__info">
-        <form action="">
+        <form  action="">
             <br>
-            <label for="questionNumber">Question Number</label>
+            <label for="questionNumber" >Question Number <?php echo $qno?></label>
             <input type="text" id="questionNumber" name="questionNumber" placeholder="question number">
             <br><br>
             <label for="questionNumber">Question</label>
@@ -166,6 +166,12 @@
               <option value="optionD">Option d</option>
             </select>
 
+            <div class="quiz__button">
+              <div class="quiz__start">
+                <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Enter Next Question</button></a>
+              </div>
+
+              <br><br><br><br>
             <div class="quiz__button">
               <div class="quiz__start">
               <button type="button" class="btn btn-dark" name="createQuiz">Create Quiz!</button>
