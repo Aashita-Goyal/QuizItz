@@ -3,7 +3,7 @@
 
 <head>
   <title>Create Quiz</title>
-  <link rel="stylesheet" href="./navbar_footer.css">
+  <link rel="stylesheet" href="./Old/navbar_footer.css">
   <link rel="stylesheet" href="./new.css">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -99,10 +99,11 @@
   <div class="create__quiz">
       <div class="quiz__create__heading"><div class="attempt__quiz__heading">Create a New Quiz</div></div>
       <div class="quiz__details">
-          <form action="../scripts/createquizscript.php" method="post">
+          <form method="post" action="./scripts/createquizscript.php" >
             <br /><br /><br />
             <label for="branch">Choose a Branch</label>
             <select id="branch" name="branch">
+              <!-- <option>select</option> -->
               <option value="computer">CS/IT</option>
               <option value="electronics">EC</option>
               <option value="electrical">EE/EI</option>
@@ -119,9 +120,20 @@
             <label for="totalQuestions">Total Questions</label>
             <input type="text" id="totalQuestions" name="totalQuestions" placeholder="total number of questions"><br>
 
-            <div class="quiz__button">
-              <div class="quiz__start">
-              <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Start Entering Questions</button></a>
+            <!-- <div class="quiz__button">
+              <div class="quiz__start"> -->
+              <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Start Entering Questions</button></a> -->
+              <button type="submit" class="btn btn-dark" name="startEntering">Start Entering Questions</button>
+              <!-- <input type="submit" value="Sign Up" class="button"> -->
+
+              <?php
+// function writeMsg() {
+//   echo "Hello world!";
+// }
+
+// writeMsg(); // call the function
+ ?>
+
               </div>
             </div>
           </form>
@@ -130,21 +142,18 @@
           <br>
       </div>
 
+
       <div class="question__details">
         <p id="quesno">Enter Quiz details</p>
         <div class="question__details__info">
         <form  action="">
             <br>
-            <label for="questionNumber" >Question Number <?php echo $qno?></label>
+            <label for="questionNumber" >Question Number </label>  
             <input type="text" id="questionNumber" name="questionNumber" placeholder="question number">
             <br><br>
             <label for="questionNumber">Question</label>
             <input type="paragraph" id="questionDescription" name="question" placeholder="enter question here">
-            <!--<textarea
-                rows="6"
-                id="questionDescription"
-                placeholder="enter question here"
-              ></textarea>-->
+           
             <br><br>
             <label for="answerOption">Option a</label>
             <input type="paragraph" id="optionA" name="optionA" placeholder="enter answer here">
@@ -181,6 +190,10 @@
         </div>
       </div>
  </div>
+
+
+
+
 </div>
   <!--Footer-->
   <footer>
@@ -208,3 +221,9 @@
   <div class="create__quiz__left">Hello left</div>
   <div class="create__quiz__right">Hello right</div>
 </div>-->
+
+ <!--<textarea
+                rows="6"
+                id="questionDescription"
+                placeholder="enter question here"
+              ></textarea>-->

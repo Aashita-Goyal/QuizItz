@@ -83,3 +83,63 @@ Any other page you find necessary
 
 
 Add responsiveness everywheree
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!empty($_POST['branch']) && 
+
+
+  // $query_result = mysqli_query($con, $query);
+            // if($query_result == true)
+            // {
+        //     } else {
+        //         die(mysqli_error($con));
+        //     }
+        // } else {
+        // }
+            // $query_result = mysqli_query($con, $query);
+
+            // if($query_result){
+            //     function myFunction() {
+            //         echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+            //      }
+            //     if (isset($_GET['startEntering'])) {
+            //         myFunction();
+            //     }
+            //     echo "Quiz data uploaded succesfully!"; 
+                
+            //     echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+            // }else{
+            //     echo "Details not uploaded";
+            // }
+
+          
+        // }
+        // else{
+        //     echo "Please enter all required fields";
+        // }
+    
+        // $email = $_POST["email"];
+        // $message = $_POST["message"];
+
+        // mysqli_query($con, "INSERT INTO contact (email, message) VALUES ('" . $email. "','" . $message. "')");
+        // $insert_id = mysqli_insert_id($con);
+        // $display = "Your contact information is saved successfully.";
+        // $type = "success";
+
+
+
+
+        // <?php echo $qno ?
+    
