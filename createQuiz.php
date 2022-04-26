@@ -1,10 +1,15 @@
+<?php
+            session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <title>Create Quiz</title>
   <link rel="stylesheet" href="./Old/navbar_footer.css">
-  <link rel="stylesheet" href="./new.css">
+  <link rel="stylesheet" href="./Old/new.css">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -126,13 +131,6 @@
               <button type="submit" class="btn btn-dark" name="startEntering">Start Entering Questions</button>
               <!-- <input type="submit" value="Sign Up" class="button"> -->
 
-              <?php
-// function writeMsg() {
-//   echo "Hello world!";
-// }
-
-// writeMsg(); // call the function
- ?>
 
               </div>
             </div>
@@ -142,14 +140,30 @@
           <br>
       </div>
 
-
       <div class="question__details">
         <p id="quesno">Enter Quiz details</p>
         <div class="question__details__info">
-        <form  action="">
+        <form  method="POST" action="./scripts/enterquestionscript.php">
             <br>
-            <label for="questionNumber" >Question Number </label>  
-            <input type="text" id="questionNumber" name="questionNumber" placeholder="question number">
+            <br>
+            
+            <?php
+           // $qno = $_SESSION["var"];
+           $qno = 0;
+          if($qno==0){
+           echo "<label for='questionNumber' id='break'>Question Number </label>";
+            $qno++;
+            if ($qno <= $_SESSION["var"]){
+              echo "<input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='$qno' />";
+    
+     // $qnoUpdate = $qno + 1;
+      }
+    }else{
+       echo "wrong qno";
+     }
+      ?>
+
+
             <br><br>
             <label for="questionNumber">Question</label>
             <input type="paragraph" id="questionDescription" name="question" placeholder="enter question here">
@@ -177,7 +191,8 @@
 
             <div class="quiz__button">
               <div class="quiz__start">
-                <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Enter Next Question</button></a>
+              <button type="submit" class="btn btn-dark" name="nextQuestion">Enter Next Question</button>
+                <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Enter Next Question</button></a> -->
               </div>
 
               <br><br><br><br>

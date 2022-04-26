@@ -143,3 +143,10 @@ Add responsiveness everywheree
 
         // <?php echo $qno ?
     
+
+
+
+
+LEARN - never stop learning
+ANALYSE - analyze to memorize
+INTERACT - interact and retain

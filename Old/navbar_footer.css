@@ -180,6 +180,15 @@
     
 }
 
+
+
+
+
+
+
+
+
+
 @media (min-width: 1024px) {
     body{
         font-family: 'Merriweather', serif;
@@ -247,6 +256,11 @@
           font-size: 36px;
           margin-left: 50px;
         }
+
+        .navbar_fixed{
+          position: fixed;
+        }
+
         
         
     

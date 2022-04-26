@@ -1,9 +1,12 @@
 <?php
+session_start();
+
     require '../db/dbconn.php';
             $branch = $_POST['branch'];
             $topic = $_POST['topic'];
             $keywords = $_POST['keywords'];
             $totalQuestions = $_POST['totalQuestions'];
+            $_SESSION["var"]=$totalQuestions;
             $quizid = rand(4,500);
 
 
@@ -20,12 +23,12 @@
             if($query_result == true){ 
             ?>
                 <script>window.alert("Quiz Data Entered! \nPlease enter the Question details now");
-                window.location.href = "http://localhost/QuizItz/createQuiz.php#quesno";</script>
+                 window.location.href = "http://localhost/QuizItz/createQuiz.php#quesno";</script>
             <?php
 
-            } else {
-                die(mysqli_error($con));
-            }
+        }else{
+            die(mysqli_error($con));
+        }
 
         } else {
             echo "All required fields not entered";
