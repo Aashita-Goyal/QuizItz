@@ -16,7 +16,6 @@
         <button>Explore</button>
     </div>
 
-
     <!--section 2-->
     <marquee behavior="slide" scrollamount="45">
 
