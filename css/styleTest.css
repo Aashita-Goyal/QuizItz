@@ -273,8 +273,9 @@ body {
     }
 
     .div-two-subtext{
-      text-align: center;
-      font-size: x-large;
+      /* text-align: center; */
+      font-size: large;
+      padding-left: 90px;
     }
 
     .div-two img{
