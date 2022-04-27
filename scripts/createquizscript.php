@@ -1,36 +1,50 @@
 <?php
+session_start();
+
     require '../db/dbconn.php';
-
-    // $qid = $_POST['questionID'];
-    // $qno = $_POST['email'];
-    // $password = $_POST['password'];
-    // $confirmpassword = $_POST['confirmpassword'];
-
-
-    if(isset($_POST['startEntering'])) 
-    {
-        if(!empty($_POST['branch']) && !empty($_POST['topic']) && !empty($_POST['totalQuestions'])){
-            // $quizid = $_POST['questionID'];
             $branch = $_POST['branch'];
-            $quiztopic = $_POST['topic'];
+            $topic = $_POST['topic'];
             $keywords = $_POST['keywords'];
-            $totalques = $_POST['totalQuestions'];
+            $totalQuestions = $_POST['totalQuestions'];
+            $_SESSION["var"]=$totalQuestions;
+            $quizid = rand(4,500);
 
-            $query = "INSERT INTO `quiz` (`branch`, `topic`, `keywords`, `totalQuestions`) VALUES ('$branch', '$topic', '$keywords', '$totalques')";
+
+     if(isset($_POST['startEntering'])) 
+     {
+         if(!empty($_POST['topic']) && !empty($_POST['totalQuestions'])){
+    
+            
+            $query = "INSERT INTO `quiz` (`quizid`, `branch`, `quiztopic`, `keywords`, `totalques`) VALUES ('$quizid', '$branch', '$topic', '$keywords', '$totalQuestions')";
+
+            
             $query_result = mysqli_query($con, $query);
 
-          
-        }
-        else{
-            echo "Please enter all required fields";
-        }
-    }
-        // $email = $_POST["email"];
-        // $message = $_POST["message"];
+            if($query_result == true){ 
+            ?>
+                <script>window.alert("Quiz Data Entered! \nPlease enter the Question details now");
+                 window.location.href = "http://localhost/QuizItz/createQuiz.php#quesno";</script>
+            <?php
 
-        // mysqli_query($con, "INSERT INTO contact (email, message) VALUES ('" . $email. "','" . $message. "')");
-        // $insert_id = mysqli_insert_id($con);
-        // $display = "Your contact information is saved successfully.";
-        // $type = "success";
-    
-?>
+        }else{
+            die(mysqli_error($con));
+        }
+
+        } else {
+            echo "All required fields not entered";
+        }
+
+
+}
+
+
+
+
+
+            //generate random number for quiz id
+            //call values of quiz id and total ques in table of quiz question
+            ?>
+
+
+
+            

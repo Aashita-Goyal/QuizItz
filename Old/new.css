@@ -293,7 +293,8 @@
 
     .quiz__button{
         width: 200px;
-        margin-left: 180px;
+        /* margin-left: 180px; */
+        margin-right: 300px;
     }
 
     .create__quiz{
@@ -316,6 +317,9 @@
 
 
 @media (min-width: 1024px) {
+
+   
+
     .topic__bar{
         border-color: black;
     }
@@ -406,7 +410,7 @@
     .quiz__start{
         text-align: center;
         margin-top: 50px;
-        margin-left: 30px;
+        /* margin-left: 30px; */
     }
 
     .quiz__start a{
@@ -623,7 +627,7 @@
 
     .quiz__button{
         width: 200px;
-        margin-left: 470px;
+        /* margin-left: 470px; */
     }
 
     .create__quiz{

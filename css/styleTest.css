@@ -288,6 +288,95 @@ body {
       width: 50%;
     } 
 
+    /*ABOUT PAGE*/
+    .triangle-design{
+      display: flex;
+  }
+
+  .triangle{
+      width: 130px;
+height: 160px;
+background: grey;
+border-radius: 50%;
+margin: 30px;
+  }
+
+  
+
+.triangle:hover .triangle-text,
+.triangle .triangle-text-hide {
+  display: none;
+}
+.triangle:hover .triangle-text-hide {
+  display: block;
+  background-color: black;
+  color: aliceblue;
+  width: 130px;
+  height: 160px;
+  background: black;
+  border-radius: 50%;
+  text-align: center;
+  padding: 20px;
+  /* font-size: larger; */
+}
+
+.triangle-text{
+  text-align: center;
+  margin-left: 12px;
+  margin-top: 40px;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#text1{
+  padding-top: 10px;
+  margin-right: 20px;
+}
+
+/* .triangle-hide{
+  margin-top: 20px;
+  margin-left: 20PX;
+} */
+
+.text-show1{
+ 
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+#member1{
+  /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
+  background-image: url('../assets/Images/girl\ profile.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#member2{
+  /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
+  background-image: url('../assets/Images/Aashita_.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#member3{
+  /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
+  background-image: url('../assets/Images/girl\ profile.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#member4{
+  /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
+  background-image: url('../assets/Images/girl\ profile.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 
 
 
