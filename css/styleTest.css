@@ -290,12 +290,13 @@ body {
     /*ABOUT PAGE*/
     .triangle-design{
       display: flex;
+      margin-left: 250px;
   }
 
   .triangle{
       width: 130px;
 height: 160px;
-background: grey;
+background-color: black;
 border-radius: 50%;
 margin: 30px;
   }
@@ -326,6 +327,7 @@ margin: 30px;
   font-size: 23px;
   font-weight: 500;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: aliceblue;
 }
 
 #text1{
@@ -346,7 +348,7 @@ margin: 30px;
 
 #member1{
   /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
-  background-image: url('../assets/Images/girl\ profile.jpg');
+  background-image: url('../assets/Images/Aditi.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -354,7 +356,7 @@ margin: 30px;
 
 #member2{
   /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
-  background-image: url('../assets/Images/Aashita_.jpg');
+  background-image: url('../assets/Images/Aashita.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -362,7 +364,7 @@ margin: 30px;
 
 #member3{
   /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
-  background-image: url('../assets/Images/girl\ profile.jpg');
+  background-image: url('../assets/Images/Sakshi.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -370,10 +372,49 @@ margin: 30px;
 
 #member4{
   /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
-  background-image: url('../assets/Images/girl\ profile.jpg');
+  background-image: url('../assets/Images/Aparna.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.team-members{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+  font-size: 50px;
+  margin: 30px;
+}
+
+.triangle{
+  
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.triangle .tooltiptext {
+  visibility: hidden;
+  width: 170px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin-left: 50px;
+  margin-top: 150px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.triangle:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltiptext{
+  font-size: 10px;
 }
 
 
