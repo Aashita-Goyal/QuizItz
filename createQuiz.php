@@ -145,22 +145,47 @@
         <div class="question__details__info">
         <form  method="POST" action="./scripts/enterquestionscript.php">
             <br>
-            <br>
+            <br id='break' />
+            <label for='questionNumber'>Question Number </label>
+            <input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='' />
+            
             
             <?php
-           // $qno = $_SESSION["var"];
-           $qno = 0;
-          if($qno==0){
-           echo "<label for='questionNumber' id='break'>Question Number </label>";
-            $qno++;
-            if ($qno <= $_SESSION["var"]){
-              echo "<input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='$qno' />";
+          
+
+          //  if($_SESSION["var"] <= 10){
+            // $qno = $_SESSION["var"];
+
+          //   $qno = 1;
+          //   echo "<br id='break' />";
+          //   while($qno <= $_SESSION["var"]){
+          //   $qno = $qnoUpdate;
+          //   echo "<label for='questionNumber'>Question Number </label>";
+          //   echo "<input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='$qno' />";
+            
+          //   $qno++;
+          //   $qnoUpdate = $qno;
+          // }
+          
+
+          //  } else {
+          //    echo "Maximum number of questions can be 10";
+          //  }
+
+           //$qno = 0;
+    //       if($qno==0){
+    //       echo "<br id='break' />";
+    //       echo "<label for='questionNumber'>Question Number </label>";
+    //         $qno++;
+    //         if ($qno <= $_SESSION["var"]){
+    //           echo "<input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='$qno' />";
+
     
-     // $qnoUpdate = $qno + 1;
-      }
-    }else{
-       echo "wrong qno";
-     }
+    //  $qnoUpdate = $qno + 1;
+    //   }
+    // }else{
+    //    echo "Question number out of range";
+    //  }
       ?>
 
 
@@ -242,3 +267,10 @@
                 id="questionDescription"
                 placeholder="enter question here"
               ></textarea>-->
+
+
+
+
+
+
+

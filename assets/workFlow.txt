@@ -150,3 +150,14 @@ Add responsiveness everywheree
 LEARN - never stop learning
 ANALYSE - analyze to memorize
 INTERACT - interact and retain
+
+
+
+
+
+
+
+
+
+*************************TRY***************
+counter loop in question number on create quiz page
