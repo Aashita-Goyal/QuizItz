@@ -1,9 +1,22 @@
+<?php
+session_start();
+
+require './db/dbconn.php';
+
+$topic = $_SESSION["topic"];
+$tags = $_SESSION["tags"];
+$subject = $_SESSION["subject"];
+$totalQues = $_SESSION["totalQues"];
+
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Attempt Quiz Page</title>
-    <link rel="stylesheet" href="./navbar_footer.css">
-  <link rel="stylesheet" href="./new.css">
+    <link rel="stylesheet" href="./Old/navbar_footer.css">
+  <link rel="stylesheet" href="./Old/new.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
@@ -98,21 +111,79 @@
     </nav>
 
 
+    
+  <!--All Quiz details of the topic-->
     <!--Quiz Details-->
     <div class="attempt__quiz__container">
         <div class="attempt__quiz__heading">
-            <h2>Quiz Details</h2>
+            <h2>Quiz Details for the topic $topic</h2>
         </div>
+
+<!--Query - for all quizzes where topic is $topic, print the following div-->
+        <!-- <div class="all__quiz__details">
         <div class="attempt__quiz__details">
-          <strong>
-          <p>Quiz Topic : </p>
-          <p>Quiz Tags : </p>
-          <p>Quiz Subject : </p>
-          <p>Total Questions : </p>
-        </strong>
+          <h3 class="quiz__number">Quiz Number $quizNumber</h3>
+          
+          
+          <strong><p>Quiz Number $quizNumber</p></strong>
+          <br>
+          <br>
+        <?php 
+          // echo "<strong><p>Quiz Topic :</strong> &nbsp;  $topic </p>";
+          // echo "<strong><p>Quiz Tags : </strong> &nbsp;  $tags </p>";
+          // echo "<strong><p>Quiz Subject : </strong> &nbsp;  $subject </p>";
+          // echo "<strong><p>Total Questions : </strong> &nbsp;  $totalQues </p>";
+        ?>
         </div>
         <div class="quiz__start">
             <button type="button" class="btn btn-dark">Start Quiz!</button>
+      </div> -->
+
+  <?php
+    $query = "SELECT * FROM user WHERE email = '$email'";
+    $query = "SELECT * FROM quiz WHERE branch = 'Computer Science and Information Technology'";
+    echo "<strong><p>Query: $query </p></strong>";
+
+    $query_result = mysqli_query($con, $query);
+    if(mysqli_num_rows($result) == 0)
+    {
+?>
+    <script>
+        window.alert("No Quizzes available for the topic ", $topic);
+        window.location.href = "http://localhost/QuizCreateAttempt/topicPage.php";
+    </script>
+<?php
+    } 
+    else 
+    {
+
+if($query_result == true){
+
+  echo "<strong><p>Quiz Topic :</strong> &nbsp;  $query </p>";
+    echo "<div class='all__quiz__details'>";
+      echo "<div class='attempt__quiz__details'>";
+       
+        echo "<strong><p>Quiz Number $ quizNumber</p></strong>";
+        echo "<br>";
+        echo "<br>";
+          echo "<strong><p>Quiz Topic :</strong> &nbsp;  $topic </p>";
+          echo "<strong><p>Quiz Tags : </strong> &nbsp;  $tags </p>";
+          echo "<strong><p>Quiz Subject : </strong> &nbsp;  $subject </p>";
+          echo "<strong><p>Total Questions : </strong> &nbsp;  $totalQues </p>";
+
+      echo "</div>";
+      echo "<div class='quiz__start'>";
+        echo "<button type='button' class='btn btn-dark'>Start Quiz!</button>";
+      echo "</div>";
+    echo "</div>";
+  }
+}
+  ?>
+
+
+
+ 
+      <div class="quiz__start">
             <strong><p class="pad"><a href="./home.html">Go to home</a></p></strong>
             
             <strong><p><a href="./topicPage.html">Choose another quiz</a></p></strong>
@@ -120,6 +191,7 @@
             <br />
             <br />
             <strong><p><a href="">Other available quizzes for the same topic</a></p></strong>
+      </div>
         </div>
     </div>
     
@@ -142,3 +214,11 @@
 </footer>
   </body>
 </html>
+
+
+
+
+
+
+
+

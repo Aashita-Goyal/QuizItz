@@ -3,8 +3,8 @@
 
 <head>
     <title>Quiz Page</title>
-    <link rel="stylesheet" href="./navbar_footer.css">
-  <link rel="stylesheet" href="./new.css">
+    <link rel="stylesheet" href="./Old/navbar_footer.css">
+  <link rel="stylesheet" href="./Old/new.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="

@@ -104,17 +104,17 @@
   <div class="create__quiz">
       <div class="quiz__create__heading"><div class="attempt__quiz__heading">Create a New Quiz</div></div>
       <div class="quiz__details">
-          <form method="post" action="./scripts/createquizscript.php" >
+          <form method="post" action="../QuizCreateAttempt/scripts/enterquestionscript.php" >
             <br /><br /><br />
             <label for="branch">Choose a Branch</label>
             <select id="branch" name="branch">
               <!-- <option>select</option> -->
-              <option value="computer">CS/IT</option>
-              <option value="electronics">EC</option>
-              <option value="electrical">EE/EI</option>
-              <option value="mechatronics">MT</option>
-              <option value="biotechnology">BT</option>
-              <option value="chemical">CE</option>
+              <option value="Computer Science and Information Technology">CS/IT</option>
+              <option value="Electronics">EC</option>
+              <option value="Electrical">EE/EI</option>
+              <option value="Mechatronics">MT</option>
+              <option value="Biotechnology">BT</option>
+              <option value="Chemical">CE</option>
             </select>
             <br /><br />
             <label for="topic">Quiz Topic</label>
@@ -139,6 +139,8 @@
           <hr>
           <br>
       </div>
+            
+          
 
       <div class="question__details">
         <p id="quesno">Enter Quiz details</p>
@@ -147,46 +149,7 @@
             <br>
             <br id='break' />
             <label for='questionNumber'>Question Number </label>
-            <input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='' />
-            
-            
-            <?php
-          
-
-          //  if($_SESSION["var"] <= 10){
-            // $qno = $_SESSION["var"];
-
-          //   $qno = 1;
-          //   echo "<br id='break' />";
-          //   while($qno <= $_SESSION["var"]){
-          //   $qno = $qnoUpdate;
-          //   echo "<label for='questionNumber'>Question Number </label>";
-          //   echo "<input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='$qno' />";
-            
-          //   $qno++;
-          //   $qnoUpdate = $qno;
-          // }
-          
-
-          //  } else {
-          //    echo "Maximum number of questions can be 10";
-          //  }
-
-           //$qno = 0;
-    //       if($qno==0){
-    //       echo "<br id='break' />";
-    //       echo "<label for='questionNumber'>Question Number </label>";
-    //         $qno++;
-    //         if ($qno <= $_SESSION["var"]){
-    //           echo "<input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='$qno' />";
-
-    
-    //  $qnoUpdate = $qno + 1;
-    //   }
-    // }else{
-    //    echo "Question number out of range";
-    //  }
-      ?>
+            <input type='text' id='questionNumber' name='questionNum' placeholder='question number'/>
 
 
             <br><br>
@@ -221,11 +184,16 @@
               </div>
 
               <br><br><br><br>
+
+              
+            
             <div class="quiz__button">
               <div class="quiz__start">
-              <button type="button" class="btn btn-dark" name="createQuiz">Create Quiz!</button>
+              <a href='./allQuizInfo.php'><button type='button' class='btn btn-dark' name='createQuiz'>Create Quiz!</button></a>
+
               </div>
             </div>
+           
         </form>
         </div>
       </div>

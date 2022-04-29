@@ -6,8 +6,12 @@ session_start();
             $topic = $_POST['topic'];
             $keywords = $_POST['keywords'];
             $totalQuestions = $_POST['totalQuestions'];
-            $_SESSION["var"]=$totalQuestions;
-            $quizid = rand(4,500);
+            $quizid = rand(4,1000);
+
+            $_SESSION["topic"]=$topic;
+            $_SESSION["tags"]=$keywords;
+            $_SESSION["subject"]=$branch;
+            $_SESSION["totalQues"]=$totalQuestions;
 
 
      if(isset($_POST['startEntering'])) 
@@ -23,7 +27,7 @@ session_start();
             if($query_result == true){ 
             ?>
                 <script>window.alert("Quiz Data Entered! \nPlease enter the Question details now");
-                 window.location.href = "http://localhost/QuizItz/createQuiz.php#quesno";</script>
+                 window.location.href = "http://localhost/QuizItz/OTHER//QuizCreateAttempt/createQuiz.php#break";</script>
             <?php
 
         }else{
