@@ -17,6 +17,10 @@ session_start();
             $_SESSION["totalQues"]=$totalQuestions;
             // $_SESSION["qno"]=$qno;
 
+            // $quizid_query = "SELECT MAX(quizid) FROM quiz3";
+            // $quizid = (int)$quizid_query;
+            // $_SESSION["quizid_query"]=$quizid;
+            
 
      if(isset($_POST['startEntering'])) 
      {

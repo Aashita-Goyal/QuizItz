@@ -19,10 +19,15 @@ session_start();
             $keywords = $_SESSION["tags"];
             $branch = $_SESSION["subject"];
             $totalQuestions = $_SESSION["totalQues"];
+            // $quizid_query = $_SESSION["quizid_query"];
+            // $quizid_query = "SELECT MAX(quizid) FROM quiz3";
+            // $quizid_query_result = mysqli_query($con, $quizid_query);
+            // $quizid = (int)$quizid_query;
+            // $_SESSION["quizid_query"]=$quizid;
 
-
-            
-       
+            $countid = $_SESSION['countid'];
+            // $qno = 0;
+   
 
 if(isset($_POST['nextQuestion'])) 
 {
@@ -30,8 +35,8 @@ if(isset($_POST['nextQuestion']))
        !empty($_POST['optionB']) && !empty($_POST['optionC']) && !empty($_POST['optionD']) && 
        !empty($_POST['correct']))
        {
-           $queryQuestion = "INSERT INTO `question3` (`qno`, `ques`, `a`, `b`, `c`, `d`, `correct`) 
-                             VALUES ('$qnum', '$ques', '$opta', '$optb', '$optc', '$optd', '$correct')";
+           $queryQuestion = "INSERT INTO `question3` (`qno`, `ques`, `a`, `b`, `c`, `d`, `correct`, `quizid`) 
+                             VALUES ('$qnum', '$ques', '$opta', '$optb', '$optc', '$optd', '$correct', '$countid')";
            $query_result_question = mysqli_query($con, $queryQuestion);
            
            if($query_result_question == true){ ?>
@@ -44,4 +49,5 @@ if(isset($_POST['nextQuestion']))
             echo "All required fields not entered";
         }
     }
+
 ?>

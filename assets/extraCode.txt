@@ -246,3 +246,249 @@ Branch Page
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+Quiz Data Fetch
+if (mysqli_num_rows($result) > 0) {
+                    ?>
+                        <table class='table table-bordered table-striped'>
+                            <tr>
+                                <td>QuizId</td>
+                                <td>Counter</td>
+                                <td>Action</td>
+
+                            </tr>
+                            <?php
+                            // $i = 0;
+                            $counter = 0;
+                            
+                            while ($row = mysqli_fetch_array($result)) {
+                              
+                              ++$counter;
+                            ?>
+                                <tr>
+                                    <td><?php echo $row['quizid']; ?></td>
+                                    <td><?php echo $counter; ?></td>
+                                    <td><a href="createQuiz.php?quizid=<?php echo $row['quizid']; ?>">Update</a></td>
+                                </tr>
+                            <?php
+                                // $i++;
+                            }?>
+                            
+                        </table>
+                        <p><?php echo $counter; ?></p>
+                    <?php
+                    } else {
+                        echo "No result found";
+                    }
+                    ?>
+
+
+
+CREATE QUIZ COUNTER RESET QUIX id
+
+
+      <?php
+      
+      if($_SESSION["counter"] < $_SESSION["totalQues"]){
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#enterNewQuestion'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion' >";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='button' class='btn btn-dark ms-5' value='Enter New Question'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+
+          if (mysqli_num_rows($result) > 0) {
+                    
+            $countid = 0;
+            
+            while ($row = mysqli_fetch_array($result)) {
+              
+              ++$countid;
+            
+            }
+            ?>
+        <strong><p class="text-start">Quiz ID : </strong><?php echo $countid; ?></p
+    <?php
+    } else {
+        echo "Quiz ID not found";
+    }
+
+        echo "</form>";
+      }else{
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#createquiz'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion'>";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='reset' class='btn btn-dark ms-5' value='All Questions Succesfully Uploaded'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+
+          if (mysqli_num_rows($result) > 0) {
+                    
+            $countid = 0;
+            
+            while ($row = mysqli_fetch_array($result)) {
+              
+              ++$countid;
+            
+            }
+            ?>
+        <strong><p class="text-start">Quiz ID : </strong><?php echo $countid; ?></p
+    <?php
+    } else {
+        echo "Quiz ID not found";
+    }
+
+        echo "</form>";
+
+      }
+
+      $_SESSION['countid'] = $countid;
+      ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#enterNewQuestion'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion' >";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='button' class='btn btn-dark ms-5' value='Enter New Question'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+
+          if (mysqli_num_rows($result) > 0) {
+                    
+            $countid = 0;
+            
+            while ($row = mysqli_fetch_array($result)) {
+              
+              ++$countid;
+            
+            }
+            ?>
+        <strong><p class="text-start">Quiz ID : </strong><?php echo $countid; ?></p
+    <?php
+    } else {
+        echo "Quiz ID not found";
+    }
+
+        echo "</form>";
+      }else{
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#createquiz'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion'>";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='reset' class='btn btn-dark ms-5' value='All Questions Succesfully Uploaded'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+
+          if (mysqli_num_rows($result) > 0) {
+                    
+            $countid = 0;
+            
+            while ($row = mysqli_fetch_array($result)) {
+              
+              ++$countid;
+            
+            }
+            echo "<strong><p class='text-start'>Quiz ID : </strong><?php echo $countid; ?></p>";
+            ?>
+        
+    <?php
+    } else {
+        echo "Quiz ID not found";
+    }
+
+        echo "</form>";
+        $_SESSION['countid'] = $countid;
+
+      }
+
+
+      
+      echo "<form method='post' action='../QuizCreateAttempt/scripts/enterquestionscript.php' >";
+      echo "<br>";
+      echo "<br id='break' />";
+      echo "<label for='questionNumber'>Question Number </label>";
+
+      
+       echo "<input type='text' id='questionNumber' name='questionNum' placeholder='question number' value='$_SESSION[counter]'>";
+      
+      
+       echo "<br><br>";
+       echo " <label for='questionNumber'>Question</label>";
+       echo "  <input type='paragraph' id='questionDescription' name='question' placeholder='enter question here'>";
+           
+       echo "   <br><br>";
+       echo "    <label for='snswerOption'>Option a</label>";
+       echo "  <input type='paragraph' id='optionA' name='optionA' placeholder='enter answer here'>";
+       echo "  <br><br>";
+       echo " <label for='answerOption'>Option b</label>";
+       echo "  <input type='paragraph' id='optionB' name='optionB' placeholder='enter answer here'>";
+       echo "  <br><br>";
+       echo "   <label for='answerOption'>Option c</label>";
+       echo "  <input type='paragraph' id='optionC' name='optionC' placeholder='enter answer here'>";
+       echo "   <br><br>";
+       echo "   <label for='answerOption'>Option d</label>";
+       echo "   <input type='paragraph' id='optionD' name='optionD' placeholder='enter answer here'>";
+       echo "    <br><br>";
+       echo "   <label for='answer'>Choose correct option</label>";
+       echo "   <select id='Correctanswer' name='correct'>";
+       echo "    <option value='optionA'>Option a</option>";
+       echo "     <option value='optionB'>Option b</option>";
+       echo "    <option value='optionC'>Option c</option>";
+       echo "    <option value='optionD'>Option d</option>";
+       echo "   </select>";
+ 
+           
+
+       echo "<div class='quiz__button'>";
+       echo "  <div class='quiz__start'>";
+       echo "   <button type='submit' class='btn btn-dark' name='nextQuestion'>Submit This Question</button>";
+      
+              // <!-- <input type="submit" name="button" value="Counter" /> -->
+              //   <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Enter Next Question</button></a> -->
+                echo " </div>";
+                echo "</form>";

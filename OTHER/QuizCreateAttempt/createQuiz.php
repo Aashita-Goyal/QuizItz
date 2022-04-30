@@ -1,5 +1,9 @@
 <?php
+
             session_start();
+            require './db/dbconn.php';
+
+            $result = mysqli_query($con, "SELECT * FROM quiz3");
 
             // if counter is not set, set to zero
             if(!isset($_SESSION['counter'])) {
@@ -16,7 +20,6 @@
                 $_SESSION['counter'] = 1;
             }
             
-            // $qno=$_SESSION["qno"];
             ?>
 
 
@@ -39,7 +42,6 @@
 
 <body>
   <!--Navbar-->
-  <!---->
   <nav class="navbar navbar-expand-md bg-gradient-secondary" id="grad">
     <div class="padLogo padLogo-light ps-4"></div>
     <div id="mySidenav" class="sidenav">
@@ -94,14 +96,11 @@
         <li class="nav-item">
           <a class="nav-link" href="">
             <p class="text-light mt-2">Settings<i class="fa-solid fa-gear p-2"></i></p>
-            <!--<img src="https://img.icons8.com/small/128/000000/settings.png" class="icons" />-->
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="profile.html">
             <p class="text-light mt-2">Profile<i class="fa-solid fa-user p-2"></i></p>
-
-            <!--<img src="https://img.icons8.com/glyph-neue/64/000000/lifecycle.png" class="icons" />-->
           </a>
         </li>
         <li class="nav-item">
@@ -146,14 +145,8 @@
             <label for="totalQuestions">Total Questions</label>
             <input type="text" id="totalQuestions" name="totalQuestions" placeholder="total number of questions"><br>
             <br /><br />
-            <!-- <div class="quiz__button">
-              <div class="quiz__start"> -->
-              <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Start Entering Questions</button></a> -->
               <button type="submit" class="btn btn-dark" name="startEntering">Start Entering Questions</button>
-              <!-- <input type="submit" value="Sign Up" class="button"> -->
-
-
-              </div>
+             </div>
             </div>
           </form>
           <br>
@@ -161,106 +154,64 @@
           <br>
       </div>
 
-      <div class="question__details">
-        <p id="quesno">Enter Quiz details</p>
-        <div class="question__details__info">
 
-      <?php
 
-      if($_SESSION["counter"] < $_SESSION["totalQues"]){
-        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#enterNewQuestion'>";
-          echo "<div class='quiz__button'>";
-            echo "<div class='quiz__start'>";
-                echo "<br  id='enterNewQuestion' >";
-              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
-              echo "<input type='submit' name='button' class='btn btn-dark ms-5' value='Enter New Question'/>";
-              echo "<br/>";
-              echo "<br/>";
-              echo "<br/>";
-            echo "</div>";
-          echo "</div>";
-        echo "</form>";
-      }else{
-        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#createquiz'>";
-          echo "<div class='quiz__button'>";
-            echo "<div class='quiz__start'>";
-              echo "<br  id='enterNewQuestion'>";
-              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
-              echo "<input type='submit' name='reset' class='btn btn-dark ms-5' value='All Questions Succesfully Uploaded'/>";
-              echo "<br/>";
-              echo "<br/>";
-              echo "<br/>";
-            echo "</div>";
-          echo "</div>";
-        echo "</form>";
 
-      }
-      ?>
 
-        <form  method="POST" action="../QuizCreateAttempt/scripts/enterquestionscript.php">
-            <br>
-            <br id='break' />
-            <label for='questionNumber'>Question Number </label>
 
-            <?php
-            // $qno = 1;
-            // $qnumber=$_SESSION["qno"];
-            ?>
-            <input type='text' id='questionNumber' name='questionNum' placeholder='question number' value="<?php echo $_SESSION['counter']; ?>"/>
-            
+
+
+
+
+
+
+      <form method='post' action='../QuizCreateAttempt/scripts/enterquestionscript.php' >
+      <br>
+      <br id='break' />
+      <label for='questionNumber'>Question Number </label>
+
+      <input type='text' id='questionNumber' name='questionNum' placeholder='question number' value='<?php echo $_SESSION['counter'] ?>'>
+      
+      
+       <br><br>
+       <label for='questionNumber'>Question</label>
+       <input type='paragraph' id='questionDescription' name='question' placeholder='enter question here'>
+           
+       <br><br>
+       <label for='snswerOption'>Option a</label>
+       <input type='paragraph' id='optionA' name='optionA' placeholder='enter answer here'>
+       <br><br>
+       <label for='answerOption'>Option b</label>
+       <input type='paragraph' id='optionB' name='optionB' placeholder='enter answer here'>
+       <br><br>
+       <label for='answerOption'>Option c</label>
+       <input type='paragraph' id='optionC' name='optionC' placeholder='enter answer here'>
+       <br><br>
+       <label for='answerOption'>Option d</label>
+       <input type='paragraph' id='optionD' name='optionD' placeholder='enter answer here'>
+       <br><br>
+       <label for='answer'>Choose correct option</label>
+       <select id='Correctanswer' name='correct'>
+       <option value='optionA'>Option a</option>
+       <option value='optionB'>Option b</option>
+       <option value='optionC'>Option c</option>
+       <option value='optionD'>Option d</option>
+       </select>
             
 
-            <br><br>
-            <label for="questionNumber">Question</label>
-            <input type="paragraph" id="questionDescription" name="question" placeholder="enter question here">
-           
-            <br><br>
-            <label for="answerOption">Option a</label>
-            <input type="paragraph" id="optionA" name="optionA" placeholder="enter answer here">
-            <br><br>
-            <label for="answerOption">Option b</label>
-            <input type="paragraph" id="optionB" name="optionB" placeholder="enter answer here">
-            <br><br>
-            <label for="answerOption">Option c</label>
-            <input type="paragraph" id="optionC" name="optionC" placeholder="enter answer here">
-            <br><br>
-            <label for="answerOption">Option d</label>
-            <input type="paragraph" id="optionD" name="optionD" placeholder="enter answer here">
-            <br><br>
-            <label for="answer">Choose correct option</label>
-            <select id="Correctanswer" name="correct">
-              <option value="optionA">Option a</option>
-              <option value="optionB">Option b</option>
-              <option value="optionC">Option c</option>
-              <option value="optionD">Option d</option>
-            </select>
-
-           
-
-            <div class="quiz__button">
-              <div class="quiz__start">
-              <button type="submit" class="btn btn-dark" name="nextQuestion">Submit This Question</button>
+       <div class='quiz__button'>
+       <div class='quiz__start'>
+       <button type='submit' class='btn btn-dark' name='nextQuestion'>Submit This Question</button>
+       </div>
+      </form>
+      
               <!-- <input type="submit" name="button" value="Counter" /> -->
-                <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Enter Next Question</button></a> -->
-    </div>
+              <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Enter Next Question</button></a> -->
+               
 
-          
-           
-        </form>
-        <!-- <form method="POST" action="../QuizCreateAttempt/createQuiz.php#createquiz">
-        <div class="quiz__button">
-              <div class="quiz__start">
-                <br  id="enterNewQuestion" >
-              <input type="hidden" name="counter" value="" />
-              <?php 
-              // echo $_SESSION['counter'];
-               ?>
-                <input type="submit" name="reset" class="btn btn-dark ms-5" value="All Questions Succesfully Uploaded"/>
-              <br/>
-        
-              </div>
-      </div>
-      </form> -->
+
+               
+
 
       <br><br><br><br>
       <div class="quiz__button">
@@ -287,9 +238,6 @@
     <div class="container-fluid p-lg-3">
       <br />
       <h5 class="ps-2">Follow Us</h5>
-      <!--<a href=""><img src="https://img.icons8.com/ios-glyphs/60/000000/facebook-new.png" class="icons"/></a>
-        <a href=""><img src="https://img.icons8.com/ios-glyphs/50/000000/instagram-new.png" class="icons"/></a>
-        <a href=""><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" class="icons"/></a>-->
       <a href=""><img src="https://img.icons8.com/fluency/144/000000/facebook-new.png" class="icons" /></a>
       <a href=""><img src="https://img.icons8.com/fluency/144/000000/instagram-new.png" class="icons" /></a>
       <a href=""><img src="https://img.icons8.com/fluency/144/000000/twitter.png" class="icons" /></a>
@@ -301,23 +249,3 @@
 </body>
 
 </html>
-
-
-
-<!--<div class="create__quiz__container">
-  <div class="create__quiz__left">Hello left</div>
-  <div class="create__quiz__right">Hello right</div>
-</div>-->
-
- <!--<textarea
-                rows="6"
-                id="questionDescription"
-                placeholder="enter question here"
-              ></textarea>-->
-
-
-
-
-
-
-

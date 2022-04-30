@@ -13,6 +13,8 @@ createQuiz.php file in main folder (to change it's css)
 8. Follow roadmap on OneNote
 9. Enter Quiz name alsofrom user
 10. While uploading ques, make writing ques and all options compulsory
+15. Profile page backend, call profile details of user and quiz result details
+16. Result Page backend
 
 11. when uploading, call questions along with quiz id 
 12. display quiz details, row wise on quizCoverPage
