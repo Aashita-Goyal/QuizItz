@@ -28,3 +28,10 @@ createQuiz.php file in main folder (to change it's css)
 
 1. On cover pages, the buttons should be able to take branch id and redirect to topic page of the banch directly
    Instead of having to go to branch page first.
+
+
+
+On dates 1st, 2nd and 3rd,
+1. Linking Files
+2. CSS
+3. organized folders
