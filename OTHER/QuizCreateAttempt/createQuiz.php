@@ -1,6 +1,24 @@
 <?php
             session_start();
-?>
+
+            // if counter is not set, set to zero
+            if(!isset($_SESSION['counter'])) {
+                $_SESSION['counter'] = 1;
+            }
+            
+            // if button is pressed, increment counter
+            if(isset($_POST['button'])) {
+                ++$_SESSION['counter'];
+            }    
+            
+            // reset counter
+            if(isset($_POST['reset'])) {
+                $_SESSION['counter'] = 1;
+            }
+            
+            // $qno=$_SESSION["qno"];
+            ?>
+
 
 
 <!DOCTYPE html>
@@ -104,8 +122,11 @@
   <div class="create__quiz">
       <div class="quiz__create__heading"><div class="attempt__quiz__heading">Create a New Quiz</div></div>
       <div class="quiz__details">
-          <form method="post" action="../QuizCreateAttempt/scripts/enterquestionscript.php" >
+          <form method="post" action="../QuizCreateAttempt/scripts/createquizscript.php" >
             <br /><br /><br />
+            <label for="quizname">Quiz Name</label>
+            <input type="text" id="quizname" name="quizname" placeholder="enter your quiz name"><br>
+            <br />
             <label for="branch">Choose a Branch</label>
             <select id="branch" name="branch">
               <!-- <option>select</option> -->
@@ -124,7 +145,7 @@
             <input type="text" id="topic" name="keywords" placeholder="enter keywords/tags related to topic"><br><br>
             <label for="totalQuestions">Total Questions</label>
             <input type="text" id="totalQuestions" name="totalQuestions" placeholder="total number of questions"><br>
-
+            <br /><br />
             <!-- <div class="quiz__button">
               <div class="quiz__start"> -->
               <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Start Entering Questions</button></a> -->
@@ -139,18 +160,55 @@
           <hr>
           <br>
       </div>
-            
-          
 
       <div class="question__details">
         <p id="quesno">Enter Quiz details</p>
         <div class="question__details__info">
-        <form  method="POST" action="./scripts/enterquestionscript.php">
+
+      <?php
+
+      if($_SESSION["counter"] < $_SESSION["totalQues"]){
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#enterNewQuestion'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+                echo "<br  id='enterNewQuestion' >";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='button' class='btn btn-dark ms-5' value='Enter New Question'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+        echo "</form>";
+      }else{
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#createquiz'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion'>";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='reset' class='btn btn-dark ms-5' value='All Questions Succesfully Uploaded'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+        echo "</form>";
+
+      }
+      ?>
+
+        <form  method="POST" action="../QuizCreateAttempt/scripts/enterquestionscript.php">
             <br>
             <br id='break' />
             <label for='questionNumber'>Question Number </label>
-            <input type='text' id='questionNumber' name='questionNum' placeholder='question number'/>
 
+            <?php
+            // $qno = 1;
+            // $qnumber=$_SESSION["qno"];
+            ?>
+            <input type='text' id='questionNumber' name='questionNum' placeholder='question number' value="<?php echo $_SESSION['counter']; ?>"/>
+            
+            
 
             <br><br>
             <label for="questionNumber">Question</label>
@@ -177,24 +235,45 @@
               <option value="optionD">Option d</option>
             </select>
 
+           
+
             <div class="quiz__button">
               <div class="quiz__start">
-              <button type="submit" class="btn btn-dark" name="nextQuestion">Enter Next Question</button>
+              <button type="submit" class="btn btn-dark" name="nextQuestion">Submit This Question</button>
+              <!-- <input type="submit" name="button" value="Counter" /> -->
                 <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Enter Next Question</button></a> -->
-              </div>
+    </div>
 
-              <br><br><br><br>
-
-              
-            
-            <div class="quiz__button">
-              <div class="quiz__start">
-              <a href='./allQuizInfo.php'><button type='button' class='btn btn-dark' name='createQuiz'>Create Quiz!</button></a>
-
-              </div>
-            </div>
+          
            
         </form>
+        <!-- <form method="POST" action="../QuizCreateAttempt/createQuiz.php#createquiz">
+        <div class="quiz__button">
+              <div class="quiz__start">
+                <br  id="enterNewQuestion" >
+              <input type="hidden" name="counter" value="" />
+              <?php 
+              // echo $_SESSION['counter'];
+               ?>
+                <input type="submit" name="reset" class="btn btn-dark ms-5" value="All Questions Succesfully Uploaded"/>
+              <br/>
+        
+              </div>
+      </div>
+      </form> -->
+
+      <br><br><br><br>
+      <div class="quiz__button">
+              <div class="quiz__start">
+              <a href='../QuizCreateAttempt/quizCoverPage.php'><button type='button' class='btn btn-dark' name='createQuiz' id="createquiz">Create Quiz!</button></a>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              </div>
+            </div>
+
         </div>
       </div>
  </div>

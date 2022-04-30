@@ -1,0 +1,793 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* To Box Model */
+  }
+  
+  /*Navbar*/
+  
+  .navbar {
+    width: 219px;
+    background-color: #211522;
+    color: #ebf2ff;
+    display: inline;
+  }
+  
+  .nav-item {
+    font-size: 7px;
+    padding: 0;
+    display: none;
+  }
+  
+  .nav-link {
+    color: #ebf2ff;
+    font-size: 17px;
+    font-weight: 400;
+    display: inline;
+  }
+  
+  
+  .logo {
+    background: linear-gradient(to right, #73436D, #B67C9A,
+        #864879, #C197D2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 40px;
+    padding: 10px;
+    margin-left: 15px;
+    border: none;
+  }
+  
+  .padLogo {
+    background-color: #ebf2ff;
+  }
+
+  nav span{
+      padding-right: 360px;
+  }
+
+  
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .toggleNav {
+    border: 3px solid black;
+    text-align: justify;
+    background-color: #864879;
+    margin: 2px;
+  }
+  
+  .toggleNav:hover {
+    background-color: gray;
+    color: #ebf2ff;
+  }
+  
+  #mySidenav {
+    background-color: lightgray;
+  }
+  
+  .closebtn:hover {
+    color: #73436D !important;
+    font-size: 30px !important;
+  }
+  
+  
+  
+  
+  /*Footer*/
+  
+  footer{
+    width: 219px;
+  }
+  
+  .container-fluid {
+    text-align: center;
+    background-color: #211522;
+    color: rgb(0, 0, 0);
+    padding-top: 1px;
+    padding-bottom: 20px;
+  }
+  
+  .container-fluid p,
+  h5 {
+    color: white;
+  }
+  
+  
+  .icons {
+    width: 20px;
+    height: 20px;
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+  }
+  
+
+
+
+  /* Login register contact */
+
+.login-body{
+  background: url(https://i.pinimg.com/736x/d1/b0/83/d1b083ac9d9344250908137e08d6eb20.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  /* Images
+  https://images.wallpapersden.com/image/download/cloudy-mountains_a2toaWWUmZqaraWkpJRmbmdlrWZlbWU.jpg
+
+  https://w.wallhaven.cc/full/2e/wallhaven-2evz6x.png ----- contact image
+
+  bubbles - https://images.unsplash.com/photo-1594165681163-1b85559cf250?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80
+
+  door - https://images.unsplash.com/photo-1524562787295-1608217aa823?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80
+
+  lavender - https://wallpapercave.com/wp/wp7334578.jpg
+
+  study room - https://st.hzcdn.com/simgs/pictures/kabinety/kraski-tikkurila-dlya-rabochih-mest-tikkurila-russia-img~9031fb7309c3a7fd_14-1322-1-df27c6d.jpg
+
+  study table - https://i.pinimg.com/originals/5c/2b/21/5c2b21f66c619957a09624ce0be2c834.jpg
+
+  study table 3 - https://i.pinimg.com/736x/c4/73/ae/c473aeecb922ce8f598941bf7c033a8d.jpg
+
+  study table 2 - https://i.pinimg.com/736x/d1/b0/83/d1b083ac9d9344250908137e08d6eb20.jpg
+  */
+}
+
+.contact-body{
+  background: url(https://w.wallhaven.cc/full/2e/wallhaven-2evz6x.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 300px;
+
+}
+
+.contact-body .login-form{
+  /* background-color: rgba(188, 188, 188, 0.4); */
+  padding-bottom: 40px;
+}
+
+.contact-body div{
+  padding-top: 0;
+  margin-top: 0;
+}
+
+
+.login-form {
+  background: transparent;
+  width: 500px;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
+}
+
+#register-body{
+  margin: 30px auto;
+}
+
+.login-form h1 {
+  padding: 35px 35px 0 35px;
+  font-weight: 300;
+  text-align: center;
+  color:antiquewhite;
+  /* color: #803372; */
+}
+
+.login-form .contact-head {
+  padding: 35px 35px 0 35px;
+  font-weight: 500;
+  text-align: center;
+  color: #803372;
+}
+
+.login-form .contact-head:hover{
+  font-size: 35px;
+  text-shadow: 1px 1px #803372;
+}
+
+.login-form .content {
+  padding: 35px;
+}
+
+.login-form .input-field {
+  padding: 12px 5px;
+  border-radius: 30px;
+}
+
+.login-form .input-field input {
+  font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-radius: 17px;
+  opacity: 0.9;
+}
+
+input::placeholder{
+  padding-left: 15px;
+}
+
+.content .input-field{
+  font-size: 23px;
+}
+
+.login-form a.link {
+  text-decoration: none;
+  color: #803372;
+  letter-spacing: 0.2px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.login-form a.link:hover{
+    color: blue;
+}
+
+.login-form .action {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+}
+
+.login-form .action button {
+  width: 100%;
+  border: none;
+  padding: 18px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #472c49;
+  color: rgb(255, 255, 255);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  letter-spacing: 0.2px;
+  outline: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.login-form .action input:hover {
+  background: #000000;
+  color: white;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 125px;
+  height: 125px;
+  }
+  
+  .login-form .action input {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #472c49;
+    color: rgb(255, 255, 255);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+
+  .login-form .contact-head{
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .input-field{
+    font-size: 40px;
+  }
+
+  .input-field label{
+    padding: 10px 0;
+    margin-bottom: 20px;
+    margin-left: 12px;
+    font-size: 1.7rem;
+  }
+
+  .input-field textarea{
+    width: 420px;
+    opacity: 0.7;
+    font-size: large;
+    padding: 8px;
+    border-radius: 17px;
+  }
+
+  .contact-body input::placeholder{
+    opacity: 0.7;
+    margin: 0;
+  }
+
+  textarea::placeholder {
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .link{
+    padding-left: 50px;
+  }
+
+  .link-login{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .login-form a.link-login {
+    text-decoration: none;
+    color: #747474;
+    /* color: #803372; */
+    letter-spacing: 0.2px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .login-form a.link-login:hover{
+      color: #803372;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+@media (min-width: 786px) {}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* To Box Model */
+    }
+  
+    /*Navbar*/
+  
+    .navbar {
+      width: 100%;
+      background-color: #211522;
+      opacity: 1;
+      color: #ebf2ff;
+    }
+
+  
+    .nav-item {
+      font-size: 17px;
+      display: contents;
+    }
+  
+    .nav-link {
+      color: #ebf2ff;
+      font-size: 1.1pc;
+    }
+  
+    .nav-link :hover {
+      font-size: 20px;
+      text-shadow: 2px 2px black;
+    }
+  
+    .logo {
+      background: linear-gradient(to right, #73436D, #B67C9A,
+          #864879, #C197D2);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-size: 35px;
+      border: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    nav span{
+        padding-right: 0;
+    }
+  
+    .padLogo {
+      background-color: #ebf2ff;
+    }
+  
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #B67C9A;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+  
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #000000;
+      display: block;
+      transition: 0.3s;
+    }
+  
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+  
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  
+    .toggleNav {
+      border: 3px solid black;
+      text-align: justify;
+      background-color: #864879;
+      margin: 2px;
+    }
+  
+    .toggleNav:hover {
+      background-color: gray;
+      color: #ebf2ff;
+    }
+  
+    #mySidenav {
+      background-color: lightgray;
+    }
+  
+    .closebtn:hover {
+      color: #73436D !important;
+      font-size: 30px !important;
+    }
+
+
+
+
+
+    /* Login register contact */
+
+    .login-body{
+      background: url(https://i.pinimg.com/736x/d1/b0/83/d1b083ac9d9344250908137e08d6eb20.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+      /* Images
+      https://images.wallpapersden.com/image/download/cloudy-mountains_a2toaWWUmZqaraWkpJRmbmdlrWZlbWU.jpg
+
+      https://w.wallhaven.cc/full/2e/wallhaven-2evz6x.png ----- contact image
+
+      bubbles - https://images.unsplash.com/photo-1594165681163-1b85559cf250?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80
+
+      door - https://images.unsplash.com/photo-1524562787295-1608217aa823?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80
+
+      lavender - https://wallpapercave.com/wp/wp7334578.jpg
+
+      study room - https://st.hzcdn.com/simgs/pictures/kabinety/kraski-tikkurila-dlya-rabochih-mest-tikkurila-russia-img~9031fb7309c3a7fd_14-1322-1-df27c6d.jpg
+
+      study table - https://i.pinimg.com/originals/5c/2b/21/5c2b21f66c619957a09624ce0be2c834.jpg
+
+      study table 3 - https://i.pinimg.com/736x/c4/73/ae/c473aeecb922ce8f598941bf7c033a8d.jpg
+
+      study table 2 - https://i.pinimg.com/736x/d1/b0/83/d1b083ac9d9344250908137e08d6eb20.jpg
+      */
+    }
+
+    .contact-body{
+      background: url(https://w.wallhaven.cc/full/2e/wallhaven-2evz6x.png) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+    }
+
+    .contact-body .login-form{
+      /* background-color: rgba(188, 188, 188, 0.4); */
+    }
+
+
+    .login-form {
+      background: transparent;
+      width: 500px;
+      margin: 30px auto;
+      display: -webkit-box;
+      display: flex;
+      flex-direction: column;
+      border-radius: 30px;
+      box-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
+      font-family: sans-serif;
+    }
+
+    #register-body{
+      margin: 30px auto;
+    }
+    
+    .login-form h1 {
+      padding: 35px 35px 0 35px;
+      font-weight: 300;
+      text-align: center;
+      color:antiquewhite;
+      /* color: #803372; */
+    }
+
+    .login-form .contact-head {
+      padding: 35px 35px 0 35px;
+      font-weight: 500;
+      text-align: center;
+      color: #803372;
+    }
+
+    .login-form .contact-head:hover{
+      font-size: 35px;
+      text-shadow: 1px 1px #803372;
+    }
+    
+    .login-form .content {
+      padding: 35px;
+    }
+    
+    .login-form .input-field {
+      padding: 12px 5px;
+      border-radius: 30px;
+    }
+    
+    .login-form .input-field input {
+      font-size: 16px;
+      display: block;
+      font-family: 'Rubik', sans-serif;
+      width: 100%;
+      padding: 10px 1px;
+      border: 0;
+      border-bottom: 1px solid #747474;
+      outline: none;
+      -webkit-transition: all .2s;
+      transition: all .2s;
+      border-radius: 17px;
+      opacity: 0.9;
+    }
+
+    input::placeholder{
+      padding-left: 15px;
+    }
+
+    /* input{
+      padding-left: 15px;
+    } */
+    
+    .content .input-field{
+      font-size: 23px;
+    }
+    
+    .login-form a.link {
+      text-decoration: none;
+      color: #803372;
+      letter-spacing: 0.2px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    
+    .login-form a.link:hover{
+        color: blue;
+    }
+  
+    .login-form .action {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+    }
+    
+    .login-form .action button {
+      width: 100%;
+      border: none;
+      padding: 18px;
+      font-family: 'Rubik', sans-serif;
+      cursor: pointer;
+      text-transform: uppercase;
+      background: #472c49;
+      color: rgb(255, 255, 255);
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 0;
+      letter-spacing: 0.2px;
+      outline: 0;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+    
+    .login-form .action input:hover {
+      background: #000000;
+      color: white;
+    }
+    
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 125px;
+      height: 125px;
+      }
+      
+      .login-form .action input {
+        width: 100%;
+        border: none;
+        padding: 18px;
+        font-family: 'Rubik', sans-serif;
+        cursor: pointer;
+        text-transform: uppercase;
+        background: #472c49;
+        color: rgb(255, 255, 255);
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 0;
+        letter-spacing: 0.2px;
+        outline: 0;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+      }
+
+      .login-form .contact-head{
+        font-size: 40px;
+        font-weight: 500;
+      }
+    
+      .input-field{
+        font-size: 40px;
+      }
+
+      .input-field label{
+        padding: 10px 0;
+        margin-bottom: 20px;
+        margin-left: 12px;
+        font-size: 1.7rem;
+      }
+  
+      .input-field textarea{
+        width: 420px;
+        opacity: 0.7;
+        font-size: large;
+        padding: 8px;
+        border-radius: 17px;
+      }
+
+      .contact-body input::placeholder{
+        opacity: 0.7;
+        margin: 0;
+      }
+
+      textarea::placeholder {
+        color: black;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+
+      .link{
+        padding-left: 50px;
+      }
+
+      .link-login{
+        padding-left: 80px;
+        text-align: center;
+        margin-left: 20px;
+        font-size: 20px;
+      }
+
+      .login-form a.link-login {
+        text-decoration: none;
+        color: #747474;
+        /* color: #803372; */
+        letter-spacing: 0.2px;
+        display: inline-block;
+        margin-top: 20px;
+      }
+      
+      .login-form a.link-login:hover{
+          color: #803372;
+      }
+
+
+
+  
+    
+  
+    /*Footer*/
+
+    footer{
+        margin: none;
+        width: 100%;
+    }
+    .container-fluid {
+      text-align: center;
+      background-color: #3F3351;
+      background-color: #211522;
+      color: rgb(0, 0, 0);
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  
+    .container-fluid p,
+    h5 {
+      color: white;
+    }
+  
+  
+    .icons {
+      width: 20px;
+      height: 20px;
+      width: 80px;
+      height: 80px;
+      padding: 2px;
+    }
+  
+  }

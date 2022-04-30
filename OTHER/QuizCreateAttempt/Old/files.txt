@@ -2,7 +2,7 @@ createQuiz.php file in main folder (to change it's css)
 
 
 
-1. loop in question number at create quiz page
+1. loop in question number at create quiz page  ✔️
 2. constraint on create quiz button on create quiz page 
    (so that it opens attempt quiz only when all questions have been uploaded)
 3. add css and beautification
@@ -11,3 +11,12 @@ createQuiz.php file in main folder (to change it's css)
 6. for quiz id and question id, enter ordered numbering (instead of random id)
 7. Change paths when moving QuizCreateAttempt folder to main QuizItz folder
 8. Follow roadmap on OneNote
+9. Enter Quiz name alsofrom user
+10. While uploading ques, make writing ques and all options compulsory
+
+
+
+
+
+1. On cover pages, the buttons should be able to take branch id and redirect to topic page of the banch directly
+   Instead of having to go to branch page first.

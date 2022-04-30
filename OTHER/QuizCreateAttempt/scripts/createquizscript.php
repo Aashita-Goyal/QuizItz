@@ -6,20 +6,24 @@ session_start();
             $topic = $_POST['topic'];
             $keywords = $_POST['keywords'];
             $totalQuestions = $_POST['totalQuestions'];
-            $quizid = rand(4,1000);
+            // $quizid = rand(4,1000);
+            $quizName = $_POST['quizname'];
+            $startEntering = $_POST['startEntering'];
 
+            $_SESSION["quizName"] = $quizName;
             $_SESSION["topic"]=$topic;
             $_SESSION["tags"]=$keywords;
             $_SESSION["subject"]=$branch;
             $_SESSION["totalQues"]=$totalQuestions;
+            // $_SESSION["qno"]=$qno;
 
 
      if(isset($_POST['startEntering'])) 
      {
-         if(!empty($_POST['topic']) && !empty($_POST['totalQuestions'])){
+         if(!empty($_POST['topic']) && !empty($_POST['totalQuestions']) && !empty($_POST['quizname'])){
     
             
-            $query = "INSERT INTO `quiz` (`quizid`, `branch`, `quiztopic`, `keywords`, `totalques`) VALUES ('$quizid', '$branch', '$topic', '$keywords', '$totalQuestions')";
+            $query = "INSERT INTO `quiz3` (`quizname`, `branch`, `quiztopic`, `keywords`, `totalques`) VALUES ('$quizName', '$branch', '$topic', '$keywords', '$totalQuestions')";
 
             
             $query_result = mysqli_query($con, $query);
@@ -27,7 +31,7 @@ session_start();
             if($query_result == true){ 
             ?>
                 <script>window.alert("Quiz Data Entered! \nPlease enter the Question details now");
-                 window.location.href = "http://localhost/QuizItz/OTHER//QuizCreateAttempt/createQuiz.php#break";</script>
+                 window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/createQuiz.php#enterNewQuestion";</script>
             <?php
 
         }else{

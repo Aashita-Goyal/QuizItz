@@ -1,39 +1,29 @@
-<?php
-            session_start();
-?>
-
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/style1.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/styleTest.css">
     
 
-  <title>Branch Page</title>
-  <!-- <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="../css/style1.css" /> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+     <!-- FontAwesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-</head>
-
+   </head>
 <body>
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-md bg-gradient-secondary" id="grad">
+   <!--Navbar-->
+   <nav class="navbar navbar-expand-md bg-gradient-secondary" id="grad">
     <div class="padLogo padLogo-light ps-4"></div>
     <div id="mySidenav" class="sidenav">
       <div class="closeSide">
@@ -56,7 +46,7 @@
       <a href="#" class="toggleNav">Help</a>
       <a href="#" class="toggleNav">Contact</a>
     </div>
-
+    
     <span style="font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; </span>
     <script>
       function openNav() {
@@ -91,11 +81,11 @@
       </ul>
       <ul ul class="nav justify-content-end">
         <!--<li class="nav-item">
-                  <a class="nav-link" href="">
-                    <p class="text-light mt-2">Settings<i class="fa-solid fa-gear p-2"></i></p>
-                    <img src="https://img.icons8.com/small/128/000000/settings.png" class="icons" />
-                  </a>
-                </li>-->
+          <a class="nav-link" href="">
+            <p class="text-light mt-2">Settings<i class="fa-solid fa-gear p-2"></i></p>
+            <img src="https://img.icons8.com/small/128/000000/settings.png" class="icons" />
+          </a>
+        </li>-->
         <li class="nav-item">
           <a class="nav-link" href="profile.html">
             <p class="text-light mt-2">Profile<i class="fa-solid fa-user p-2"></i></p>
@@ -115,55 +105,58 @@
     </div>
   </nav>
 
-  <section>
-    <div><br /><br /><br /></div>
-  </section>
+<section>
+  <div><br /><br /><br /></div>
+</section>
 
-  <!--==================== STEPS ====================-->
-  <section class="steps section container">
-    <div class="steps__bg">
-      <h2 class="section__title-center steps__title">
-        BRANCHES
-      </h2>
+<br /> <br /> <br />
 
-      <div class="steps__container grid">
-        <div class="steps__card">
-          <div class="steps__card-number">IT</div>
-          <h3>Information Technology</h3>
-        </div>
+  <!-- <section> -->
+ <header>
+   <div>
+   <div class="content">
+     <div class="text-content">
+       <div class="text">STUDY MATERIAL </div>
+       <div class="name">STUDY HARD</div>
+       <div class="material">
+         <div class="material">
+           <span> </span>
+            <div class="typing-text">
+              <span class="one">READY TO </span>
+              <span class="two">SCORE.... </span>
+            </div>
+          </div>
+       </div>
+       <div class="buttons">
+       <a href="#allQuiz"><button>Study material</button></a>
+       <a href="./uploadStudyMaterial.php"><button>Upload material</button></a>
+       <a href="./branchPage.php"><button>Topic List</button></a>
+ </div>
 
-        <div class="steps__card">
-          <div class="steps__card-number">BT</div>
-          <h3>Biotech</h3><br><br>
-        </div>
-
-        <div class="steps__card">
-          <div class="steps__card-number">CE</div>
-          <h3>Chemical Engineering</h3><br>
-        </div>
+     </div>
+     <div class="girl">
+        <img src="./assets/Images/collage.png">
+        <!-- <img src="../../assets/Images/collage.png"> -->
       </div>
+      
+   </div>
 
-      <div class="steps__container grid">
-        <div class="steps__card">
-          <div class="steps__card-number">EE</div>
-          <h3>Electrical and Electronics</h3>
+ </header>
+<!-- </section> -->
 
-        </div>
-        <div class="steps__card">
-          <div class="steps__card-number">EC</div>
-          <h3>Electronics and Communication</h3>
-
-        </div>
-        <div class="steps__card">
-          <div class="steps__card-number">MT</div>
-          <h3>Mechatronics</h3><br>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<!-- <section> -->
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<section>
+<br /><br />
+  <div class="all_quiz_list" id="allQuiz" >
+      <h2 style="text-align: center;">List of All Study Material Available</h2>
+      <p>Calling list of all study material here</p>
+  </div>
+</section>
   <!--Footer-->
   <footer>
+    <br /> <br /> <br /> <br /> <br /> <br /> <br />
+    <br /> <br /> <br /> <br /> <br /> <br /> <br />
     <div class="container-fluid p-lg-3">
       <h5 class="ps-2 mt-5">Follow Us</h5>
       <a href="" class="icons"><i class="fa-brands fa-facebook-f" style="color: white"></i></a>
@@ -174,6 +167,11 @@
       <p class="pt-lg-0">© 2022 QuizItz Inc</p>
     </div>
   </footer>
-</body>
+</section>
 
+  
+
+
+</body>
 </html>
+
