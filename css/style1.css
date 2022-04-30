@@ -3,8 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-  /* background-color: #f0ebef; */
 }
 
 .text-content{
@@ -297,6 +295,10 @@ img{
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-5);
   transition: .3s;
+}
+
+.steps__card-number h3{
+  text-align: center;
 }
 
 .steps__card-title{

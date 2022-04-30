@@ -1,0 +1,143 @@
+
+
+
+
+
+
+
+
+
+
+
+/* LAPTOP SCREEN */
+@media (min-width: 1024px) {
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .triangle-design{
+        display: flex;
+    }
+
+    .triangle{
+        width: 100px;
+  height: 100px;
+  background: grey;
+  border-radius: 50%;
+  margin: 30px;
+    }
+
+    /* .traingle-text-hide{
+        display: none;
+    }
+
+    .traingle-text:hover + .traingle-text-hide {
+        text-align: justify;
+        display:contents;
+        color: black;
+    } */
+
+
+    /* .hide {
+        display: none;
+      }
+          
+      .myDIV:hover + .hide {
+        display: block;
+        color: red;
+      }
+
+
+      .toBeReplaced span {
+        display: none;
+    }
+    .toBeReplaced::after {
+        content: "This text replaces the original.";
+    } 
+
+    .involved-share:hover .hover,
+.involved-share .hover-other {
+    display: none;
+}
+.involved-share:hover .hover-other {
+    display: block;
+}*/
+
+.triangle:hover .triangle-text,
+.triangle .triangle-text-hide {
+    display: none;
+}
+.triangle:hover .triangle-text-hide {
+    display: block;
+    background-color: black;
+    color: aliceblue;
+    width: 100px;
+    height: 100px;
+    background: black;
+    border-radius: 50%;
+    text-align: center;
+    padding: 20px;
+    /* font-size: larger; */
+}
+
+.triangle-text{
+    margin-left: 13px;
+    margin-top: 37px;
+    font-size: 23px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#text1{
+    padding-left: 1px;
+}
+
+.triangle-hide{
+    margin-top: 20px;
+    margin-left: 20PX;
+}
+
+.text-show1{
+    margin-left: 10px;
+}
+
+
+    #triangle1{
+    }
+
+    #triangle2{
+    }
+
+    #triangle3{
+    }
+    
+    
+    /* .triangle{
+        width: 0;
+        height: 0;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        border-bottom: 100px solid goldenrod;
+    }
+
+    #triangle1{
+        position: relative;
+        z-index: 2;
+        margin-top: 20px;
+    }
+
+    #triangle2{
+        transform: rotate(180deg);
+        position: relative;
+        z-index: 1;
+}
+
+    #triangle3{
+        position: relative;
+        z-index: 2;
+        margin-top: 20px;
+    } */
+}
