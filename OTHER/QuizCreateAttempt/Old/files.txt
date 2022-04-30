@@ -14,6 +14,12 @@ createQuiz.php file in main folder (to change it's css)
 9. Enter Quiz name alsofrom user
 10. While uploading ques, make writing ques and all options compulsory
 
+11. when uploading, call questions along with quiz id 
+12. display quiz details, row wise on quizCoverPage
+13. call all quiz details on allQuizInfoPage
+14. display uploaded questions one by one on questonDisplayPage 
+    (questions called with branch, topic, quiz id, ques id, quesno )
+
 
 
 
