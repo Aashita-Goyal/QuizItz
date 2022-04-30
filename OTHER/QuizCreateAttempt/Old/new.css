@@ -1,0 +1,968 @@
+.topic__bar{
+    border-color: black;
+}
+
+.topic__name{
+    border-color: black;
+}
+
+.placement__list{
+    text-align: center;
+}
+
+.placement__list div{
+    border-color: black;
+    border-width: 20px;
+    text-align: center;
+}
+
+.topic__bar{
+    background-color: azure;
+    margin-bottom: 15px;
+    margin: 10px;
+}
+
+.topic__name{
+    background-color: #864879;
+    height: 45px;
+    width: 200px;
+    text-align: center;
+    padding-top: 8px;
+    font-size: smaller;
+}
+
+.topic__choices{
+    background-color: darkgray;
+    height: 45px;
+    width: 650px;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding: 7px;
+    font-size: x-small;
+}
+
+
+.topic__option__1, .topic__option__2, .topic__option__3, .topic__option__4, .topic__option__5{
+    border-radius: 20px;
+    margin: 1px;
+    width: 32%;
+    height: 30px;
+}
+
+.topic__search{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.topic__new__heading{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 50px;
+}
+
+.topic__new__form{
+    margin-left: 190px;
+}
+
+.attempt__quiz__container{
+    padding: 40px;
+}
+
+.attempt__quiz__heading{
+    text-align: center;
+    color: #B67C9A;
+    background-color: #3F3351;
+    height: 70px;
+    width: 600px;
+    margin-bottom: 20px;
+    margin-left: 170px;
+}
+
+.quiz__start{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+.quiz__start a{
+    text-decoration: none;
+    color: #864879;
+}
+
+.quiz__start button{
+    font-size: 25px;
+    background-color: #864879;
+    color: #1F1D36;
+    font-weight:500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 180px;
+}
+
+.pad{
+    padding-top: 60px;
+}
+.attempt__quiz__details p{
+    text-decoration: double;
+    margin-left: 180px;
+    font-size: 25px;
+}
+
+/* Quiz */
+*{
+    box-sizing: border-box;
+  }
+  .quiz{
+    background-color: #b8c6db;
+    background-image: url("https://images5.alphacoders.com/394/thumb-1920-394862.jpg");
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("https://images5.alphacoders.com/394/thumb-1920-394862.jpg");
+  }
+  .quiz-container{
+    background-color: #1F252F;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-top: 180px;
+    margin-bottom: 300px;
+    color: aliceblue;
+    width: 800px;
+    margin-left: 100px;
+  }
+  .quiz-header{
+    padding: 4rem;
+  }
+  h2{
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+  
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+  ul li{
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+    button{
+      background-color: #864879 ;
+      color: #fff;
+      border: none;
+      display: block;
+      width: 100%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-family: inherit;
+      padding: 1.3rem;
+    }
+    button:hover{
+      background-color: #C197D2;
+    }
+
+    .answer__options{
+        display: flex;
+        justify-content: space-between
+    }
+
+    .option__one__three{
+        padding-left: 75px;
+    }
+
+    .option__two__four{
+        padding-right: 130px ;
+    }
+
+    .quiz__question__body{
+        /*  background-image: url("https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg");
+          object-fit: contain;
+          max-width: 100%; */
+          background-image: url('https://media.istockphoto.com/photos/question-mark-symbol-drawn-by-purple-neon-light-on-black-wall-picture-id1249090099?k=20&m=1249090099&s=170667a&w=0&h=pg2zl1nt89icF13R4KRevEvDXTNYY77XLvywWElYUjQ=');
+        
+      }
+
+      .profile__container{
+        display: flex;
+    }
+    
+    .profile__logo{
+        border-radius: 100px;
+        padding-left: 25px;
+    }
+
+    .profile__logo img{
+        width: 150px;
+        border-radius: 100px;
+        height: 150px;
+        border-color: #864879;
+        
+    }
+
+
+    .profile__left__section{
+        margin-right: 200px;
+        height: 570px;
+        width: 25%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .profile__right__section{
+        margin-left: 200px;
+        margin: 10px;
+        padding: 5px;
+        width: 75%;
+    }
+
+    .left__menu{
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .left__menu a{
+        text-decoration: none;
+        color: #1F252F;
+    }
+
+    .your__details{
+        background-image: url("https://barbarashdwallpapers.com/wp-content/uploads/2011/01/Purple-abstract-wallpaper-2-1.jpg");
+        color: white;
+        padding-left: 10px;
+    }
+
+    .your__details strong{
+        margin: 20px;
+        padding-left: 20px;
+    }
+
+    .update__details__heading{
+        text-align: center;
+        font-weight: 600;
+        padding-top: 30px;
+        font-size: 35px;
+    }
+
+    .profile__button{
+        margin-top: 30px;
+        margin-left: 250px;
+        margin-bottom: 30px;
+    }
+
+    .update__details__info{
+        margin-left: 20px;
+    }
+
+    .quiz__create__heading{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+
+    #topic{
+        width: 300px;
+    }
+
+    .quiz__details{
+        margin-left: 150px;
+        width: 800px;
+    }
+
+    .question__details p{
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+        margin-right: 100px;
+    }
+
+    .question__details__info{
+        margin-left: 200px;
+    }
+
+    #questionDescription{
+        width: 400px;
+        height: 80px;
+        text-align: center;
+    }
+
+    .quiz__button{
+        width: 200px;
+        /* margin-left: 180px; */
+        margin-right: 300px;
+    }
+
+    .create__quiz{
+        margin: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+}
+
+
+@media (min-width: 1024px) {
+
+   
+
+    .topic__bar{
+        border-color: black;
+    }
+    
+    .topic__name{
+        border-color: black;
+    }
+    
+    .placement__list{
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .placement__list div{
+        border-color: black;
+        border-width: 20px;
+        text-align: center;
+    }
+    
+    .topic__bar{
+        background-color: azure;
+        margin-bottom: 15px;
+        margin: 10px;
+    }
+    
+    .topic__name{
+        background-color: #864879;
+        width: 350px;
+        height: 45px;
+        text-align: center;
+        padding-top: 8px;
+    }
+    
+    .topic__choices{
+        background-color: darkgray;
+        width: 850px;
+        height: 45px;
+        justify-content: center;
+        justify-content: space-between;
+        justify-content: space-around;
+        padding: 7px;
+        font-size: smaller;
+        text-decoration: none;
+    }
+    
+    
+    .topic__option__1, .topic__option__2, .topic__option__3, .topic__option__4, .topic__option__5{
+        border-radius: 20px;
+        margin: 1px;
+        width: 32%;
+        height: 30px;
+    }
+
+    .topic__search{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .topic__new__heading{
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 50px;
+    }
+
+    .topic__new__form{
+        margin-left: 250px;
+    }
+
+    .attempt__quiz__container{
+        padding: 40px;
+    }
+
+    .attempt__quiz__heading{
+        text-align: center;
+        color: #B67C9A;
+        background-color: #3F3351;
+        height: 70px;
+        width: 800px;
+        margin-left: 200px;
+        padding-bottom: 20px;
+    }
+
+    .attempt__quiz__heading h2{
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .quiz__start{
+        text-align: center;
+        margin-top: 50px;
+        /* margin-left: 30px; */
+    }
+
+    .quiz__start a{
+        text-decoration: none;
+        color: #864879;
+    }
+
+    .quiz__start button{
+        font-size: 25px;
+        background-color: #864879;
+        color: #1F1D36;
+        font-weight:500;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 200px;
+    }
+
+    .quiz__start__options{
+        text-align: center;
+        margin-top: 50px;
+        /* margin-left: 30px; */
+
+    }
+
+    .quiz__start__options{
+        text-decoration: none;
+        color: #864879;
+
+    }
+
+
+    .pad{
+        padding-top: 60px;
+    }
+    .attempt__quiz__details p{
+        text-decoration: double;
+        margin-left: 200px;
+        font-size: 25px;
+    }
+
+
+    .attempt__quiz__details h3{
+        margin-left: 200px;
+    }
+
+    .profile__container{
+        display: flex;
+    }
+    
+    .profile__logo{
+        border-radius: 100px;
+        padding-left: 55px;
+    }
+
+    .profile__logo img{
+        width: 150px;
+        border-radius: 100px;
+        height: 150px;
+        border-color: #864879;
+        
+    }
+
+
+    .profile__left__section{
+        margin-right: 200px;
+        height: 570px;
+        width: 25%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .profile__right__section{
+        margin-left: 200px;
+        margin: 10px;
+        padding: 5px;
+        width: 75%;
+        font-size: 20px;
+    }
+
+    .left__menu{
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .left__menu a{
+        text-decoration: none;
+        color: #1F252F;
+    }
+
+    .your__details{
+        background-image: url("https://barbarashdwallpapers.com/wp-content/uploads/2011/01/Purple-abstract-wallpaper-2-1.jpg");
+        color: white;
+        padding-left: 10px;
+    }
+
+    .your__details strong{
+        margin: 20px;
+        padding-left: 20px;
+    }
+
+    .update__details__heading{
+        text-align: center;
+        font-weight: 600;
+        padding-top: 30px;
+        font-size: 25px;
+    }
+
+    .profile__button{
+        margin-top: 30px;
+        margin-left: 350px;
+        margin-bottom: 30px;
+    }
+
+    .update__details__info{
+        margin-left: 20px;
+    }
+
+
+
+
+/* Quiz */
+*{
+    box-sizing: border-box;
+  }
+  .quiz{
+    background-color: #b8c6db;
+    background-image: url("https://images5.alphacoders.com/394/thumb-1920-394862.jpg");
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("https://images5.alphacoders.com/394/thumb-1920-394862.jpg");
+  }
+  .quiz-container{
+    background-color: #1F252F;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-top: 180px;
+    margin-bottom: 300px;
+    color: aliceblue;
+    width: 800px;
+    margin-left: 220px;
+  }
+  .quiz-header{
+    padding: 4rem;
+  }
+  h2{
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+  
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+  ul li{
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+    button{
+      background-color: #864879 ;
+      color: #fff;
+      border: none;
+      display: block;
+      width: 100%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-family: inherit;
+      padding: 1.3rem;
+    }
+    button:hover{
+      background-color: #C197D2;
+    }
+
+    .answer__options{
+        display: flex;
+        justify-content: space-between
+    }
+
+    .option__one__three{
+        padding-left: 75px;
+    }
+
+    .option__two__four{
+        padding-right: 130px ;
+    }
+
+    .quiz__question__body{
+      /*  background-image: url("https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg");
+        object-fit: contain;
+        max-width: 100%; */
+        background-image: url('https://media.istockphoto.com/photos/question-mark-symbol-drawn-by-purple-neon-light-on-black-wall-picture-id1249090099?k=20&m=1249090099&s=170667a&w=0&h=pg2zl1nt89icF13R4KRevEvDXTNYY77XLvywWElYUjQ=');
+      
+    }
+
+    
+
+    .quiz__create__heading{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+
+    #topic{
+        width: 300px;
+    }
+
+    .quiz__details{
+        margin-left: 200px;
+        width: 800px;
+    }
+
+    .question__details p{
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+        padding-left: 100px;
+    }
+
+    .question__details__info{
+        margin-left: 200px;
+    }
+
+    #questionDescription{
+        width: 400px;
+        height: 80px;
+        text-align: center;
+    }
+
+    .quiz__button{
+        width: 200px;
+        /* margin-left: 470px; */
+    }
+
+    .create__quiz{
+        margin: 20px;
+        margin-left: 65px;
+    }
+
+    .course{
+    }
+
+    .text-box{
+        background-color: #B67C9A;
+        height: 300px;
+        margin-top: 15px;
+    }
+
+    .text-box h1{
+        padding-top: 30px;
+    }
+
+    .cta{
+        background: linear-gradient(to bottom, #703A4B 0%, #B67C9A 100%);
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 1366px){
+    .topic__bar{
+        border-color: black;
+    }
+    
+    .topic__name{
+        border-color: black;
+    }
+    
+    .placement__list{
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .placement__list div{
+        border-color: black;
+        border-width: 20px;
+        text-align: center;
+    }
+    
+    .topic__bar{
+        background-color: azure;
+        margin-bottom: 15px;
+        margin: 10px;
+    }
+    
+    .topic__name{
+        background-color: #864879;
+        width: 350px;
+        height: 45px;
+        text-align: center;
+        padding-top: 8px;
+    }
+    
+    .topic__choices{
+        background-color: darkgray;
+        width: 850px;
+        height: 45px;
+        justify-content: center;
+        justify-content: space-between;
+        justify-content: space-around;
+        padding: 7px;
+        font-size: smaller;
+        text-decoration: none;
+    }
+    
+    
+    .topic__option__1, .topic__option__2, .topic__option__3, .topic__option__4, .topic__option__5{
+        border-radius: 20px;
+        margin: 1px;
+        width: 32%;
+        height: 30px;
+    }
+
+    .topic__search{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .topic__new__heading{
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 50px;
+    }
+
+    .topic__new__form{
+        margin-left: 250px;
+    }
+
+    .attempt__quiz__container{
+        padding: 40px;
+        margin-left: 150px;
+    }
+
+    .attempt__quiz__heading{
+        text-align: center;
+        color: #B67C9A;
+        background-color: #3F3351;
+        height: 80px;
+        width: 1100px;
+        padding-top: 5px;
+        margin-bottom: 20px;
+        margin-left: 200px;
+    }
+    
+    .quiz__start{
+        text-align: center;
+        margin-top: 50px;
+        margin-right: 150px;
+    }
+
+    .quiz__start a{
+        text-decoration: none;
+        color: #864879;
+    }
+
+    .quiz__start button{
+        font-size: 15px;
+        background-color: #864879;
+        color: #1F1D36;
+        font-weight:500;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 200px;
+    }
+
+    .pad{
+        padding-top: 60px;
+    }
+    .attempt__quiz__details p{
+        text-decoration: double;
+        margin-left: 200px;
+        font-size: 25px;
+    }
+
+    .profile__container{
+        display: flex;
+    }
+    
+    .profile__logo{
+        border-radius: 100px;
+        padding-left: 145px;
+    }
+
+    .profile__logo img{
+        width: 150px;
+        border-radius: 100px;
+        height: 150px;
+        border-color: #864879;
+        
+    }
+
+
+    .profile__left__section{
+        margin-right: 200px;
+        height: 1050px;
+        width: 25%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .profile__right__section{
+        margin-left: 200px;
+        margin: 10px;
+        padding: 5px;
+        width: 75%;
+        font-size: 30px;
+    }
+
+    .left__menu{
+        text-align: center;
+        padding-top: 80px;
+        font-size: 30px;
+    }
+
+    .left__menu a{
+        text-decoration: none;
+        color: #1F252F;
+    }
+
+    .your__details{
+        background-image: url("https://barbarashdwallpapers.com/wp-content/uploads/2011/01/Purple-abstract-wallpaper-2-1.jpg");
+        color: white;
+        padding-left: 30px;
+    }
+
+    .your__details strong{
+        margin: 20px;
+        padding-left: 20px;
+    }
+
+    .update__details__heading{
+        text-align: center;
+        font-weight: 600;
+        padding-top: 30px;
+        font-size: 35px;
+    }
+
+    .profile__button{
+        margin-top: 30px;
+        margin-left: 550px;
+        margin-bottom: 30px;
+    }
+
+    .update__details__info{
+        margin-left: 20px;
+    }
+
+
+/* Quiz */
+.quiz{
+  background-color: #b8c6db;
+  background-image: url("https://images5.alphacoders.com/394/thumb-1920-394862.jpg");
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("https://images5.alphacoders.com/394/thumb-1920-394862.jpg");
+}
+.quiz-container{
+  background-color: #1F252F;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  width: 1000px;
+  overflow: hidden;
+  margin-left: 470px;
+  margin-top: 180px;
+  margin-bottom: 300px;
+  color: aliceblue;
+}
+.quiz-header{
+  padding: 4rem;
+}
+h2{
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+ul li{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  button{
+    background-color: #864879 ;
+    color: #fff;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: inherit;
+    padding: 1.3rem;
+  }
+  button:hover{
+    background-color: #C197D2;
+  }
+
+  .answer__options{
+    display: flex;
+    justify-content: space-between
+}
+
+.option__one__three{
+    padding-left: 75px;
+}
+
+.option__two__four{
+    padding-right: 130px ;
+}
+
+
+.quiz__question__body{
+    /*  background-image: url("https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg");
+      object-fit: contain;
+      max-width: 100%; */
+      background-image: url('https://media.istockphoto.com/photos/question-mark-symbol-drawn-by-purple-neon-light-on-black-wall-picture-id1249090099?k=20&m=1249090099&s=170667a&w=0&h=pg2zl1nt89icF13R4KRevEvDXTNYY77XLvywWElYUjQ=');
+    
+  }
+
+  .create__quiz{
+    margin: 20px;
+    margin-left: 350px;
+    width: 1200px;
+}
+  }

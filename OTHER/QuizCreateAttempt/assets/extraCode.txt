@@ -1,0 +1,50 @@
+<?php
+            // echo 'Total ques are'. $_SESSION["totalQues"]. '<br>';
+          //  if($_SESSION["totalQues"] <= 10){
+            // $qno = $_SESSION["totalQues"];
+
+          //   $qno = 1;
+          //   echo "<br id='break' />";
+          //   while($qno <= $_SESSION["totalQues"]){
+          //   $qno = $qnoUpdate;
+            // echo "<label for='questionNumber'>Question Number </label>";
+            // echo "<input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='$qno' />";
+            
+          //   $qno++;
+          //   $qnoUpdate = $qno;
+          // }
+          
+
+          //  } else {
+          //    echo "Maximum number of questions can be 10";
+          //  }
+
+           //$qno = 0;
+    //       if($qno==0){
+    //       echo "<br id='break' />";
+    //       echo "<label for='questionNumber'>Question Number </label>";
+    //         $qno++;
+    //         if ($qno <= $_SESSION["var"]){
+    //           echo "<input type='text' id='questionNumber' name='questionNumber' placeholder='question number' value='$qno' />";
+
+    
+    //  $qnoUpdate = $qno + 1;
+    //   }
+    // }else{
+    //    echo "Question number out of range";
+    //  }
+      ?>
+
+
+
+       <?php
+            // $qno = $_SESSION["totalQues"];
+            // if($qno )
+            //  echo  "<a href='./attemptQuiz.php'><button type='button' class='btn btn-dark' name='createQuiz'>Create Quiz!</button></a>";
+              ?>
+
+
+    //  session_start();
+//  $qno = $_SESSION["totalQues"];
+//  while($qno <= $_SESSION["var"]){}
+// $totalQuestionsEntered=$_SESSION["var"];
