@@ -25,7 +25,7 @@ session_start();
             // $quizid = (int)$quizid_query;
             // $_SESSION["quizid_query"]=$quizid;
 
-            $countid = $_SESSION['countid'];
+            $quizid = $_SESSION['quizQuestionId'];
             // $qno = 0;
    
 
@@ -36,7 +36,7 @@ if(isset($_POST['nextQuestion']))
        !empty($_POST['correct']))
        {
            $queryQuestion = "INSERT INTO `question3` (`qno`, `ques`, `a`, `b`, `c`, `d`, `correct`, `quizid`) 
-                             VALUES ('$qnum', '$ques', '$opta', '$optb', '$optc', '$optd', '$correct', '$countid')";
+                             VALUES ('$qnum', '$ques', '$opta', '$optb', '$optc', '$optd', '$correct', '$quizid')";
            $query_result_question = mysqli_query($con, $queryQuestion);
            
            if($query_result_question == true){ ?>

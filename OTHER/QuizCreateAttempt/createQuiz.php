@@ -20,6 +20,8 @@ if (isset($_POST['reset'])) {
     $_SESSION['counter'] = 1;
 }
 
+
+
 ?>
 
 
@@ -170,6 +172,7 @@ if (isset($_POST['reset'])) {
         echo "<div class='question__details'>";
         echo "<div class='question__details__info'>";
         echo "<strong><p class='text-start'>Quiz ID : </strong>$countid</p>";
+        $_SESSION['quizQuestionId'] = $countid;
         echo "</div>";
         echo "</div>";
   } else {

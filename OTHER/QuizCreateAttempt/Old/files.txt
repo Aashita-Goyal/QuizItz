@@ -30,6 +30,13 @@ createQuiz.php file in main folder (to change it's css)
 ✔️ 19. see how to access url components
 20. On attempt quiz page, call all details of question table (so they can be posted to url when 
    user clicks start quiz button to go to quizQuestion)
+21. When we click start quiz button and quiz and question details are posted in url, 
+    then ques number has to be one. according to present code, it is taking the max question no.
+✔️ 22. quizid of quiz not being updated in quizid in question table
+23. incorrect question id being called on questionDisplayPage
+24. quesid and qno are not being updated in url
+✔️ 25. question table is only taking one question under single quizid
+26. for now, display all questions on same page, therefore, don't call ques no inurl for now
 
 
 
@@ -63,3 +70,4 @@ POINTS
 
 7. Create Quiz button on createQuiz page should lead us to topic page, but, for now, 
    it will lead us to quizCoverPage
+9. every question should be displayed on separate page, but, for now, showing all ques on same page

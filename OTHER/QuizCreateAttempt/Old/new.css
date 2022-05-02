@@ -168,7 +168,7 @@
 
     .answer__options{
         display: flex;
-        justify-content: space-between
+        justify-content: space-between;
     }
 
     .option__one__three{
@@ -557,7 +557,8 @@
     margin-left: 220px;
   }
   .quiz-header{
-    padding: 4rem;
+    /* padding: 4rem; */
+    padding: 20px;
   }
   h2{
     padding: 1rem;

@@ -1,3 +1,16 @@
+<?php
+session_start();
+require '../QuizCreateAttempt/db/dbconn.php';
+
+$quiz_result = mysqli_query($con,"SELECT * FROM quiz3 WHERE quizid='" . $_GET['quizid'] . "'");
+$row= mysqli_fetch_array($quiz_result);
+
+$question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" . $_GET['quizid'] . "'");
+// $row_question = mysqli_fetch_array($question_result);
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -94,17 +107,25 @@
     </nav>
     <div class="quiz-container">
         <div class="quiz-header">
-            <h2>Question</h2>
-            <div class="answer__options">
+
+        <?php
+            if (mysqli_num_rows($question_result) > 0) {
+        
+            $i = 0;
+            while($row_question = mysqli_fetch_array($question_result)){
+        ?>
+
+            <h2>Q<?php echo $row_question['qno'] ?>. &nbsp;<?php echo $row_question['ques'] ?></h2>
+            <div class="answer__options pb-3 mb-5">
             <div class="option__one__three">
             <ul>
                 <li>
                     <input type="radio" name="answer" id="a" class="answer">
-                    <label for="a" id="a_text">Answer a</label>
+                    <label for="a" id="a_text"><?php echo $row_question['a'] ?></label>
                 </li>
                 <li>
                     <input type="radio" name="answer" id="b" class="answer">
-                    <label for="b" id="b_text">Answer b</label>
+                    <label for="b" id="b_text"><?php echo $row_question['b'] ?></label>
                 </li>
             </ul>
         </div>
@@ -113,16 +134,24 @@
             <ul>
                 <li>
                     <input type="radio" name="answer" id="c" class="answer">
-                    <label for="c" id="c_text">Answer c</label>
+                    <label for="c" id="c_text"><?php echo $row_question['c'] ?></label>
                 </li>
                 <li>
                     <input type="radio" name="answer" id="d" class="answer">
-                    <label for="d" id="d_text">Answer d</label>
+                    <label for="d" id="d_text"><?php echo $row_question['d'] ?></label>
                 </li>
             </ul>
         </div>
         </div>
         </div>
+        <?php
+            $i++;
+            // ++$_GET['quizid'];
+            }
+        } else {
+                echo "No questions available";
+        }
+        ?>
         <button id="submit">Submit</button>
     </div>
     <!--Footer-->

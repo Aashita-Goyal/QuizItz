@@ -137,43 +137,39 @@ $row= mysqli_fetch_array($quiz_result);
         </div>
 
         <?php
-        $question_result = mysqli_query($con, "SELECT * FROM question3");
-                  if(mysqli_num_rows($quiz_result) > 0){
-                    if (mysqli_num_rows($question_result) > 0) {
+        $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" . $_GET['quizid'] . "'");
+                  // if(mysqli_num_rows($quiz_result) > 0){
+                  //   if (mysqli_num_rows($question_result) > 0) {
                     ?>
-                        <table class='table table-bordered table-striped'>
                             <?php
-                            $i = 0;
-                            while ($row = mysqli_fetch_array($quiz_result)) {
-                              while($row_question = mysqli_fetch_array($quiz_result)){
+                            // $i = 0;
+                            // while ($row = mysqli_fetch_array($quiz_result)) {
+                              //  while($row_question = mysqli_fetch_array($question_result)){
+                              $row_question = mysqli_fetch_array($question_result);
                             ?>
-                                    <?php echo $row["quizname"]; ?>
-                                    <?php echo $row["branch"]; ?>
-                                    <?php echo $row["quiztopic"]; ?>
-                                    <a href="./quizQuestion.php?quizid=<?php echo $row['quizid']; ?>&quesid=<?php echo $row_question['quesid']; ?>&qno=<?php echo $row_question['quesid']; ?>"><p>Start Quiz</p></a>
-                                    <!-- <a href="./topicAllQuizInfo.php?branch=
-                                    <?php 
-                                    // echo $row["branch"]; 
-                                    ?>
-                                    ">Other quizzes for this topic and branch</a> -->
+                            
                             <?php
-                                $i++;
-                            }
-                          }
+                              //    $i++;
+                              // }
+                          // }
                             ?>
-                        </table>
                     <?php
-                    } else {
-                        echo "No data foundin question table";
-                    }
-                  }else{
-                    echo "No data foundin question table";
-                  }
+                  //   } else {
+                  //       echo "No data foundin question table";
+                  //   }
+                  // }else{
+                  //   echo "No data foundin question table";
+                  // }
                     ?>
 
 
         <div class="quiz__start">
-            <a href="./quizQuestion.php"><button type="button" class="btn btn-dark">Start Quiz!</button></a>
+          <!-- IMPORTANT -displaying qno also in url
+            <a href="./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>&qno=<?php echo $row_question['qno'];?>"><button type="button" class="btn btn-dark">Start Quiz!</button></a> 
+          -->
+            <!-- <a href="./quizQuestion.php"><button type="button" class="btn btn-dark">Start Quiz!</button></a> -->
+
+            <a href="./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>"><button type="button" class="btn btn-dark">Start Quiz!</button></a>
             <strong><p class="pad"><a href="./home.html">Go to home</a></p></strong>
             
             <strong><p><a href="./topicPage.html">Choose another quiz</a></p></strong>
