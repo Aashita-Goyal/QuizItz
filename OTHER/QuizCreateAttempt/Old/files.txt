@@ -37,7 +37,21 @@ createQuiz.php file in main folder (to change it's css)
 24. quesid and qno are not being updated in url
 ✔️ 25. question table is only taking one question under single quizid
 26. for now, display all questions on same page, therefore, don't call ques no inurl for now
-
+27. On quiz qusestion display page, store the values entered by user
+28. create a user answer table to store values inputted by user 
+29. values in user answer table will be inserted on submitquestionscript page
+30. once sumitted, this page will redirect user to compareanswer page 
+31. make compare answer page
+32. compare answer page will redirect user to result page
+33. result page will call data from compare answer page and display result
+34. profile page, to display result on profile page, we will need to call user's result using it's 
+   unique id, i.e. email id.
+35. On quiz question page, before submitting, we can ask user for entering email id.
+36. email id will be updated to user answer table
+37. we need to check if that email id already exists in the database
+38. if it does not exist, we will display a message to user, that there result will not be stored 
+    on their profile (this may not be necessary because user will be able to access quiz page only if
+    he/she is logged in.)
 
 
 1. On cover pages, the buttons should be able to take branch id and redirect to topic page of the banch directly

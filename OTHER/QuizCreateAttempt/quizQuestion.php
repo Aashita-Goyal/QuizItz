@@ -109,13 +109,13 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
 
 
     <div class="quiz-container w-80">
-        
 
         <?php
             if (mysqli_num_rows($question_result) > 0) {
         
             $i = 0;
             while($row_question = mysqli_fetch_array($question_result)){
+            echo "<form method='post' action='../QuizCreateAttempt/scripts/submitanswerscript.php'>";
         
             echo "<div class='quiz-header w-100' style='width: 1000px;'>";
             echo "<h2>Q$row_question[qno]. &nbsp;$row_question[ques]</h2>";
@@ -124,13 +124,13 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
             echo "<ul>";
             echo "<li>";
             echo "<div class='d-flex'>";
-            echo "<input type='radio' name='answer' id='a' class='answer m-2'>";
+            echo "<input type='radio' name='answerA' id='a' class='answer m-2'>";
             echo "<label for='a' id='a_text'>$row_question[a]</label>";
             echo "</div>";
             echo "</li>";
             echo "<li>";
             echo "<div class='d-flex'>";
-            echo "<input type='radio' name='answer' id='b' class='answer m-2'>";
+            echo "<input type='radio' name='answerB' id='b' class='answer m-2'>";
             echo "<label for='b' id='b_text'>$row_question[b]</label>";
             echo "</div>";
             echo "</li>";
@@ -141,13 +141,13 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
                     echo "<ul>";
                     echo "<li>";
                     echo "<div class='d-flex'>";
-                    echo "<input type='radio' name='answer' id='c' class='answer m-2'>";
+                    echo "<input type='radio' name='answerC' id='c' class='answer m-2'>";
                     echo "<label for='c' id='c_text'>$row_question[c]</label>";
                     echo "</div>";
                     echo "</li>";
                     echo "<li>";
                     echo "<div class='d-flex'>";
-                    echo "<input type='radio' name='answer' id='d' class='answer m-2'>";
+                    echo "<input type='radio' name='answerD' id='d' class='answer m-2'>";
                     echo "<label for='d' id='d_text'>$row_question[d]</label>";
                     echo "</div>";
                     echo "</li>";
@@ -155,6 +155,8 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
                     echo "</div>";
                     echo "</div>";
                     echo "</div>";
+                echo "</form>";
+            
             $i++;
             // ++$_GET['quizid'];
             }
