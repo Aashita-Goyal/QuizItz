@@ -48,6 +48,9 @@ body {
   }
 
   body {
+    width: 100%;
+    width: auto;
+    overflow-x: hidden;
     /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmevr7YgGfhP1zSlVYtqzitM1N8q_KI965Q&usqp=CAU);
         background-size: contain;
          background-image: url(https://wallpapercave.com/wp/wp2672827.jpg); */
@@ -422,66 +425,6 @@ body {
     font-size: 10px;
   }
 
-  /* Quiz Cover */
-  /* .cover-intro {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 720px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://ak.picdn.net/shutterstock/videos/12549533/thumb/1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  } */
-
-  .bg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 720px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url(/assets/Images/bg6.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .testbox {
-    display: flex;
-    margin-top: 300px;
-  }
-
-  .box1,
-  .box2,
-  .box3 {
-    display: flex;
-    width: 300px;
-    height: 150px;
-    background: transparent;
-    border: 1px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
-    text-align: center;
-    margin: 80px;
-  }
-
-  .box1 h5,
-  .box2 h5,
-  .box3 h5 {
-    color: #dfc7da;
-    padding: 30px;
-  }
-
-  .box1:hover,
-  .box2:hover,
-  .box3:hover{
-    box-shadow: 0 0 20px 0px #000000;
-  }
 
   /* .div-two:hover{
       display: flex;
