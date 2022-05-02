@@ -131,10 +131,6 @@ $row= mysqli_fetch_array($quiz_result);
           echo "<strong><p>Quiz Subject : </strong> &nbsp;  $row[branch] </p>";
           echo "<strong><p>Total Questions : </strong> &nbsp;  $row[totalques] </p>";
         ?>
-          <!-- <strong><p>Quiz Topic :</p></strong><p><?php echo $topic; ?></p>
-          <strong><p>Quiz Tags : </p></strong><p><?php echo $tags; ?></p>
-          <strong><p>Quiz Subject : </p></strong><p><?php echo $subject; ?></p>
-          <strong><p>Total Questions : </p></strong><p><?php echo $totalQues; ?></p> -->
 
         
         
