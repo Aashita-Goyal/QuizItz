@@ -1,14 +1,3 @@
-<?php
-    require './db/dbconn.php';
-    $msg = "";
-    if(isset($_POST['submit']))
-    {
-        $email = mysqli_real_escape_string($con, $_POST['email']);
-        $message = mysqli_real_escape_string($con, $_POST['message']);
-        mysqli_query($con, "insert into contact('email', 'message') values($email, $message)");
-        ;
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +23,7 @@
 
 <body class="contact-body">
     <div class="login-form" style="margin-top: 100px;">
-        <form method="post" action="">
+        <form action="./scripts/contactscript.php" method="post">
             <h1 class="contact-head">Contact Us</h1>
             <div class="content">
                 <div class="input-field">

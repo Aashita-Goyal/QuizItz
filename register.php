@@ -35,7 +35,7 @@
       <br />
       <div class="content">
       <div class="input-field"> 
-          <input type="text" placeholder=" Name " autocomplete="off" name="name" required="true" pattern="^[A-Za-z]{2,}$" title="Enter a valid name">
+          <input type="text" placeholder=" Name " autocomplete="off" name="name" required="true" pattern="^[A-Za-z]*{2,}$" title="Enter a valid name">
         </div>
         <div class="input-field">
           <input type="email" placeholder=" Email " autocomplete="off" name="email" required="true" pattern="^[a-zA-Z0-9_\-\.]{3,}@[A-Za-z]{3,}.[A-Za-z]{2,}$" title="Enter a valid email">
