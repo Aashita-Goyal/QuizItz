@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style1.css">
     <link rel="stylesheet" href="./css/styleTest.css">
+    <style type="text/css">
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
     
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
@@ -120,8 +125,8 @@
          <div class="material">
            <span> </span>
             <div class="typing-text">
-              <!-- <span class="one">READY TO </span>
-              <span class="two">SCORE.... </span> -->
+              <span class="one">READY TO </span>
+              <span class="two">SCORE.... </span>
             </div>
           </div>
        </div> 
@@ -158,6 +163,53 @@
   <div class="all_quiz_list" id="allQuiz" >
       <h2 style="text-align: center;">List of All Quizzes Available</h2>
       <p>Calling list of all quizzes here</p>
+      <div class="bs-example">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header clearfix">
+                        <h2 class="pull-left">All Quizzes</h2>
+                    </div>
+                    <?php
+                    require '../QuizCreateAttempt/db/dbconn.php';
+                    $quiz_result = mysqli_query($con, "SELECT * FROM quiz3");
+                    ?>
+                    <?php
+                    if (mysqli_num_rows($quiz_result) > 0) {
+                    ?>
+                        <table class='table table-bordered table-striped'>
+                            <tr>
+                                <td>Quiz Name</td>
+                                <td class='text-center'>Quiz Branch</td>
+                                <td>Quiz Topic</td>
+                                <td>Action 1 - Start Quiz</td>
+                                <td>Action 2 - Other quizzes for this topic and branch</td>
+                            </tr>
+                            <?php
+                            $i = 0;
+                            while ($row = mysqli_fetch_array($quiz_result)) {
+                            ?>
+                                <tr>
+                                    <td><?php echo $row["quizname"]; ?></td>
+                                    <td><?php echo $row["branch"]; ?></td>
+                                    <td><?php echo $row["quiztopic"]; ?></td>
+                                    <td><a href="./attemptQuiz.php?quizid=<?php echo $row["quizid"]; ?>">Start Quiz</a></td>
+                                    <td><a href="./topicAllQuizInfo.php?branch=<?php echo $row["branch"]; ?>">Other quizzes for this topic and branch</a></td>
+                                </tr>
+                            <?php
+                                $i++;
+                            }
+                            ?>
+                        </table>
+                    <?php
+                    } else {
+                        echo "No result found";
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </section>
   <!--Footer-->
