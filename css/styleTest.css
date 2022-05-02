@@ -39,410 +39,461 @@ body {
 
 
 /* LAPTOP SCREEN */
-    @media (min-width: 1024px) {
+@media (min-width: 1024px) {
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
-      body {
-        /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmevr7YgGfhP1zSlVYtqzitM1N8q_KI965Q&usqp=CAU);
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmevr7YgGfhP1zSlVYtqzitM1N8q_KI965Q&usqp=CAU);
         background-size: contain;
          background-image: url(https://wallpapercave.com/wp/wp2672827.jpg); */
-      }
+  }
 
 
-      
 
-        /* Home */
-    .home-intro {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 520px;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://a-static.besthdwallpaper.com/laptop-smartphone-desk-wallpaper-2000x1333-16853_39.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  
-    .home-intro h1 {
-      font-family: sans-serif;
-      font-size: 60px;
-      color: #fff;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin: 0;
-    }
-  
-    .home-intro p {
-      font-size: 20px;
-      color: #d1d1d1;
-      text-transform: uppercase;
-      margin: 20px 0;
-    }
-  
-    .home-intro button {
-      background-color: #211522;
-      color: #ffffff;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 5px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
-    }
-  
-    .home-intro button:hover {
-      background-color: black;
-      color: white;
-    }
-  
-    .bg1 {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://th.bing.com/th/id/R.7b853ab85f50cddc286903118bca4fcf?rik=cHWqj7%2fe88%2f8WQ&riu=http%3a%2f%2fwww.wallpapersin4k.org%2fwp-content%2fuploads%2f2017%2f04%2fWallpaper-For-Medical-Students-20.jpg&ehk=8923lvl%2b%2b%2b2ugwtglSqDJyOV3coZ28lfHZRovgkhFls%3d&risl=&pid=ImgRaw&r=0); 
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../assets/Images/bg1.jpg);
-    }
-  
-    .course {
-      width: 80%;
-      margin: auto;
-      text-align: center;
-      padding-top: 100px;
-    }
-  
-    h1 {
-      font-size: 36px;
-      font-weight: 600;
-  
-    }
-  
-    .course h1 {
-      color: #fff;
-    }
-  
-    p {
-      color: #000000;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 22px;
-      padding: 10px;
-  
-    }
-  
-    .row {
-      margin-top: 5%;
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    .course-col-2 {
-      flex-basis: 20%;
-      background: #e9cfdc;
-      border-radius: 10px;
-      margin-bottom: 10%;
-      padding: 20px;
-      box-sizing: border-box;
-      transition: 0.5s;
-      height: 230px;
-      display: inline-block;
-    }
-  
-    h3,
-    h4 {
-      text-align: center;
-      font-weight: 600;
-      margin: 10px 0px;
-    }
-  
-    .course-col-2:hover {
-      box-shadow: 0 0 20px 0px #000000;
-    }
-  
-    .offer {
-      width: 80%;
-      margin: auto;
-      text-align: center;
-      padding-top: 50px;
-    }
-  
-    .offer-col-2 {
-      flex-basis: 32%;
-      border-radius: 10px;
-      margin-bottom: 50px;
-      position: relative;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-    }
-  
-    .layer{
-      padding: 30px;
-    } 
-  
-    .offer-col-2 img {
-      width: 100%;
-    }
-  
-    .facilities {
-      width: 80%;
-      margin: auto;
-      text-align: center;
-      padding-top: 100px;
-  
-    }
-  
-    .bg2 {
-      /* background-color: #ede1e7; */
-      background-color:#d1d1d1
-    }
-  
-    .cta {
-      margin: 100px auto;
-      width: 80%;
-      /* background: linear-gradient(to bottom, #9999ff 0%, #ffccff 100%); */
-      background-position: center;
-      background-size: cover;
-      border-radius: 10px;
-      text-align: center;
-      padding: 100px 0;
-      /* background-image: url(https://ak.picdn.net/shutterstock/videos/7107889/thumb/1.jpg); */
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://www.lboro.ac.uk/media/wwwlboroacuk/external/content/services/studentservices/images/studservices-home-office-1400x400.jpg);
-    }
-  
-    .cta h1 {
-      color: #ffffff;
-      margin-bottom: 40px;
-      padding: 0px;
-    }
-  
-    .hero-btn {
-      display: inline-block;
-      text-decoration: none;
-      color: #fff;
-      border: 1px solid #fff;
-      padding: 12px 34px;
-      font-size: 13px;
-      background: transparent;
-      position: relative;
-      cursor: pointer;
-    }
-  
-    .hero-btn:hover {
-      border: 1px solid #ffffff;
-      background: #000000;
-      color: #fff;
-    }
-  
-    /* Box */
-    .container1{
-      position: relative;
-      width: 1200px;
-      height: 300px;
-      margin: 240px;
-      background: #ffffff;
-    }
-  
-    .container1 .box{
-      position: relative;
-      width: calc(400px-30px);
-      height: calc(300px-30px);
-      background: #000;
-      float: left;
-      margin: 15px;
-    }
 
-    .div-two{
-      display: flex;
-      margin: 10px;
-      margin-left: 150px;
-      /* border: 8px solid gray;
+  /* Home */
+  .home-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 520px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://a-static.besthdwallpaper.com/laptop-smartphone-desk-wallpaper-2000x1333-16853_39.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .home-intro h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .home-intro p {
+    font-size: 20px;
+    color: #d1d1d1;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  .home-intro button {
+    background-color: #211522;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+  }
+
+  .home-intro button:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .bg1 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://th.bing.com/th/id/R.7b853ab85f50cddc286903118bca4fcf?rik=cHWqj7%2fe88%2f8WQ&riu=http%3a%2f%2fwww.wallpapersin4k.org%2fwp-content%2fuploads%2f2017%2f04%2fWallpaper-For-Medical-Students-20.jpg&ehk=8923lvl%2b%2b%2b2ugwtglSqDJyOV3coZ28lfHZRovgkhFls%3d&risl=&pid=ImgRaw&r=0);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../assets/Images/bg1.jpg);
+  }
+
+  .course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+
+  }
+
+  .course h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+  }
+
+  .row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .course-col-2 {
+    flex-basis: 20%;
+    background: #e9cfdc;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    height: 230px;
+    display: inline-block;
+  }
+
+  h3,
+  h4 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+  }
+
+  .course-col-2:hover {
+    box-shadow: 0 0 20px 0px #000000;
+  }
+
+  .offer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .offer-col-2 {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .layer {
+    padding: 30px;
+  }
+
+  .offer-col-2 img {
+    width: 100%;
+  }
+
+  .facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+  }
+
+  .bg2 {
+    /* background-color: #ede1e7; */
+    background-color: #d1d1d1
+  }
+
+  .cta {
+    margin: 100px auto;
+    width: 80%;
+    /* background: linear-gradient(to bottom, #9999ff 0%, #ffccff 100%); */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    /* background-image: url(https://ak.picdn.net/shutterstock/videos/7107889/thumb/1.jpg); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://www.lboro.ac.uk/media/wwwlboroacuk/external/content/services/studentservices/images/studservices-home-office-1400x400.jpg);
+  }
+
+  .cta h1 {
+    color: #ffffff;
+    margin-bottom: 40px;
+    padding: 0px;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hero-btn:hover {
+    border: 1px solid #ffffff;
+    background: #000000;
+    color: #fff;
+  }
+
+  /* Box */
+  .container1 {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 240px;
+    background: #ffffff;
+  }
+
+  .container1 .box {
+    position: relative;
+    width: calc(400px-30px);
+    height: calc(300px-30px);
+    background: #000;
+    float: left;
+    margin: 15px;
+  }
+
+  .div-two {
+    display: flex;
+    /* margin: 10px; */
+    /* margin-left: 150px; */
+    /* border: 8px solid gray;
       padding: 50px 0;  */
-    }
-
-    .div-two-text{
-      font-size: 40px;
-      font-weight: 600;
-      color: goldenrod;
-      font: bolder;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      padding-top: 300px;
-      margin: 20px;
-
-    }
-
-    .div-two-subtext{
-      /* text-align: center; */
-      font-size: large;
-      padding-left: 90px;
-    }
-
-    .div-two img{
-      height: 600px;
-    }
-
-    
-
-    .motto{
-      width: 50%;
-    } 
-
-    /*ABOUT PAGE*/
-    .triangle-design{
-      display: flex;
-      margin-left: 250px;
   }
 
-  .triangle{
-      width: 130px;
-height: 160px;
-background-color: black;
-border-radius: 50%;
-margin: 30px;
+  .div-two-text {
+    font-size: 40px;
+    font-weight: 600;
+    color: goldenrod;
+    font: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 300px;
+    margin: 20px;
+
   }
 
-  
+  .div-two-subtext {
+    /* text-align: center; */
+    font-size: large;
+    padding-left: 90px;
+  }
 
-.triangle:hover .triangle-text,
-.triangle .triangle-text-hide {
-  display: none;
-}
-.triangle:hover .triangle-text-hide {
-  display: block;
-  background-color: black;
-  color: aliceblue;
-  width: 130px;
-  height: 160px;
-  background: black;
-  border-radius: 50%;
-  text-align: center;
-  padding: 20px;
-  /* font-size: larger; */
-}
+  .div-two img {
+    height: 600px;
+    width: 800px;
+  }
 
-.triangle-text{
-  text-align: center;
-  margin-left: 12px;
-  margin-top: 40px;
-  font-size: 23px;
-  font-weight: 500;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: aliceblue;
-}
+  .layer h4 {
+    text-decoration: none;
+  }
 
-#text1{
-  padding-top: 10px;
-  margin-right: 20px;
-}
+  .motto {
+    width: 50%;
+  }
 
-/* .triangle-hide{
+  /*ABOUT PAGE*/
+  .triangle-design {
+    display: flex;
+    margin-left: 250px;
+  }
+
+  .triangle {
+    width: 130px;
+    height: 160px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 30px;
+  }
+
+
+
+  .triangle:hover .triangle-text,
+  .triangle .triangle-text-hide {
+    display: none;
+  }
+
+  .triangle:hover .triangle-text-hide {
+    display: block;
+    background-color: black;
+    color: aliceblue;
+    width: 130px;
+    height: 160px;
+    background: black;
+    border-radius: 50%;
+    text-align: center;
+    padding: 20px;
+    /* font-size: larger; */
+  }
+
+  .triangle-text {
+    text-align: center;
+    margin-left: 12px;
+    margin-top: 40px;
+    font-size: 23px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+  }
+
+  #text1 {
+    padding-top: 10px;
+    margin-right: 20px;
+  }
+
+  /* .triangle-hide{
   margin-top: 20px;
   margin-left: 20PX;
 } */
 
-.text-show1{
- 
-  margin-left: 10px;
-  overflow: hidden;
-}
+  .text-show1 {
 
-#member1{
-  /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
-  background-image: url('../assets/Images/Aditi.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+    margin-left: 10px;
+    overflow: hidden;
+  }
 
-#member2{
-  /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
-  background-image: url('../assets/Images/Aashita.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+  #member1 {
+    /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
+    background-image: url('../assets/Images/Aditi.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
-#member3{
-  /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
-  background-image: url('../assets/Images/Sakshi.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+  #member2 {
+    /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
+    background-image: url('../assets/Images/Aashita.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
-#member4{
-  /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
-  background-image: url('../assets/Images/Aparna.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+  #member3 {
+    /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
+    background-image: url('../assets/Images/Sakshi.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
-.team-members{
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 800;
-  font-size: 50px;
-  margin: 30px;
-}
+  #member4 {
+    /* background-image: url('https://i.pinimg.com/originals/77/5f/c5/775fc55ee00efd7a9e626b54eef3a390.jpg'); */
+    background-image: url('../assets/Images/Aparna.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
-.triangle{
-  
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+  .team-members {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: 50px;
+    margin: 30px;
+  }
 
-.triangle .tooltiptext {
-  visibility: hidden;
-  width: 170px;
-  background-color: rgb(78, 77, 77);
-  color: rgb(255, 255, 255);
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  margin-left: 50px;
-  margin-top: 150px;
+  .triangle {
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
 
-.triangle:hover .tooltiptext {
-  visibility: visible;
-}
+  .triangle .tooltiptext {
+    visibility: hidden;
+    width: 170px;
+    background-color: rgb(78, 77, 77);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    margin-left: 50px;
+    margin-top: 150px;
 
-.tooltiptext{
-  font-size: 10px;
-}
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
 
+  .triangle:hover .tooltiptext {
+    visibility: visible;
+  }
 
+  .tooltiptext {
+    font-size: 10px;
+  }
 
+  /* Quiz Cover */
+  /* .cover-intro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 720px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://ak.picdn.net/shutterstock/videos/12549533/thumb/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  } */
 
-    /* .div-two:hover{
+  .bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 720px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://ak.picdn.net/shutterstock/videos/12549533/thumb/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .testbox {
+    display: flex;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .box1 h3,
+  .box2 h3,
+  .box3 h3 {
+    color: rgb(255, 255, 255);
+  }
+
+  /* .div-two:hover{
       display: flex;
       margin: 20px;
       border: 5px solid black; 
     } */
 
-    /* marquee{
+  /* marquee{
       color: black; 
       font-family: Book Antiqua;
       background-color: lightgrey;
     } */
 
 
-  
 
-    /* .div-two-middle{
+
+  /* .div-two-middle{
       background-color: #211522;
       width: 50%;
       color: #d1d1d1;
     }*/
 
-    /* #triangle1{
+  /* #triangle1{
       width: 0;
       height: 0;
       border-left: 150px solid transparent;
@@ -497,8 +548,8 @@ margin: 30px;
       border-bottom: 100px solid black;
     } */
 
-    
 
-    
-      
-    }
+
+
+
+}
