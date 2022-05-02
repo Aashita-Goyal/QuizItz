@@ -1,10 +1,15 @@
 <?php
 session_start();
+require '../QuizCreateAttempt/db/dbconn.php';
 
 $topic = $_SESSION["topic"];
 $tags = $_SESSION["tags"];
 $subject = $_SESSION["subject"];
 $totalQues = $_SESSION["totalQues"];
+
+$quiz_result = mysqli_query($con,"SELECT * FROM quiz3 WHERE quizid='" . $_GET['quizid'] . "'");
+$row= mysqli_fetch_array($quiz_result);
+
 
 ?>
 
@@ -115,13 +120,16 @@ $totalQues = $_SESSION["totalQues"];
             <h2>Quiz Details</h2>
         </div>
         <div class="attempt__quiz__details">
+
           
         <?php 
-
-          echo "<strong><p>Quiz Topic :</strong> &nbsp;  $topic </p>";
-          echo "<strong><p>Quiz Tags : </strong> &nbsp;  $tags </p>";
-          echo "<strong><p>Quiz Subject : </strong> &nbsp;  $subject </p>";
-          echo "<strong><p>Total Questions : </strong> &nbsp;  $totalQues </p>";
+          // echo "<strong><p>Quiz ID :</strong> &nbsp;  $quizid </p>";
+          echo "<strong><p>Quiz ID :</strong> &nbsp;  $row[quizid] </p>";
+          echo "<strong><p>Quiz Name :</strong> &nbsp;  $row[quizname] </p>";
+          echo "<strong><p>Quiz Topic :</strong> &nbsp;  $row[quiztopic] </p>";
+          echo "<strong><p>Quiz Tags : </strong> &nbsp;  $row[keywords] </p>";
+          echo "<strong><p>Quiz Subject : </strong> &nbsp;  $row[branch] </p>";
+          echo "<strong><p>Total Questions : </strong> &nbsp;  $row[totalques] </p>";
         ?>
           <!-- <strong><p>Quiz Topic :</p></strong><p><?php echo $topic; ?></p>
           <strong><p>Quiz Tags : </p></strong><p><?php echo $tags; ?></p>
@@ -131,8 +139,45 @@ $totalQues = $_SESSION["totalQues"];
         
         
         </div>
+
+        <?php
+        $question_result = mysqli_query($con, "SELECT * FROM question3");
+                  if(mysqli_num_rows($quiz_result) > 0){
+                    if (mysqli_num_rows($question_result) > 0) {
+                    ?>
+                        <table class='table table-bordered table-striped'>
+                            <?php
+                            $i = 0;
+                            while ($row = mysqli_fetch_array($quiz_result)) {
+                              while($row_question = mysqli_fetch_array($quiz_result)){
+                            ?>
+                                    <?php echo $row["quizname"]; ?>
+                                    <?php echo $row["branch"]; ?>
+                                    <?php echo $row["quiztopic"]; ?>
+                                    <a href="./quizQuestion.php?quizid=<?php echo $row['quizid']; ?>&quesid=<?php echo $row_question['quesid']; ?>&qno=<?php echo $row_question['quesid']; ?>"><p>Start Quiz</p></a>
+                                    <!-- <a href="./topicAllQuizInfo.php?branch=
+                                    <?php 
+                                    // echo $row["branch"]; 
+                                    ?>
+                                    ">Other quizzes for this topic and branch</a> -->
+                            <?php
+                                $i++;
+                            }
+                          }
+                            ?>
+                        </table>
+                    <?php
+                    } else {
+                        echo "No data foundin question table";
+                    }
+                  }else{
+                    echo "No data foundin question table";
+                  }
+                    ?>
+
+
         <div class="quiz__start">
-            <button type="button" class="btn btn-dark">Start Quiz!</button>
+            <a href="./quizQuestion.php"><button type="button" class="btn btn-dark">Start Quiz!</button></a>
             <strong><p class="pad"><a href="./home.html">Go to home</a></p></strong>
             
             <strong><p><a href="./topicPage.html">Choose another quiz</a></p></strong>

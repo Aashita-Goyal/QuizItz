@@ -35,7 +35,7 @@ session_start();
             if($query_result == true){ 
             ?>
                 <script>window.alert("Quiz Data Entered! \nPlease enter the Question details now");
-                 window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/createQuiz.php#enterNewQuestion";</script>
+                 window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/createQuiz.php#break";</script>
             <?php
 
         }else{

@@ -1,3 +1,8 @@
+<?php 
+session_start();
+$_SESSION["old_email"] = $email;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,11 +20,11 @@
             margin: 20px;
         }
     </style>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -50,7 +55,7 @@
                                 <tr>
                                     <td><?php echo $row["name"]; ?></td>
                                     <td><?php echo $row["email"]; ?></td>
-                                    <td><a href="fetch.php?email=<?php echo $row["email"]; ?>">Update</a></td>
+                                    <td><a href="./update.php?email=<?php echo $row["email"]; ?>">Update</a></td>
                                 </tr>
                             <?php
                                 $i++;
