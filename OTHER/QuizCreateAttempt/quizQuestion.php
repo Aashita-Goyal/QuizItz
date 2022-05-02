@@ -105,46 +105,56 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
         </div>
         </div>
     </nav>
-    <div class="quiz-container">
-        <div class="quiz-header">
+
+
+
+    <div class="quiz-container w-80">
+        
 
         <?php
             if (mysqli_num_rows($question_result) > 0) {
         
             $i = 0;
             while($row_question = mysqli_fetch_array($question_result)){
-        ?>
+        
+            echo "<div class='quiz-header w-100' style='width: 1000px;'>";
+            echo "<h2>Q$row_question[qno]. &nbsp;$row_question[ques]</h2>";
+            echo "<div class='answer__options pb-2 mb-2'>";
+            echo "<div class='option__one__three'>";
+            echo "<ul>";
+            echo "<li>";
+            echo "<div class='d-flex'>";
+            echo "<input type='radio' name='answer' id='a' class='answer m-2'>";
+            echo "<label for='a' id='a_text'>$row_question[a]</label>";
+            echo "</div>";
+            echo "</li>";
+            echo "<li>";
+            echo "<div class='d-flex'>";
+            echo "<input type='radio' name='answer' id='b' class='answer m-2'>";
+            echo "<label for='b' id='b_text'>$row_question[b]</label>";
+            echo "</div>";
+            echo "</li>";
+            echo "</ul>";
+            echo "</div>";
 
-            <h2>Q<?php echo $row_question['qno'] ?>. &nbsp;<?php echo $row_question['ques'] ?></h2>
-            <div class="answer__options pb-3 mb-5">
-            <div class="option__one__three">
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="a" class="answer">
-                    <label for="a" id="a_text"><?php echo $row_question['a'] ?></label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="b" class="answer">
-                    <label for="b" id="b_text"><?php echo $row_question['b'] ?></label>
-                </li>
-            </ul>
-        </div>
-
-            <div class="option__two__four">
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="c" class="answer">
-                    <label for="c" id="c_text"><?php echo $row_question['c'] ?></label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="d" class="answer">
-                    <label for="d" id="d_text"><?php echo $row_question['d'] ?></label>
-                </li>
-            </ul>
-        </div>
-        </div>
-        </div>
-        <?php
+                    echo "<div class='option__two__four'>";
+                    echo "<ul>";
+                    echo "<li>";
+                    echo "<div class='d-flex'>";
+                    echo "<input type='radio' name='answer' id='c' class='answer m-2'>";
+                    echo "<label for='c' id='c_text'>$row_question[c]</label>";
+                    echo "</div>";
+                    echo "</li>";
+                    echo "<li>";
+                    echo "<div class='d-flex'>";
+                    echo "<input type='radio' name='answer' id='d' class='answer m-2'>";
+                    echo "<label for='d' id='d_text'>$row_question[d]</label>";
+                    echo "</div>";
+                    echo "</li>";
+                    echo "</ul>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
             $i++;
             // ++$_GET['quizid'];
             }
@@ -152,8 +162,12 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
                 echo "No questions available";
         }
         ?>
+
         <button id="submit">Submit</button>
     </div>
+
+
+
     <!--Footer-->
     <footer>
         <div class="container-fluid p-lg-3">

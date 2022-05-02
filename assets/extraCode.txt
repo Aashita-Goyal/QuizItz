@@ -533,6 +533,55 @@ IMPORTANT - two variables
 
 
 
+question display page
+ <?php
+            if (mysqli_num_rows($question_result) > 0) {
+        
+            $i = 0;
+            while($row_question = mysqli_fetch_array($question_result)){
+        ?>
+
+            <h2>Q<?php echo $row_question['qno'] ?>. &nbsp;<?php echo $row_question['ques'] ?></h2>
+            <div class="answer__options pb-3 mb-5">
+            <div class="option__one__three">
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text"><?php echo $row_question['a'] ?></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text"><?php echo $row_question['b'] ?></label>
+                </li>
+            </ul>
+        </div>
+
+            <div class="option__two__four">
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text"><?php echo $row_question['c'] ?></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text"><?php echo $row_question['d'] ?></label>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+        <?php
+            $i++;
+            // ++$_GET['quizid'];
+            }
+        } else {
+                echo "No questions available";
+        }
+        ?>
+
+
+
+
 update.php
 <?php
 // Include database connection file
