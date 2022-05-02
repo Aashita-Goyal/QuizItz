@@ -756,17 +756,13 @@ input::placeholder{
           color: #803372;
       }
 
-
-
-  
-    
   
     /*Footer*/
-
     footer{
         margin: none;
         width: 100%;
     }
+    
     .container-fluid {
       text-align: center;
       background-color: #3F3351;
@@ -780,7 +776,6 @@ input::placeholder{
     h5 {
       color: white;
     }
-  
   
     .icons {
       width: 20px;

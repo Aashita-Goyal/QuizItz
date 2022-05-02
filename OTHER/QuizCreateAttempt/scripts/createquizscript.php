@@ -17,6 +17,10 @@ session_start();
             $_SESSION["totalQues"]=$totalQuestions;
             // $_SESSION["qno"]=$qno;
 
+            // $quizid_query = "SELECT MAX(quizid) FROM quiz3";
+            // $quizid = (int)$quizid_query;
+            // $_SESSION["quizid_query"]=$quizid;
+            
 
      if(isset($_POST['startEntering'])) 
      {
@@ -31,7 +35,7 @@ session_start();
             if($query_result == true){ 
             ?>
                 <script>window.alert("Quiz Data Entered! \nPlease enter the Question details now");
-                 window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/createQuiz.php#enterNewQuestion";</script>
+                 window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/createQuiz.php#break";</script>
             <?php
 
         }else{

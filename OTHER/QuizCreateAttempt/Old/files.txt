@@ -2,27 +2,86 @@ createQuiz.php file in main folder (to change it's css)
 
 
 
-1. loop in question number at create quiz page  ✔️
-2. constraint on create quiz button on create quiz page 
-   (so that it opens attempt quiz only when all questions have been uploaded)
+✔️ 1. loop in question number at create quiz page  
+👍 2. constraint on create quiz button on create quiz page 
+   (so that it opens attempt quiz only when all questions have been uploaded) 
 3. add css and beautification
 4. In attempt quiz page, call quiz details by id (not by the latest value in the variables)
-5. when inputting question details for a quiz, all those questions should be called under the quiz id.
-6. for quiz id and question id, enter ordered numbering (instead of random id)
+✔️ 5. when inputting question details for a quiz, all those questions should be called under the quiz id. 
+✔️ 6. for quiz id and question id, enter ordered numbering (instead of random id) 
 7. Change paths when moving QuizCreateAttempt folder to main QuizItz folder
-8. Follow roadmap on OneNote
-9. Enter Quiz name alsofrom user
-10. While uploading ques, make writing ques and all options compulsory
+👍 8. Follow roadmap on OneNote 
+✔️ 9. Enter Quiz name also from user 
+✔️ 10. While uploading ques, make writing ques and all options compulsory 
+15. Profile page backend, call profile details of user and quiz result details
+16. Result Page backend
 
-11. when uploading, call questions along with quiz id 
-12. display quiz details, row wise on quizCoverPage
-13. call all quiz details on allQuizInfoPage
+✔️ 11. when uploading, call questions along with quiz id 
+✔️ 12. display all quiz details, row wise on quizCoverPage
+15. Do the same for study material pg. (point 12)
+16. Do the same for flashcard pg. (point 12)
+13. call details of all quizzes of that specific branch and topic on allQuizInfoPage
+17. Do the same for study material pg. (point 13)
+18. Do the same for flashcard pg. (point 13)
 14. display uploaded questions one by one on questonDisplayPage 
     (questions called with branch, topic, quiz id, ques id, quesno )
+✔️ 15. for now, create quiz button should lead us to quizCoverPage
 
-
-
+✔️ 19. see how to access url components
+20. On attempt quiz page, call all details of question table (so they can be posted to url when 
+   user clicks start quiz button to go to quizQuestion)
+21. When we click start quiz button and quiz and question details are posted in url, 
+    then ques number has to be one. according to present code, it is taking the max question no.
+✔️ 22. quizid of quiz not being updated in quizid in question table
+23. incorrect question id being called on questionDisplayPage
+24. quesid and qno are not being updated in url
+✔️ 25. question table is only taking one question under single quizid
+26. for now, display all questions on same page, therefore, don't call ques no inurl for now
+27. On quiz qusestion display page, store the values entered by user
+28. create a user answer table to store values inputted by user 
+29. values in user answer table will be inserted on submitquestionscript page
+30. once sumitted, this page will redirect user to compareanswer page 
+31. make compare answer page
+32. compare answer page will redirect user to result page
+33. result page will call data from compare answer page and display result
+34. profile page, to display result on profile page, we will need to call user's result using it's 
+   unique id, i.e. email id.
+35. On quiz question page, before submitting, we can ask user for entering email id.
+36. email id will be updated to user answer table
+37. we need to check if that email id already exists in the database
+38. if it does not exist, we will display a message to user, that there result will not be stored 
+    on their profile (this may not be necessary because user will be able to access quiz page only if
+    he/she is logged in.)
 
 
 1. On cover pages, the buttons should be able to take branch id and redirect to topic page of the banch directly
    Instead of having to go to branch page first.
+
+
+
+On dates 1st, 2nd and 3rd,
+1. Linking Files
+2. CSS
+3. organized folders
+
+
+
+
+
+
+POINTS
+1. every branch will have it's own topic page (one topic page template will be called by various
+   branches' id in url)
+2. when we enter a topic page from a branch, the branch id gets assigned to each topic on that page
+3. when we click on an option, for eg. attempt quiz, we get redirected to allQuizInfoPage for that
+   topic (and branch)
+4. therefore, we have one allQuizInfoPage for every topic (one page template will be called by various
+   topics' id in url)
+9. Each topic will also have to be assigned an id
+5. When a user click on any quiz in allQuizInfoPage, they get redirected to attemptQuiz page
+6. When a user clicks start quiz on any quiz from quizCoverPage, they get redirected to attemptQuiz page
+8. Update record page for quiz, study material and flashcard contents AND profile-setting update page
+
+7. Create Quiz button on createQuiz page should lead us to topic page, but, for now, 
+   it will lead us to quizCoverPage
+9. every question should be displayed on separate page, but, for now, showing all ques on same page

@@ -168,7 +168,7 @@
 
     .answer__options{
         display: flex;
-        justify-content: space-between
+        justify-content: space-between;
     }
 
     .option__one__three{
@@ -549,15 +549,17 @@
     background-color: #1F252F;
     border-radius: 20px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-top: 180px;
     margin-bottom: 300px;
     color: aliceblue;
     width: 800px;
     margin-left: 220px;
+    height: 100%;
   }
   .quiz-header{
-    padding: 4rem;
+    /* padding: 4rem; */
+    padding: 20px;
   }
   h2{
     padding: 1rem;

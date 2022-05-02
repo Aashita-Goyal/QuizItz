@@ -14,7 +14,7 @@
         {
             $confirmpassword = md5($confirmpassword);
             $query = "INSERT INTO `user` (`name`, `email`, `password`) VALUES ('$name', '$email', '$confirmpassword')";
-            $query_result = mysqli_query($con, $query);
+            $query_result = mysqli_query($con, $query);  
             if($query_result == true)
             {
                 ?>

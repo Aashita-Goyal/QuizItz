@@ -246,3 +246,427 @@ Branch Page
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+Quiz Data Fetch
+if (mysqli_num_rows($result) > 0) {
+                    ?>
+                        <table class='table table-bordered table-striped'>
+                            <tr>
+                                <td>QuizId</td>
+                                <td>Counter</td>
+                                <td>Action</td>
+
+                            </tr>
+                            <?php
+                            // $i = 0;
+                            $counter = 0;
+                            
+                            while ($row = mysqli_fetch_array($result)) {
+                              
+                              ++$counter;
+                            ?>
+                                <tr>
+                                    <td><?php echo $row['quizid']; ?></td>
+                                    <td><?php echo $counter; ?></td>
+                                    <td><a href="createQuiz.php?quizid=<?php echo $row['quizid']; ?>">Update</a></td>
+                                </tr>
+                            <?php
+                                // $i++;
+                            }?>
+                            
+                        </table>
+                        <p><?php echo $counter; ?></p>
+                    <?php
+                    } else {
+                        echo "No result found";
+                    }
+                    ?>
+
+
+
+CREATE QUIZ COUNTER RESET QUIX id
+
+
+      <?php
+      
+      if($_SESSION["counter"] < $_SESSION["totalQues"]){
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#enterNewQuestion'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion' >";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='button' class='btn btn-dark ms-5' value='Enter New Question'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+
+          if (mysqli_num_rows($result) > 0) {
+                    
+            $countid = 0;
+            
+            while ($row = mysqli_fetch_array($result)) {
+              
+              ++$countid;
+            
+            }
+            ?>
+        <strong><p class="text-start">Quiz ID : </strong><?php echo $countid; ?></p
+    <?php
+    } else {
+        echo "Quiz ID not found";
+    }
+
+        echo "</form>";
+      }else{
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#createquiz'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion'>";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='reset' class='btn btn-dark ms-5' value='All Questions Succesfully Uploaded'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+
+          if (mysqli_num_rows($result) > 0) {
+                    
+            $countid = 0;
+            
+            while ($row = mysqli_fetch_array($result)) {
+              
+              ++$countid;
+            
+            }
+            ?>
+        <strong><p class="text-start">Quiz ID : </strong><?php echo $countid; ?></p
+    <?php
+    } else {
+        echo "Quiz ID not found";
+    }
+
+        echo "</form>";
+
+      }
+
+      $_SESSION['countid'] = $countid;
+      ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#enterNewQuestion'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion' >";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='button' class='btn btn-dark ms-5' value='Enter New Question'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+
+          if (mysqli_num_rows($result) > 0) {
+                    
+            $countid = 0;
+            
+            while ($row = mysqli_fetch_array($result)) {
+              
+              ++$countid;
+            
+            }
+            ?>
+        <strong><p class="text-start">Quiz ID : </strong><?php echo $countid; ?></p
+    <?php
+    } else {
+        echo "Quiz ID not found";
+    }
+
+        echo "</form>";
+      }else{
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#createquiz'>";
+          echo "<div class='quiz__button'>";
+            echo "<div class='quiz__start'>";
+              echo "<br  id='enterNewQuestion'>";
+              echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter]; ?>' />";
+              echo "<input type='submit' name='reset' class='btn btn-dark ms-5' value='All Questions Succesfully Uploaded'/>";
+              echo "<br/>";
+              echo "<br/>";
+              echo "<br/>";
+            echo "</div>";
+          echo "</div>";
+
+          if (mysqli_num_rows($result) > 0) {
+                    
+            $countid = 0;
+            
+            while ($row = mysqli_fetch_array($result)) {
+              
+              ++$countid;
+            
+            }
+            echo "<strong><p class='text-start'>Quiz ID : </strong><?php echo $countid; ?></p>";
+            ?>
+        
+    <?php
+    } else {
+        echo "Quiz ID not found";
+    }
+
+        echo "</form>";
+        $_SESSION['countid'] = $countid;
+
+      }
+
+
+      
+      echo "<form method='post' action='../QuizCreateAttempt/scripts/enterquestionscript.php' >";
+      echo "<br>";
+      echo "<br id='break' />";
+      echo "<label for='questionNumber'>Question Number </label>";
+
+      
+       echo "<input type='text' id='questionNumber' name='questionNum' placeholder='question number' value='$_SESSION[counter]'>";
+      
+      
+       echo "<br><br>";
+       echo " <label for='questionNumber'>Question</label>";
+       echo "  <input type='paragraph' id='questionDescription' name='question' placeholder='enter question here'>";
+           
+       echo "   <br><br>";
+       echo "    <label for='snswerOption'>Option a</label>";
+       echo "  <input type='paragraph' id='optionA' name='optionA' placeholder='enter answer here'>";
+       echo "  <br><br>";
+       echo " <label for='answerOption'>Option b</label>";
+       echo "  <input type='paragraph' id='optionB' name='optionB' placeholder='enter answer here'>";
+       echo "  <br><br>";
+       echo "   <label for='answerOption'>Option c</label>";
+       echo "  <input type='paragraph' id='optionC' name='optionC' placeholder='enter answer here'>";
+       echo "   <br><br>";
+       echo "   <label for='answerOption'>Option d</label>";
+       echo "   <input type='paragraph' id='optionD' name='optionD' placeholder='enter answer here'>";
+       echo "    <br><br>";
+       echo "   <label for='answer'>Choose correct option</label>";
+       echo "   <select id='Correctanswer' name='correct'>";
+       echo "    <option value='optionA'>Option a</option>";
+       echo "     <option value='optionB'>Option b</option>";
+       echo "    <option value='optionC'>Option c</option>";
+       echo "    <option value='optionD'>Option d</option>";
+       echo "   </select>";
+ 
+           
+
+       echo "<div class='quiz__button'>";
+       echo "  <div class='quiz__start'>";
+       echo "   <button type='submit' class='btn btn-dark' name='nextQuestion'>Submit This Question</button>";
+      
+              // <!-- <input type="submit" name="button" value="Counter" /> -->
+              //   <!-- <a href="#quesno"><button type="button" class="btn btn-dark" name="startEntering">Enter Next Question</button></a> -->
+                echo " </div>";
+                echo "</form>";
+
+
+
+
+
+                <?php
+
+// Initialize URL to the variable
+$url = 'https://www.geeksforgeeks.org/register?name=Amit&email=amit1998@gmail.com';
+	
+// Use parse_url() function to parse the URL
+// and return an associative array which
+// contains its various components
+$url_components = parse_url($url);
+
+// Use parse_str() function to parse the
+// string passed via URL
+parse_str($url_components['query'], $params);
+	
+// Display result
+echo ' Hi '.$params['name'].' your emailID is '.$params['email'];
+
+?>
+
+
+
+
+
+
+
+
+
+
+IMPORTANT - two variables
+<a href='page2c.php?myNumber={$row[0]}&myFruit={$row[1]}'>Send variables</a>
+
+
+
+
+
+
+question display page
+ <?php
+            if (mysqli_num_rows($question_result) > 0) {
+        
+            $i = 0;
+            while($row_question = mysqli_fetch_array($question_result)){
+        ?>
+
+            <h2>Q<?php echo $row_question['qno'] ?>. &nbsp;<?php echo $row_question['ques'] ?></h2>
+            <div class="answer__options pb-3 mb-5">
+            <div class="option__one__three">
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text"><?php echo $row_question['a'] ?></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text"><?php echo $row_question['b'] ?></label>
+                </li>
+            </ul>
+        </div>
+
+            <div class="option__two__four">
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text"><?php echo $row_question['c'] ?></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text"><?php echo $row_question['d'] ?></label>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+        <?php
+            $i++;
+            // ++$_GET['quizid'];
+            }
+        } else {
+                echo "No questions available";
+        }
+        ?>
+
+
+
+
+update.php
+<?php
+// Include database connection file
+session_start();
+require './db/dbconn.php';
+$new_name = $_POST['name'];
+$new_email = $_POST['newEmail'];
+// $old_email = $_GET['email'];
+
+if (count($_POST) > 0) {
+    // mysqli_query($con, "UPDATE user set  name='" . $_POST['name'] . "', email='" . $_POST['email'] . "' WHERE email='" . $_POST['email'] . "'");
+    mysqli_query($con, "UPDATE `user` set  `name`='$new_name', `email`='$new_email' WHERE `email`='$old_email'");
+    $message = "Record Modified Successfully";
+}
+$result = mysqli_query($con, "SELECT * FROM user WHERE email='" . $_GET['email'] . "'");
+$row = mysqli_fetch_array($result);
+
+// $old_email = $_GET['email'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Update Record</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        .wrapper {
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>Update Record</h2>
+                    </div>
+                    <p>Please edit the input values and submit to update the record.</p>
+
+                    <!-- <form action="
+<?php
+// echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); 
+?>
+" method="post"> -->
+
+
+                    <!-- <form action="
+                    <?php 
+                    // echo htmlspecialchars(basename($_SERVER['REQUEST_URI']));" method="post">
+                    ?>
+                     -->
+                    <form action="./update.php?email=$new_email" method="post">
+                        <div class='form-group'>
+                            <label>Name</label>
+                            <input type="text" name="name" class="form-control" value="<?php echo $row["name"]; ?>">
+                        </div>
+                        <div class="form-group ">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" value="<?php echo $row["email"]; ?>">
+                        </div>
+                        <input type="hidden" name="id" value="<?php echo $row["email"]; ?>" />
+                        <input type="submit" class="btn btn-primary" value="Submit" name="newEmail">
+                        <!-- <input type="hidden" name="email" value="
+                        <?php 
+                        // echo $_GET['newEmail']; 
+                        ?>"> -->
+                        <a href="fetch.php" class="btn btn-default">Cancel</a>
+
+                        <?php
+                        if (isset($_GET['submit'])) {
+                            echo '<div class="form" id="form3"><br><br><br><br><br><br>
+                            <Span>Data Updated Successfuly......!!</span></div>';
+                            }
+                        // $new_email = $_POST['newEmail'];
+                        ?>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

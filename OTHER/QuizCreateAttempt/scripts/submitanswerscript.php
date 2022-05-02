@@ -1,6 +1,5 @@
 <?php
 session_start();
-// $qno=$_SESSION["qno"];
 
     require '../db/dbconn.php';
 
@@ -11,22 +10,7 @@ session_start();
             $optc = $_POST['optionC'];
             $optd = $_POST['optionD'];
             $correct = $_POST['correct'];
-            // $quesid = rand(4,1000);
 
-
-            $quizName = $_SESSION["quizName"];
-            $topic = $_SESSION["topic"];
-            $keywords = $_SESSION["tags"];
-            $branch = $_SESSION["subject"];
-            $totalQuestions = $_SESSION["totalQues"];
-            // $quizid_query = $_SESSION["quizid_query"];
-            // $quizid_query = "SELECT MAX(quizid) FROM quiz3";
-            // $quizid_query_result = mysqli_query($con, $quizid_query);
-            // $quizid = (int)$quizid_query;
-            // $_SESSION["quizid_query"]=$quizid;
-
-            $quizid = $_SESSION['quizQuestionId'];
-            // $qno = 0;
    
 
 if(isset($_POST['nextQuestion'])) 
