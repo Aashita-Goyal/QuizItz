@@ -221,6 +221,12 @@ $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
             // }
             $totalQues = $row['totalques'];
             $quesno = $_GET['qno'];
+            $questionID = $_GET['quesid'];
+            $quizID = $_GET['quizid'];
+
+            // while(){
+            // }
+
         if($question_result == true){
             if($quesno < $totalQues){
                 echo"<button type='button' class='btn btn-dark' id='nextQuestion'>Next Question <i class='fa-solid fa-book-arrow-right'></i></button>";
