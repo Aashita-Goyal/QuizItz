@@ -116,8 +116,8 @@ if (isset($_POST['reset'])) {
 
     <!--Create Quiz-->
     <!--Branch, Topic, Keywords/Tags, Total no. of Questions-->
-
-    <div class="create__quiz">
+<div class="create__quiz__heading d-flex" style="align-items:center; justify-content:center;">
+    <div class="create__quiz me-15">
         <div class="quiz__create__heading">
             <div class="attempt__quiz__heading">Create a New Quiz</div>
         </div>
@@ -125,8 +125,8 @@ if (isset($_POST['reset'])) {
             <form method="post" action="../QuizCreateAttempt/scripts/createquizscript.php">
                 <br />
                 <label for="quizname">Quiz Name</label>
-                <input type="text" id="quizname" name="quizname" placeholder="enter your quiz name" style="margin-left: 280px; padding-left: 40px; margin-right: 10px;"><br>
-                <br />
+                <!-- <input type="text" id="quizname" name="quizname" placeholder="enter your quiz name" style="margin-left: 280px; padding-left: 40px; margin-right: 10px;"><br> -->
+                <br /><input type="text" id="quizname" name="quizname" placeholder="enter your quiz name"><br>
                 <label for="branch">Choose a Branch</label>
                 <select id="branch" name="branch" style="margin-left: 240px; padding-left: 25px;">
                     <!-- <option>select</option> -->
@@ -149,6 +149,7 @@ if (isset($_POST['reset'])) {
                 <button type="submit" class="btn btn-dark" name="startEntering">Start Entering Questions</button>
         </div>
     </div> 
+</div>
     </form>
     <br>
     <hr>
