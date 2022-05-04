@@ -36,7 +36,7 @@
                     <button type="button" class="btn btn-secondary">Study Material</button>
                 </div>
                 <div class="steps__card" style="padding-left: 60px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://th.bing.com/th/id/OIP.6Xq86ICwBqVhwDeQpTpKVwAAAA?w=312&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7);">
-                    <h3 style="color: white; padding-top: 40px;">Biotech</h3><br><br>
+                    <h3 style="color: white; padding-top: 40px;">Biotechnology</h3><br><br>
                     <button type="button" class="btn btn-secondary">Attempt quiz</button>
                     <button type="button" class="btn btn-secondary">Study Material</button>  
                 </div>
