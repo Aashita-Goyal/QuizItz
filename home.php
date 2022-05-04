@@ -150,6 +150,7 @@ This is an Example Marquee (Behavior : Alternate)
     </div>
 
     <?php include 'includes/footer.php'; ?>
+    
 </body>
 
 </html>
