@@ -33,7 +33,6 @@
       }
     </script>
 
-
     <div class="container">
       <a class="navbar-brand pe-sm-3" href="home.html">
         <h3 class="logo">QuizItz</h3>

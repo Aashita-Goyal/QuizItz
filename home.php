@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['email'])){
+        header('location:index.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -143,6 +150,7 @@ This is an Example Marquee (Behavior : Alternate)
     </div>
 
     <?php include 'includes/footer.php'; ?>
+    
 </body>
 
 </html>
