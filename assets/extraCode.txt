@@ -718,3 +718,14 @@ $row = mysqli_fetch_array($result);
                     echo "</div>";
                     echo "</div>";
                     echo "</div>";
+
+
+
+
+
+                                    // <a href='./scripts/submitanswerscript.php?
+                // answerquizid=<?php echo repliedquizid=$row[quizid];?>
+                // &answerquesid=
+                <?php echo repliedquesid=$row[quesid];?>
+                //  &answerquesno=<?php echorepliedqno=$row[qno];?>
+                // </a>

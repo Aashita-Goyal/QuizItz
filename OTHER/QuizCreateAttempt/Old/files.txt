@@ -53,6 +53,13 @@ createQuiz.php file in main folder (to change it's css)
 38. if it does not exist, we will display a message to user, that there result will not be stored 
     on their profile (this may not be necessary because user will be able to access quiz page only if
     he/she is logged in.)
+39. correct answernot being uploaded in answer table
+40. user answer option being received as "on"
+41. error after submitting answer of a question
+42. on pressing next question, redirect to next question
+43. make a loop whichincreases question number
+44. the button should change from next question to Go To Result on last question
+45. If user clicks next question without giving an answer, send a popup saying, please submitthe question first
 
 
 1. On cover pages, the buttons should be able to take branch id and redirect to topic page of the banch directly

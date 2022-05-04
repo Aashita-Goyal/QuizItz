@@ -3,36 +3,61 @@ session_start();
 
     require '../db/dbconn.php';
 
-            $qnum = $_POST['quizid'];
-            $ques = $_POST['quesid'];
-            $ques = $_POST['qno'];
-            $opta = $_POST['optionA'];
-            $optb = $_POST['optionB'];
-            $optc = $_POST['optionC'];
-            $optd = $_POST['optionD'];
-            $correct = $_POST['correct'];
+            // $quizid = $_POST['quizid'];
+            // $quesid = $_POST['quesid'];
+            // $qno = $_POST['qno'];
+            $userAnswer = $_POST['answer'];
+            // $correct = $_POST['correct'];
+            // $correctAnswer = $_SESSION["correctAnswer"];
+            $quizid = $_SESSION['attemptingQuestionQuizId'];
+
+            $answer_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid=$quizid");
+            $row_answer = mysqli_fetch_array($answer_result);
+            $quesid = $row_answer['quesid'];
+            $qno = $row_answer['qno']; 
+            $correct = $row_answer['correct']; 
+
+
 
    
 
-if(isset($_POST['nextQuestion'])) 
+if(isset($_POST['submitAnswer'])) 
 {
-    if(!empty($_POST['questionNum']) && !empty($_POST['question']) && !empty($_POST['optionA']) && 
-       !empty($_POST['optionB']) && !empty($_POST['optionC']) && !empty($_POST['optionD']) && 
-       !empty($_POST['correct']))
+    if(!empty($quizid) && !empty($quesid) && !empty($qno) && !empty($userAnswer))
        {
-           $queryQuestion = "INSERT INTO `question3` (`qno`, `ques`, `a`, `b`, `c`, `d`, `correct`, `quizid`) 
-                             VALUES ('$qnum', '$ques', '$opta', '$optb', '$optc', '$optd', '$correct', '$quizid')";
-           $query_result_question = mysqli_query($con, $queryQuestion);
+        if (mysqli_num_rows($answer_result) > 0) {
+
+           $queryAnswer = "INSERT INTO `answer` (`quizid`, `quesid`, `qno`, `answeroption`, `correctanswer`) 
+                             VALUES ('$quizid', '$quesid', '$qno', '$userAnswer', '$correct')";
+           $query_answer_submit = mysqli_query($con, $queryAnswer);
+
+        // $answer_submit = mysqli_query($con, "SELECT * FROM question3 WHERE quizid=$quizid");
+        // $row_answer = mysqli_fetch_array($answer_submit);
            
-           if($query_result_question == true){ ?>
-                 <script>window.alert("Question uploaded\nEnter next Question");
-                 window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/createQuiz.php#enterNewQuestion";</script>
+           if($query_answer_submit== true){ ?>
+
+                 <script>
+                var quizidJ = '<?php echo $quizid; ?>';
+                var quesidJ = '<?php echo $quesid; ?>';
+                var qnoJ = '<?php echo $qno; ?>';
+                 window.alert("Your response has been received\nPlease proceed");
+                 window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/quizQuestion.php?quizid="+quizidJ+"&quesid="+quesidJ+"&qno="+qnoJ+""</script>
     <?php        }else{
                     die(mysqli_error($con));
                 }
         } else {
+                echo "No questions available";
+        }
+    } else if(empty($userAnswer)){
+        echo "\nPlease SUBMIT your question first\nPlease press back";
+    }
+    else {
             echo "All required fields not entered";
+            
+
         }
     }
+
+    
 
 ?>

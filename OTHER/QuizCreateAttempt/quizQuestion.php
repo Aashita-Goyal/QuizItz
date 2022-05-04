@@ -4,10 +4,14 @@ require '../QuizCreateAttempt/db/dbconn.php';
 
 $quiz_result = mysqli_query($con,"SELECT * FROM quiz3 WHERE quizid='" . $_GET['quizid'] . "'");
 $row= mysqli_fetch_array($quiz_result);
-
+?>
+<?php
 $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" . $_GET['quizid'] . "'");
-// $row_question = mysqli_fetch_array($question_result);
+$row_question = mysqli_fetch_array($question_result);
 
+$_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
+// $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
+// $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
 
 ?>
 
@@ -117,9 +121,13 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
         
             // $i = 0;
             // while($row_question = mysqli_fetch_array($question_result)){
-                $row_question = mysqli_fetch_array($question_result);
-            echo "<form method='post' action='../QuizCreateAttempt/scripts/submitanswerscript.php'>";
-        
+                // $row_question = mysqli_fetch_array($question_result);
+            
+            echo "<form method='post' action='../QuizCreateAttempt/scripts/submitanswerscript.php?answerquizid=<?php echo repliedquizid=$row_question[quizid];?>&answerquesid=<?php echo repliedquesid=$row_question[quesid];?>&answerquesno=<?php echo repliedqno=$row_question[qno];?>'>";
+            
+            echo "<input type='hidden' name='questionQuizId' value='<?php echo $_GET[quizid];   ?>   ' />";
+            echo "<input type='hidden' name='questionQuestionId' value='<?php echo $_GET[quesid];   ?>   ' />";
+            echo "<input type='hidden' name='questionQuestionNo' value='<?php echo $_GET[qno];   ?>   ' />";
             echo "<div class='quiz-header'>";
             echo "<h2>Q$row_question[qno]. &nbsp;$row_question[ques]</h2>";
             echo "<div class='answer__options'>";
@@ -127,14 +135,14 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
             echo "<ul>";
             echo "<li>";
             echo "<div class='d-flex'>";
-            echo "<input type='radio' name='answerA' id='a' class='answer m-2'>";
+            echo "<input type='radio' name='answer' id='a' class='answer m-2' value='optionA'>";
             //class='answer m-2';
             echo "<label for='a' id='a_text'>$row_question[a]</label>";
             echo "</div>";
             echo "</li>";
             echo "<li>";
             echo "<div class='d-flex'>";
-            echo "<input type='radio' name='answerB' id='b' class='answer m-2'>";
+            echo "<input type='radio' name='answer' id='b' class='answer m-2' value='optionB'>";
             echo "<label for='b' id='b_text'>$row_question[b]</label>";
             echo "</div>";
             echo "</li>";
@@ -145,13 +153,13 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
                     echo "<ul>";
                     echo "<li>";
                     echo "<div class='d-flex'>";
-                    echo "<input type='radio' name='answerC' id='c' class='answer m-2'>";
+                    echo "<input type='radio' name='answer' id='c' class='answer m-2' value='optionC'>";
                     echo "<label for='c' id='c_text'>$row_question[c]</label>";
                     echo "</div>";
                     echo "</li>";
                     echo "<li>";
                     echo "<div class='d-flex'>";
-                    echo "<input type='radio' name='answerD' id='d' class='answer m-2'>";
+                    echo "<input type='radio' name='answer' id='d' class='answer m-2' value='optionD'>";
                     echo "<label for='d' id='d_text'>$row_question[d]</label>";
                     echo "</div>";
                     echo "</li>";
@@ -159,22 +167,56 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
                     echo "</div>";
                     echo "</div>";
                     echo "</div>";
-                    echo "<input type='hidden' name='questionQuizId' value='<?php echo $_GET[quizid];   ?>   ' />";
-                    echo "<input type='hidden' name='questionQuestionId' value='<?php echo $_GET[quesid];   ?>   ' />";
-                    echo "<input type='hidden' name='questionQuestionNo' value='<?php echo $_GET[qno];   ?>   ' />";
+
+                    echo"
+                           <button type='submit' id='submit' name='submitAnswer'>
+                                Submit This Question
+                           </button>";
+           
                 echo "</form>";
             
-            //     $i++;
-            // ++$_GET['quizid'];
-            // }
         } else {
                 echo "No questions available";
         }
         ?>
 
-        <button id="submit">Submit</button>
+<a href="./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>&qno=<?php echo $row_question['qno'];?>"><button type="button" class="btn btn-dark" id="nextQuestion">Next Question <i class="fa-solid fa-book-arrow-right"></i></button></a>
+<?php
+    if ($_GET['qno']<= $_SESSION["totalQues"]) {
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#break'>";
+        echo "<br  id='enterNewQuestion' >";
+        echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter];   ?>   ' />";
+        echo "<input type='submit' name='button' class='btn btn-dark ms-5' value='Enter New Question'/>";
+    } else {
+        echo "<div class='question__details'>";
+        echo "<div class='question__details__info'>";
+        echo "<form method='POST' action='../QuizCreateAttempt/createQuiz.php#createquiz'>";
+        echo "<div class='quiz__button'>";
+        echo "<div class='quiz__start'>";
+        echo "<br  id='enterNewQuestion'>";
+        echo "<input type='hidden' name='counter' value='<?php echo $_SESSION[counter];   ?>    ' />";
+        echo "<input type='submit' name='reset' class='btn btn-dark ms-5' value='All Questions Succesfully Uploaded'/>";
+        echo "<br/>";
+        echo "<br/>";
+        echo "<br/>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+    }
+    ?>
+
+
     </div>
+    <!-- <a href="./quizQuestion.php?quizid=<?php 
+    // echo $row['quizid'];
+    ?>&quesid=<?php 
+    // echo $row_question['quesid'];
+    ?>&qno=<?php 
+    // echo $row_question['qno'];
+    ?>"><button type="button" class="btn btn-dark" style="position:absolute; width:170px; top:750px; right:500px;" id="nextQuestion">Next Question <i class="fa-solid fa-book-arrow-right"></i></button></a> -->
     </div>
+    
 
 
 
