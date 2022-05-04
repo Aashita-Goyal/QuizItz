@@ -27,7 +27,9 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 </head>
 
-<body class="quiz__question__body">
+<body class="quiz__question__body ms-20">  
+
+    <!-- style="margin-left:100px; padding-left: 100px;" -->
     <!--Navbar-->
     <!--PLEASE DO NOT REPLACE NAVBAR OF THIS PAGE WITH NAVBAR-->
     <nav class="navbar fixed-top navbar-expand-md bg-gradient-secondary" id="grad" class="navbar_fixed">
@@ -107,24 +109,26 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
     </nav>
 
 
-
-    <div class="quiz-container w-80">
+<div class="container ms-20" style="display:flex; align-items:center; justify-content:center;">
+    <div class="quiz-container">
 
         <?php
             if (mysqli_num_rows($question_result) > 0) {
         
-            $i = 0;
-            while($row_question = mysqli_fetch_array($question_result)){
+            // $i = 0;
+            // while($row_question = mysqli_fetch_array($question_result)){
+                $row_question = mysqli_fetch_array($question_result);
             echo "<form method='post' action='../QuizCreateAttempt/scripts/submitanswerscript.php'>";
         
-            echo "<div class='quiz-header w-100' style='width: 1000px;'>";
+            echo "<div class='quiz-header'>";
             echo "<h2>Q$row_question[qno]. &nbsp;$row_question[ques]</h2>";
-            echo "<div class='answer__options pb-2 mb-2'>";
+            echo "<div class='answer__options'>";
             echo "<div class='option__one__three'>";
             echo "<ul>";
             echo "<li>";
             echo "<div class='d-flex'>";
             echo "<input type='radio' name='answerA' id='a' class='answer m-2'>";
+            //class='answer m-2';
             echo "<label for='a' id='a_text'>$row_question[a]</label>";
             echo "</div>";
             echo "</li>";
@@ -155,17 +159,21 @@ $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" .
                     echo "</div>";
                     echo "</div>";
                     echo "</div>";
+                    echo "<input type='hidden' name='questionQuizId' value='<?php echo $_GET[quizid];   ?>   ' />";
+                    echo "<input type='hidden' name='questionQuestionId' value='<?php echo $_GET[quesid];   ?>   ' />";
+                    echo "<input type='hidden' name='questionQuestionNo' value='<?php echo $_GET[qno];   ?>   ' />";
                 echo "</form>";
             
-            $i++;
+            //     $i++;
             // ++$_GET['quizid'];
-            }
+            // }
         } else {
                 echo "No questions available";
         }
         ?>
 
         <button id="submit">Submit</button>
+    </div>
     </div>
 
 

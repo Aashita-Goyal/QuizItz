@@ -3,8 +3,9 @@ session_start();
 
     require '../db/dbconn.php';
 
-            $qnum = $_POST['questionNum'];
-            $ques = $_POST['question'];
+            $qnum = $_POST['quizid'];
+            $ques = $_POST['quesid'];
+            $ques = $_POST['qno'];
             $opta = $_POST['optionA'];
             $optb = $_POST['optionB'];
             $optc = $_POST['optionC'];

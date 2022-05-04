@@ -37,7 +37,8 @@ createQuiz.php file in main folder (to change it's css)
 24. quesid and qno are not being updated in url
 ✔️ 25. question table is only taking one question under single quizid
 26. for now, display all questions on same page, therefore, don't call ques no inurl for now
-27. On quiz qusestion display page, store the values entered by user
+
+27. On quiz question display page, store the values entered by user
 28. create a user answer table to store values inputted by user 
 29. values in user answer table will be inserted on submitquestionscript page
 30. once sumitted, this page will redirect user to compareanswer page 
