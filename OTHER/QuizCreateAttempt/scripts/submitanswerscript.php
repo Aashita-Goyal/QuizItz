@@ -40,6 +40,8 @@ if(isset($_POST['submitAnswer']))
                 var quizidJ = '<?php echo $quizid; ?>';
                 var quesidJ = '<?php echo $quesid; ?>';
                 var qnoJ = '<?php echo $qno; ?>';
+                // ++quesidJ;
+                // ++qnoJ;
                  window.alert("Your response has been received\nPlease proceed");
                  window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/quizQuestion.php?quizid="+quizidJ+"&quesid="+quesidJ+"&qno="+qnoJ+""</script>
     <?php        }else{

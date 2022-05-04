@@ -729,3 +729,167 @@ $row = mysqli_fetch_array($result);
                 <?php echo repliedquesid=$row[quesid];?>
                 //  &answerquesno=<?php echorepliedqno=$row[qno];?>
                 // </a>
+
+
+
+
+                <a href="./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>&qno=<?php echo $row_question['qno'];?>"><button type="button" class="btn btn-dark" id="nextQuestion">Next Question <i class="fa-solid fa-book-arrow-right"></i></button></a>
+
+
+
+
+                 if (mysqli_num_rows($question_result) > 0) {
+
+                // $i = 0;
+                // while($row_question = mysqli_fetch_array($question_result)){
+                // $row_question = mysqli_fetch_array($question_result);
+
+                echo "<form method='post' action='../QuizCreateAttempt/scripts/submitanswerscript.php?answerquizid=<?php echo repliedquizid=$row_question[quizid];?>&answerquesid=<?php echo repliedquesid=$row_question[quesid];?>&answerquesno=<?php echo repliedqno=$row_question[qno];?>'>";
+
+                echo "<input type='hidden' name='questionQuizId' value='<?php echo $_GET[quizid];   ?>   ' />";
+                echo "<input type='hidden' name='questionQuestionId' value='<?php echo $_GET[quesid];   ?>   ' />";
+                echo "<input type='hidden' name='questionQuestionNo' value='<?php echo $_GET[qno];   ?>   ' />";
+                echo "<div class='quiz-header'>";
+                echo "<h2>Q$row_question[qno]. &nbsp;$row_question[ques]</h2>";
+                echo "<div class='answer__options'>";
+                echo "<div class='option__one__three'>";
+                echo "<ul>";
+                echo "<li>";
+                echo "<div class='d-flex'>";
+                echo "<input type='radio' name='answer' id='a' class='answer m-2' value='optionA'>";
+                //class='answer m-2';
+                echo "<label for='a' id='a_text'>$row_question[a]</label>";
+                echo "</div>";
+                echo "</li>";
+                echo "<li>";
+                echo "<div class='d-flex'>";
+                echo "<input type='radio' name='answer' id='b' class='answer m-2' value='optionB'>";
+                echo "<label for='b' id='b_text'>$row_question[b]</label>";
+                echo "</div>";
+                echo "</li>";
+                echo "</ul>";
+                echo "</div>";
+
+                echo "<div class='option__two__four'>";
+                echo "<ul>";
+                echo "<li>";
+                echo "<div class='d-flex'>";
+                echo "<input type='radio' name='answer' id='c' class='answer m-2' value='optionC'>";
+                echo "<label for='c' id='c_text'>$row_question[c]</label>";
+                echo "</div>";
+                echo "</li>";
+                echo "<li>";
+                echo "<div class='d-flex'>";
+                echo "<input type='radio' name='answer' id='d' class='answer m-2' value='optionD'>";
+                echo "<label for='d' id='d_text'>$row_question[d]</label>";
+                echo "</div>";
+                echo "</li>";
+                echo "</ul>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+
+                echo "
+                           <button type='submit' id='submit' name='submitAnswer'>
+                                Submit This Question
+                           </button>";
+
+                echo "</form>";
+                
+
+
+
+
+
+
+
+
+                 if (mysqli_num_rows($question_result) > 0) {
+                if (mysqli_num_rows($quiz_result) > 0) {
+                    if ($row_question['qno'] < $row['totalques'])
+                     {
+                        $qno = $row_question['qno'];
+                        ++$qno;
+                        $quizid = $_GET['quizid'];
+                        // echo "<form method='POST' action='../QuizCreateAttempt/scripts/submitanswerscript.php'>";
+                        // echo "<input type='submit' name='button' class='btn btn-dark ms-5' id='nextQuestion' value='Next Question'/>";
+                        echo "  <a href='./quizQuestion.php?quizid=<?php echo $row[quizid];?>&quesid=<?php echo $row_question[quesid];?>&qno=$qno'><button type='button' class='btn btn-dark' id='nextQuestion'>Next Question <i class='fa-solid fa-book-arrow-right'></i></button></a>'";
+                        ?>
+                        <a href='./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>&qno=<?php echo $row_question['qno'];?>'><button type='button' class='btn btn-dark' id='nextQuestion'>Next Question <i class='fa-solid fa-book-arrow-right'></i></button></a>
+                        <?php
+                    } else {
+                        $qno = $row_question['qno'];
+                        ++$qno;
+                        // echo "<input type='submit' name='button' class='btn btn-dark ms-5' id='nextQuestion' value='Next Question'/>";
+                        echo "  <a href='./quizQuestion.php?quizid=<?php echo $row[quizid];?>
+                        &quesid=<?php echo $row_question[quesid];?>&qno=$qno'><button type='button' class='btn btn-dark' id='nextQuestion'>Go to result <i class='fa-solid fa-book-arrow-right'></i></button></a>'";
+                    }
+                }
+            }
+
+
+
+
+
+
+
+            <?php
+            if (mysqli_num_rows($question_result) > 0) {
+                if (mysqli_num_rows($quiz_result) > 0) {
+                    if ($row_question['qno'] < $row['totalques'])
+                     {
+                        $qno = $row_question['qno'];
+                        ++$qno;
+                        $quizid = $_GET['quizid'];
+                        // echo "<form method='POST' action='../QuizCreateAttempt/scripts/submitanswerscript.php'>";
+                        // echo "<input type='submit' name='button' class='btn btn-dark ms-5' id='nextQuestion' value='Next Question'/>";
+                        echo "  <a href='./quizQuestion.php?quizid=<?php echo $row[quizid];?>&quesid=<?php echo $row_question[quesid];?>&qno=$qno'><button type='button' class='btn btn-dark' id='nextQuestion'>Next Question <i class='fa-solid fa-book-arrow-right'></i></button></a>'";
+                        ?>
+                        <a href='./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>&qno=<?php echo $row_question['qno'];?>'><button type='button' class='btn btn-dark' id='nextQuestion'>Next Question <i class='fa-solid fa-book-arrow-right'></i></button></a>
+                        <?php
+                    } else {
+                        $qno = $row_question['qno'];
+                        ++$qno;
+                        // echo "<input type='submit' name='button' class='btn btn-dark ms-5' id='nextQuestion' value='Next Question'/>";
+                        echo "  <a href='./quizQuestion.php?quizid=<?php echo $row[quizid];?>
+                        &quesid=<?php echo $row_question[quesid];?>&qno=$qno'><button type='button' class='btn btn-dark' id='nextQuestion'>Go to result <i class='fa-solid fa-book-arrow-right'></i></button></a>'";
+                    }
+                }
+            }
+            ?>\
+
+
+
+
+
+            echo "<form method='post' action='../QuizCreateAttempt/scripts/submitanswerscript.php?answerquizid=<?php echo repliedquizid=$row_question[quizid];?>&answerquesid=<?php echo repliedquesid=$row_question[quesid];?>&answerquesno=<?php echo repliedqno=$row_question[qno];?>'>";
+
+
+
+
+                if (mysqli_num_rows($question_result) > 0) {
+                    
+                    $questionid = 0;
+                    $questionnumber = 0;
+                    
+                    while ($row_question = mysqli_fetch_array($question_result)) {
+                      
+                      ++$questionid;
+                      while ($row_question = mysqli_fetch_array($question_result)) {
+                      
+                        ++$questionnumber;
+                      
+                      }
+                      echo "Question Number. $questionnumber";
+                    
+                    }
+                    echo "Question ID. $questionid";
+                    
+              } else {
+                echo "Quiz ID not found";
+              } 
+
+
+
+
+               window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/quizQuestion.php?quizid="+quizidJ+"&quesid="+quesidJ+"&qno="+qnoJ+""
