@@ -261,9 +261,11 @@ img{
 /*=============== STEPS ===============*/
 
 .btn{
-    background-color: #D3B1C2;
-   
+    background-color: #D3B1C2; 
 }
+
+
+
 .steps__bg{
   background-color: var(--first-color);
   padding: 3rem 2rem 2rem;
@@ -314,6 +316,9 @@ img{
   transform: translateY(-.25rem);
 }
 
+.newbg{
+  background-color: #161818;
+}
 
 /*=============== CONTACT ===============*/
 .contact__container{

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test-Home</title>
+  <link rel="stylesheet" href="./CSS/style1.css" />
+  <link rel="stylesheet" href="./CSS/styleTest.css" />
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-md bg-gradient-secondary" id="grad">
+    <div class="padLogo padLogo-light ps-4"></div>
+    <div id="mySidenav" class="sidenav">
+      <div class="closeSide">
+        <a href="javascript:void(0)" class="closebtn pb-3" onclick="closeNav()">Menu &times; &nbsp; &nbsp; &nbsp; &nbsp;
+          &nbsp; </a>
+        <!-- &times;  - X sign-->
+      </div>
+      <a href="#" class="toggleNav">Home</a>
+      <a href="#" class="toggleNav">Branches</a>
+      <a href="#" class="toggleNav">Create Quiz</a>
+      <a href="#" class="toggleNav">Attempt Quiz</a>
+      <a href="#" class="toggleNav">Placement Quiz</a>
+      <a href="#" class="toggleNav">Read Study Material</a>
+      <a href="#" class="toggleNav">Upload Study Material</a>
+      <a href="#" class="toggleNav">Flashcards</a>
+      <a href="#" class="toggleNav">Other Games</a>
+      <a href="#" class="toggleNav">Profile</a>
+      <a href="#" class="toggleNav">Login</a>
+      <a href="#" class="toggleNav">About Us</a>
+      <a href="#" class="toggleNav">Help</a>
+      <a href="#" class="toggleNav">Contact</a>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; </span>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+
+
+    <div class="container">
+      <a class="navbar-brand pe-sm-3" href="home.html">
+        <h3 class="logo">QuizItz</h3>
+      </a>
+      <ul class="nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">
+            <p class="text-light mt-2 font-weight-bold">Home</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <p class="text-light mt-2">About Us</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <p class="text-light mt-2">Branches</p>
+          </a>
+        </li>
+      </ul>
+      <ul ul class="nav justify-content-end">
+        <!--<li class="nav-item">
+              <a class="nav-link" href="">
+                <p class="text-light mt-2">Settings<i class="fa-solid fa-gear p-2"></i></p>
+                <img src="https://img.icons8.com/small/128/000000/settings.png" class="icons" />
+              </a>
+            </li>-->
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">
+            <p class="text-light mt-2">Profile<i class="fa-solid fa-user p-2"></i></p>
+
+            <!--<img src="https://img.icons8.com/glyph-neue/64/000000/lifecycle.png" class="icons" />-->
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.php">
+            <p class="text-light mt-2">Logout <i class="fa-solid fa-arrow-right-from-bracket p-2"></i></p>
+
+            <!--<img src="https://img.icons8.com/ios/100/000000/shutdown--v1.png" class="icons" />-->
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <!--section 1-->
+  <div class="home-intro">
+    <h1>QUIZITZ</h1>
+    <p>An online learning website</p>
+    <button>Explore</button>
+  </div>
+
+
+  <!--section 2-->
+  <marquee behavior="slide" scrollamount="45">
+
+    <div class="div-two">
+
+      <div class="triangle-design">
+        <!--<div class="triangle" id="triangle1">1 Never Stop Learning - study material page</div>
+       <div class="triangle" id="triangle2">2 Analyse to Memorize - quiz page</div>
+       <div class="triangle" id="triangle3">3 Interact and Retain - flashcard page</div>-->
+
+        <img src="./assets/Images/5437683.jpg" alt="study image">
+      </div>
+
+      <div class="motto">
+        <p class="div-two-text">Learn. Analyse. Interact.</p>
+        <p class="div-two-subtext">Every beginner possesses a great potential
+          <br>
+          to be an expert in his or her chosen field
+        </p>
+      </div>
+    </div>
+
+  </marquee>
+
+
+  <!-- <marquee 
+behavior="alternate">
+This is an Example Marquee (Behavior : Alternate)
+</marquee> -->
+  <!-- <div class="div-two-middle"></div> -->
+  <!-- <div class="triangle1"></div>
+       <div class="triangle2"></div>
+       <div class="triangle3"></div>
+    </div>-->
+  <!-- <div class="motto" data-position="right">
+       <p class="div-two-text">Learn. Analyse. Interact.</p>
+    </div> -->
+  <!--  <a href='https://www.freepik.com/vectors/computer-test'>Computer test vector created by macrovector - www.freepik.com</a> 
+    </div>-->
+
+
+  <!--section 3-->
+  <div class="bg1">
+    <div class="row"></div>
+    <section class="course">
+      <h1>What we offer</h1>
+      <p style="color: white;">There is no future, no past. There is only the present.</p>
+      <br>
+      <div class="row">
+        <div class="course-col-2">
+          <h3>Attempt Quiz</h3>
+          <p>Attempt quizzez with new expert explanations and our ever-effective flashcards, get a suite of
+            science-backed study tools at your fingertips.
+          </p>
+        </div>
+        <div class="course-col-2">
+          <h3>Read Study materials</h3>
+          <p>Effective study material to familiarise students with their course unit related to every
+            branches.
+          </p>
+        </div>
+        <div class="course-col-2">
+          <h4>Placement Preparations</h4>
+          <p>As placement seasons are coming so provided with placement materials with respect to every
+            branches.
+          </p>
+        </div>
+        <div class="course-col-2">
+          <h3>Flashcards</h3>
+          <p>Mixed with smart study tools, our flashcards have been helping students ace their toughest exams.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--section 4-->
+  <div class="container-fluid1">
+    <section class="offer">
+      <h1>Other features</h1>
+      <p>Life is not a problem to be solved. Just remember to have something that keeps you busy doing what you
+        love while
+        being surrounded by the people who love you.</p>
+      <br>
+      <div class="row">
+        <div class="offer-col-2">
+          <!-- <img src="https://th.bing.com/th/id/R.16554dd82a1e89a03cf7e9d64be84339?rik=wGkWcGZttC%2fnEA&riu=http%3a%2f%2fwww.allbluevr.com%2fwp-content%2fuploads%2f2017%2f06%2fAll-Blue-Quiz.jpg&ehk=L7V9TI%2b2Z4kbGC1kO2jIK7%2ftHwfuwVULeVsx3PHOwuA%3d&risl=&pid=ImgRaw&r=0">-->
+          <a href=""><img src="./assets/Images/quizcloud.jpg" alt="quiz image 1 cloud"></a>
+          <div class="layer">
+            <h4>Create Quiz</h4>
+          </div>
+        </div>
+        <div class="offer-col-2">
+          <a href=""><img src="https://th.bing.com/th/id/OIP.NZCjTGctXCOE9qVNszma4gHaE8?pid=ImgDet&rs=1"></a>
+          <div class="layer">
+            <h4>Upload Study materials</h4>
+          </div>
+        </div>
+        <div class="offer-col-2">
+          <a href=""><img src="https://www.eschoolnews.com/files/2017/08/gaming-600x400.jpg"></a>
+          <div class="layer">
+            <h4>Interactive Learning</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--section 5-->
+  <div class="bg2">
+    <div class="row"></div>
+    <section class="cta">
+      <h1>Enroll for our various online courses <br> anywhere from the world</h1>
+      <a href="" class="hero-btn">Contact us</a>
+    </section>
+    <div class="row"></div>
+  </div>
+
+  <div>
+    <br>
+    <br>
+    <br>
+  </div>
+
+  <footer>
+    <div class="container-fluid p-lg-3">
+      <h5 class="ps-2 mt-5">Follow Us</h5>
+      <a href="" class="icons"><i class="fa-brands fa-facebook-f" style="color: white"></i></a>
+      <a href="" class="icons"><i class="fa-brands fa-instagram" style="color: white"></i></a>
+      <a href="" class="icons"><i class="fa-brands fa-twitter" style="color: white"></i></a>
+      <br>
+      <br>
+      <p class="pt-lg-0">© 2022 QuizItz Inc</p>
+    </div>
+  </footer>
+</body>
+
+</html>

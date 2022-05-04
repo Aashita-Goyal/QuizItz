@@ -168,7 +168,7 @@
 
     .answer__options{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between
     }
 
     .option__one__three{
@@ -311,7 +311,7 @@
 
 
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 
 }
 
@@ -411,7 +411,7 @@
         text-align: center;
         margin-top: 50px;
         /* margin-left: 30px; */
-    }
+  /*  }
 
     .quiz__start a{
         text-decoration: none;
@@ -429,10 +429,10 @@
 
     .quiz__start__options{
         text-align: center;
-        margin-top: 50px;
+        margin-top: 50px;*/
         /* margin-left: 30px; */
 
-    }
+  /*  }
 
     .quiz__start__options{
         text-decoration: none;
@@ -531,7 +531,7 @@
 
 
 /* Quiz */
-*{
+/**{
     box-sizing: border-box;
   }
   .quiz{
@@ -549,17 +549,15 @@
     background-color: #1F252F;
     border-radius: 20px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-    /* overflow: hidden; */
+    overflow: hidden;
     margin-top: 180px;
     margin-bottom: 300px;
     color: aliceblue;
     width: 800px;
     margin-left: 220px;
-    height: 100%;
   }
   .quiz-header{
-    /* padding: 4rem; */
-    padding: 20px;
+    padding: 4rem;
   }
   h2{
     padding: 1rem;
@@ -607,7 +605,7 @@
       /*  background-image: url("https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg");
         object-fit: contain;
         max-width: 100%; */
-        background-image: url('https://media.istockphoto.com/photos/question-mark-symbol-drawn-by-purple-neon-light-on-black-wall-picture-id1249090099?k=20&m=1249090099&s=170667a&w=0&h=pg2zl1nt89icF13R4KRevEvDXTNYY77XLvywWElYUjQ=');
+      /*  background-image: url('https://media.istockphoto.com/photos/question-mark-symbol-drawn-by-purple-neon-light-on-black-wall-picture-id1249090099?k=20&m=1249090099&s=170667a&w=0&h=pg2zl1nt89icF13R4KRevEvDXTNYY77XLvywWElYUjQ=');
       
     }
 
@@ -649,7 +647,7 @@
     .quiz__button{
         width: 200px;
         /* margin-left: 470px; */
-    }
+  /*  }
 
     .create__quiz{
         margin: 20px;
@@ -886,7 +884,7 @@
 
 
 /* Quiz */
-.quiz{
+/*.quiz{
   background-color: #b8c6db;
   background-image: url("https://images5.alphacoders.com/394/thumb-1920-394862.jpg");
   font-family: 'Poppins', sans-serif;
@@ -955,9 +953,6 @@ ul li{
 
 
 .quiz__question__body{
-    /*  background-image: url("https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg");
-      object-fit: contain;
-      max-width: 100%; */
       background-image: url('https://media.istockphoto.com/photos/question-mark-symbol-drawn-by-purple-neon-light-on-black-wall-picture-id1249090099?k=20&m=1249090099&s=170667a&w=0&h=pg2zl1nt89icF13R4KRevEvDXTNYY77XLvywWElYUjQ=');
     
   }
@@ -967,4 +962,4 @@ ul li{
     margin-left: 350px;
     width: 1200px;
 }
-  }
+  } */

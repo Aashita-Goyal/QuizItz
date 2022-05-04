@@ -27,6 +27,8 @@ session_start();
 
             $quizid = $_SESSION['quizQuestionId'];
             // $qno = 0;
+
+            $_SESSION["correctAnswer"]=$correct;
    
 
 if(isset($_POST['nextQuestion'])) 
