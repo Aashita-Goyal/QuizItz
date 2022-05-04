@@ -10,12 +10,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style5.css" />
+    <?php include 'includes/head.php'; ?>
     <title></title>
   </head>
   <body>
+  <?php include 'includes/navbarLogout.php'; ?>
     <section class="section-plans" id="section-plans">
-
-
       <div class="row">
         <div class="col-1-of-3">
           <div class="card">
@@ -107,7 +107,7 @@ Relation Schema: A relation schema represents name of the relation with its attr
           </div>
         </div>
       </div>
-
     </section>
+    <?php include 'includes/footer.php'; ?>
   </body>
 </html>
