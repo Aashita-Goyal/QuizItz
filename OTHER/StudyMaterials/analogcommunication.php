@@ -103,14 +103,15 @@
     </nav>
 
   <section>
-    <div><br /><br /><br /></div>
+  <div><br /><br /><br /></div>
   </section>
 
   <div class="center">
     <div class="title">Analog Communications</div>
     <a href="ANALOG COMMUNICATIONS-18.pdf" target="_sakshi">Click to download</a>
+    <br> <br>
     <div class="title">PDF 2</div>
-    <a href="daa2.pdf" target="_sakshi">Click to download</a>
+    <a href="analog2.pdf" target="_sakshi">Click to download</a>
     </div>
   </div>
 
@@ -126,3 +127,6 @@
       <p class="pt-lg-0">© 2022 QuizItz Inc</p>
     </div>
   </footer>
+
+
+  

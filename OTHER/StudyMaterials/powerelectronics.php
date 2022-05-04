@@ -108,7 +108,8 @@
 
   <div class="center">
     <div class="title">PDF 1</div>
-    <a href="daa1.pdf" target="_sakshi">Click to download</a>
+    <a href="powerele2.pdf" target="_sakshi">Click to download</a>
+    <br><br>
     <div class="title">Power Electronics</div>
     <a href="power electronics.pdf" target="_sakshi">Click to download</a>
     </div>
@@ -126,3 +127,13 @@
       <p class="pt-lg-0">© 2022 QuizItz Inc</p>
     </div>
   </footer>
+
+
+  <div class="center">
+    <div class="title">PDF 1</div>
+    <a href="powersys2.pdf" target="_sakshi">Click to download</a>
+    <br><br>
+    <div class="title">Power System Enineering II</div>
+    <a href="Power system engineering II.pdf" target="_sakshi">Click to download</a>
+    </div>
+  </div>

@@ -108,7 +108,8 @@
 
   <div class="center">
     <div class="title">PDF 1</div>
-    <a href="daa1.pdf" target="_sakshi">Click to download</a>
+    <a href="hydraulic2.pdf" target="_sakshi">Click to download</a>
+    <br><br>
     <div class="title">Hydraulic</div>
     <a href="HydraulicsNotes.pdf" target="_sakshi">Click to download</a>
     </div>
@@ -126,3 +127,9 @@
       <p class="pt-lg-0">© 2022 QuizItz Inc</p>
     </div>
   </footer>
+
+  <div><br /><br /><br /></div>
+  </section>
+
+  
+  

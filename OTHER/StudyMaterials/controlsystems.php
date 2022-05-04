@@ -111,7 +111,9 @@
     <div class="center">
         <div class="title">Control Systems</div>
         <a href="Control Systems ECE.pdf" target="_sakshi">Click to download</a>
-
+        <br> <br>
+        <div class="title">PDF2</div>
+        <a href="control systems.pdf" target="_sakshi">Click to download</a>
     </div>
     </div>
     <!--Footer-->
