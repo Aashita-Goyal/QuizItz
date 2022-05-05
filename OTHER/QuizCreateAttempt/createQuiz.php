@@ -124,12 +124,14 @@ if (isset($_POST['reset'])) {
         <div class="quiz__details">
             <form method="post" action="../QuizCreateAttempt/scripts/createquizscript.php">
                 <br />
+                <div class="d-flex mb-3">
                 <label for="quizname">Quiz Name</label>
                 <!-- <input type="text" id="quizname" name="quizname" placeholder="enter your quiz name" style="margin-left: 280px; padding-left: 40px; margin-right: 10px;"><br> -->
-                <br /><input type="text" id="quizname" name="quizname" placeholder="enter your quiz name"><br>
-                <label for="branch">Choose a Branch</label>
+                <br /><input type="text" id="quizname" name="quizname" placeholder="enter your quiz name" style="margin-left: 80px;"><br>
+                </div>
+                <label for="branch pt-3 mt-3">Choose a Branch</label>
                 <!-- <select id="branch" name="branch" style="margin-left: 240px; padding-left: 25px;"> -->
-                    <select id="branch" name="branch" style="margin-left: 240px; padding-left: 25px;">
+                    <select id="branch" name="branch" style="margin-left: 35px;">
                     <!-- <option>select</option> -->
                     <option value="Computer Science and Information Technology">Computer Science</option>
                     <option value="Electronics">Electronics and Comm.</option>
@@ -141,16 +143,16 @@ if (isset($_POST['reset'])) {
                 <br /><br />
                 <label for="topic">Quiz Topic</label>
                 <!-- <input type="text" id="topic" name="topic" placeholder="enter your quiz topic" style="margin-left: 285px; padding-left: 40px; margin-right: 20px;"> -->
-                <input type="text" id="topic" name="topic" placeholder="enter your quiz topic"><br>
+                <input type="text" id="topic" name="topic" placeholder="enter your quiz topic" style="margin-left: 80px;"><br>
                 <br />
                 <label for="keywords">Keywords/Tags</label>
                 <!-- <input type="text" id="topic" name="keywords" placeholder="enter topic related tags" style="margin-left: 255px; padding-left: 20px; padding-right: 20px;"> -->
-                <input type="text" id="topic" name="keywords" placeholder="enter topic related tags"><br><br>
+                <input type="text" id="topic" name="keywords" placeholder="enter topic related tags" style="margin-left: 47px;"><br><br>
                 <label for="totalQuestions">Total Questions</label>
                 <!-- <input type="text" id="totalQuestions" name="totalQuestions" placeholder="total number of questions" style="margin-left: 250px; padding-left: 20px; padding-right: 20px;">-->
-                <input type="text" id="totalQuestions" name="totalQuestions" placeholder="total number of questions"><br>
+                <input type="text" id="totalQuestions" name="totalQuestions" placeholder="total number of questions" style="margin-left: 45px;"><br>
                 <br /><br />
-                <button type="submit" class="btn btn-dark" name="startEntering">Start Entering Questions</button>
+                <button type="submit" class="btn btn-dark" name="startEntering" class="w-25 ms-5" style="width: 300px; padding-left:30px; margin-left:100px;">Start Entering Questions</button>
         </div>
     </div> 
 </div>

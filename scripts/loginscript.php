@@ -37,7 +37,7 @@
 ?>
     <script> 
         window.alert("Incorrect password!");
-        window.location.href = "http://localhost/QuizItz/login.php";
+        window.location.href = "http://localhost/QuizItz/register.php";
     </script>
 <?php
     } 

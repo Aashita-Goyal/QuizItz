@@ -121,9 +121,9 @@
       </strong>
     </div>
     <div class="quiz__start">
-      <button type="button" class="btn btn-dark" style="position: absolute; top:600px; right:420px;">Reattempt !</button>
+      <button type="button" class="btn btn-dark" style="position: absolute; top:610px; right:420px;">Reattempt !</button>
       <strong>
-        <p class="pad" style="position: absolute; top:650px; right:470px;"><a href="./home.html">Go to home</a></p>
+        <p class="pad" style="position: absolute; top:650px; right:470px;"><a href="../../home.php">Go to home</a></p>
       </strong>
       <strong>
         <p style="position: absolute; top:680px; right:445px;"><a href="./topicPage.html">Choose another quiz</a></p>

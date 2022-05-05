@@ -29,7 +29,31 @@
         </div>
     </div>
 </div>
+
+
+
 <?php include 'includes/footer.php'; ?>
 </body>
+<div style="display:flex; align-items:center; justify-content:center;">
+    <div>
+    <br><br><br><br><br><br>
+    <h1>All Flashcards</h1>
+    <br><br>
+
+    <a href="./flash-daa.php">DAA Flashcards</a><br>
+    <a href="./flash-digital.php">Digital Flashcards</a><br>
+    <a href="./flash-emd.php">EMD Flashcards</a><br>
+    <a href="./flash-industrial.php">Industrial Flashcards</a><br>
+    <a href="./flash-micro.php">Micro Flashcards</a><br>
+    <a href="./flash-oops.php">OOPS Flashcards</a><br>
+    <a href="./flash-oops.php">DAA Flashcards</a><br>
+    <a href="./flash-daa.php">DBMS Flashcards</a><br>
+    <a href="./flash-os.php">OS Flashcards</a><br>
+    <a href="./flash-power.php">Power Flashcards</a><br>
+    <a href="./flash-robotics.php">Robotics Flashcards</a><br>
+    <a href="./flash-oops.php">DSA Flashcards</a><br>
+    <br><br><br>
+    </div>
+</div>
 
 </html>

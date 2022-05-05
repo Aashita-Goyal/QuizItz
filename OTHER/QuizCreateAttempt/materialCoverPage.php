@@ -61,11 +61,40 @@
       <br /><br />
    </div>
 
+   <div style="display:flex; align-items:center; justify-content:center;">
+    <div>
+    
+   
+    <br><br><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1>All Flashcards</h1>
+    <br /><br />
+    <a href="../StudyMaterials/daa.php">DAA</a><br>
+    <a href="../StudyMaterials/analogcommunication.php">analog communication</a><br>
+    <a href="../StudyMaterials/biochemistry.php">biochemistry</a><br>
+    <a href="../StudyMaterials/controlsystems.php">controlsystems</a><br>
+    <a href="../StudyMaterials/dbms.php">dbms</a><br>
+    <a href="../StudyMaterials/digitalcommunication.php">digitalcommunication</a><br>
+    <a href="../StudyMaterials/electricalmachine.php">electricalmachine</a><br>
+    <a href="../StudyMaterials/hydraulic.php">hydraulic</a><br>
+    <a href="../StudyMaterials/industrialautomation.php">industrialautomation</a><br>
+    <a href="../StudyMaterials/microbiology.php">Pmicrobiology</a><br>
+    <a href="../StudyMaterials/microwave.php">microwave</a><br>
+    <a href="../StudyMaterials/operating.php">operating</a><br>
+    <a href="../StudyMaterials/powerelectronics.php">powerelectronics</a><br>
+    <a href="../StudyMaterials/powersystem.php">powersystem</a><br>
+    <a href="../StudyMaterials/robotics.php">robotics</a><br>
+    <br><br><br>
+    </div>
+
  </header>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br />
 
 <?php include '../../includes/footer.php'; ?>
 
 </body>
+
+
+</div>
 </html>
+
 

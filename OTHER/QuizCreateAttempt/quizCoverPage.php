@@ -39,19 +39,19 @@
     </div>
     <div class="testbox">
         <div class="box1">
-            <h5>Create Quiz</h5>
+            <a href="./createQuiz.php"><h5>Create Quiz</h5></a>
             <p>Create a question or an entire quiz in minutes and help yourself and others.</p>
-            <a href=""><h6 style="padding-bottom: 20px;">Click to create quiz</h6></a>
+            <a href="./createQuiz.php"><h6 style="padding-bottom: 20px;">Click to create quiz</h6></a>
         </div>
         <div class="box2">
             <h5>Attempt Quiz</h5>
             <p>Ready to start getting better grades? Then test and improve yourself.</p>
-            <a href=""><h6>Click to attempt quiz</h6></a>
+            <a href="#allQuiz"><h6>Click to attempt quiz</h6></a>
         </div>
         <div class="box3">
             <h5>View Topic</h5>
             <p>Find, study or create sets anywhere life takes you with the mobile app.</p>
-            <a href=""><h6>Go to topics</h6></a>
+            <a href="./topicPage.php"><h6>Go to topics</h6></a>
         </div>
     </div>
 </div>

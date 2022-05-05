@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['email'])){
-        header('location:index.php');
-    }
+    // session_start();
+    // if(!isset($_SESSION['email'])){
+    //     header('location:index.php');
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
     <div class="home-intro">
         <h1>QUIZITZ</h1>
         <p>An online learning website</p>
-        <button>Explore</button>
+        <a href="./OTHER/QuizCreateAttempt/branchPage.php"><button>Explore</button></a>
     </div>
 
     <!--section 2-->
