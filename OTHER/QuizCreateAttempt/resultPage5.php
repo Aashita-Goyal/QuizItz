@@ -95,10 +95,11 @@
   <!--Quiz Result-->
 
   <div class="attempt__quiz__container">
-    <div class="attempt__quiz__heading me-15 pe-15">
+    <div class="attempt__quiz__heading me-15 pe-15" style="position: absolute; top:130px; right:220px;">
       <h2>Quiz Result</h2>
     </div>
     <div class="attempt__quiz__details">
+      <br><br><br><br>
     <?php 
           // echo "<strong><p>Quiz ID :</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;$quizid </p>";
           
@@ -109,27 +110,29 @@
           // echo "<strong><p>Quiz Subject : </strong>&nbsp;$row[branch] </p>";
           // echo "<strong><p>Total Questions : </strong>&nbsp;$row[totalques] </p>";
         ?>
-      <strong>
-        <p>Marks Obtained : </p>
-        <p>Correct Answers : </p>
-        <p>Incorrect Answers : </p>
-        <p>Unattempted Questions : </p>
-        <p>Total Questions : </p>
-        <p>Percentage obtained : </p>
+     <strong>
+      <strong><p>Marks Obtained : </strong>&nbsp;15</p>
+      <strong><p>Correct Answers : </strong>&nbsp;3</p>
+      <strong><p>Incorrect Answers : </strong>&nbsp;2</p>
+      <strong><p>Unattempted Questions : </strong>&nbsp;</p>
+      <strong><p>Total Questions : </strong>&nbsp;5</p>
+      <strong><p>Maximum Marks : </strong>&nbsp;20</p>
+      <strong><p>Percentage obtained : </strong>&nbsp;</p>
       </strong>
     </div>
     <div class="quiz__start">
-      <button type="button" class="btn btn-dark">Reattempt !</button>
+      <button type="button" class="btn btn-dark" style="position: absolute; top:600px; right:420px;">Reattempt !</button>
       <strong>
-        <p class="pad"><a href="./home.html">Go to home</a></p>
+        <p class="pad" style="position: absolute; top:650px; right:470px;"><a href="./home.html">Go to home</a></p>
       </strong>
       <strong>
-        <p><a href="./topicPage.html">Choose another quiz</a></p>
+        <p style="position: absolute; top:680px; right:445px;"><a href="./topicPage.html">Choose another quiz</a></p>
       </strong>
     </div>
   </div>
 
   <!--Footer-->
+  <br><br><br><br>
   <footer>
     <div class="container-fluid p-lg-3">
       <br />

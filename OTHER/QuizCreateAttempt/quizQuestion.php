@@ -191,7 +191,7 @@ $quizid = $_GET['quizid'];
                         }
                             ?>
                     </form>
-                    <a style="text-decoration: none; color:white;" href='../QuizCreateAttempt/resultPage.php?quizid=<?php echo $row_quiz['quizid'];?>'><button type='button' class='btn btn-dark' id='nextQuestion'>Go To Result <i class='fa-solid fa-book-arrow-right'></i></a>
+                    <a style="text-decoration: none; color:white;" href='../QuizCreateAttempt/resultPage.php';?>'><button type='button' class='btn btn-dark' id='nextQuestion'>Go To Result <i class='fa-solid fa-book-arrow-right'></i></a>
                 <?php
             } else {
                 echo "No result found";

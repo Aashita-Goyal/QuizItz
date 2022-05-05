@@ -60,7 +60,7 @@
 <br /><br />
   <div class="all_quiz_list" id="allQuiz" >
       <h2 style="text-align: center;">List of All Quizzes Available</h2>
-      <p>Calling list of all quizzes here</p>
+      <!-- <p>Calling list of all quizzes here</p> -->
       <div class="bs-example">
         <div class="container">
             <div class="row">

@@ -40,7 +40,7 @@ $row= mysqli_fetch_array($quiz_result);
 
     <!--Quiz Details-->
     <div class="attempt__quiz__container">
-        <div class="attempt__quiz__heading">
+        <div class="attempt__quiz__heading" style="position: absolute; top:130px; right:220px;">
             <h2>Quiz Details</h2>
         </div>
         <div class="attempt__quiz__details">
@@ -105,7 +105,7 @@ $row= mysqli_fetch_array($quiz_result);
           -->
             <!-- <a href="./quizQuestion.php"><button type="button" class="btn btn-dark">Start Quiz!</button></a> -->
 
-            <a href='./quizQuestion.php?quizid=<?php echo $row['quizid'];?>'><button type="button" class="btn btn-dark">Start Quiz!</button></a>
+            <a href='./quizQuestion.php?quizid=<?php echo $row['quizid'];?>'><button type="button" class="btn btn-dark" style="position: absolute; top:500px; right:420px;">Start Quiz!</button></a>
             <!-- &quesid=
             <?php 
             // echo $row_question['quesid'];
@@ -115,19 +115,28 @@ $row= mysqli_fetch_array($quiz_result);
             // echo $row_question['qno'];
             ?> 
             -->
-            <strong><p class="pad"><a href="./home.html">Go to home</a></p></strong>
-            
-            <strong><p><a href="./topicPage.html">Choose another quiz</a></p></strong>
+            <div class="quiz__start">
+    
+      <strong>
+        <p class="pad" style="position: absolute; top:550px; right:470px;"><a href="./home.html">Go to home</a></p>
+      </strong>
+      <strong>
+        <p style="position: absolute; top:650px; right:430px;"><a href="./topicPage.html">Choose another quiz</a></p>
+      </strong>
+    </div>
             <br />
             <br />
             <br />
-            <strong><p><a href="">Other available quizzes for the same topic</a></p></strong>
+            <!-- <strong><p style="position: absolute; top:600px; right:420px;"><a href="">Other available quizzes for the same topic</a></p></strong> -->
         </div>
     </div>
     
 
 
      <!--Footer-->
+     <br>
+     <br>
+     <br>
      <footer>
         <div class="container-fluid p-lg-3">
         <h5 class="ps-2">Follow Us</h5>
