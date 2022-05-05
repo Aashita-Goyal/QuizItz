@@ -95,10 +95,20 @@
   <!--Quiz Result-->
 
   <div class="attempt__quiz__container">
-    <div class="attempt__quiz__heading">
+    <div class="attempt__quiz__heading me-15 pe-15">
       <h2>Quiz Result</h2>
     </div>
     <div class="attempt__quiz__details">
+    <?php 
+          // echo "<strong><p>Quiz ID :</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;$quizid </p>";
+          
+          // echo "<strong><p>Quiz ID :</strong>&nbsp;$row[quizid] </p>";
+          // echo "<strong><p>Quiz Name :</strong>&nbsp;$row[quizname] </p>";
+          // echo "<strong><p>Quiz Topic :</strong>&nbsp;$row[quiztopic] </p>";
+          // echo "<strong><p>Quiz Tags : </strong>&nbsp;$row[keywords] </p>";
+          // echo "<strong><p>Quiz Subject : </strong>&nbsp;$row[branch] </p>";
+          // echo "<strong><p>Total Questions : </strong>&nbsp;$row[totalques] </p>";
+        ?>
       <strong>
         <p>Marks Obtained : </p>
         <p>Correct Answers : </p>

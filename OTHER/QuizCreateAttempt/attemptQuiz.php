@@ -105,7 +105,16 @@ $row= mysqli_fetch_array($quiz_result);
           -->
             <!-- <a href="./quizQuestion.php"><button type="button" class="btn btn-dark">Start Quiz!</button></a> -->
 
-            <a href="./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>&qno=<?php echo $row_question['qno'];?>"><button type="button" class="btn btn-dark">Start Quiz!</button></a>
+            <a href='./quizQuestion.php?quizid=<?php echo $row['quizid'];?>'><button type="button" class="btn btn-dark">Start Quiz!</button></a>
+            <!-- &quesid=
+            <?php 
+            // echo $row_question['quesid'];
+            ?>
+            &qno=
+            <?php 
+            // echo $row_question['qno'];
+            ?> 
+            -->
             <strong><p class="pad"><a href="./home.html">Go to home</a></p></strong>
             
             <strong><p><a href="./topicPage.html">Choose another quiz</a></p></strong>

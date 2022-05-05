@@ -893,3 +893,111 @@ $row = mysqli_fetch_array($result);
 
 
                window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/quizQuestion.php?quizid="+quizidJ+"&quesid="+quesidJ+"&qno="+qnoJ+""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 if (mysqli_num_rows($question_result) > 0) {
+            $i = 0;
+                while ($row = mysqli_fetch_array($question_result)) {
+                            
+            if($quesno < $totalQues){
+                
+                ++$quesno;
+                ++$questionID;
+            ?>
+                <a href='./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>&qno=<?php echo $row_question['qno'];?>'><button type='button' class='btn btn-dark' id='nextQuestion'>Next Question <i class='fa-solid fa-book-arrow-right'></i></button></a>
+            <?php
+            }else if($quesno = $totalQues){
+                ?>
+                <a href='./quizQuestion.php?quizid=<?php echo $row['quizid'];?>&quesid=<?php echo $row_question['quesid'];?>&qno=<?php echo $row_question['qno'];?>'><button type='button' class='btn btn-dark' id='nextQuestion'>Go To Result <i class='fa-solid fa-book-arrow-right'></i></button></a>
+                <?php
+            }else{
+                echo "No question data found";
+            }
+            $i++;
+                            }
+        }else{
+            echo "No rows for given query";
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <input type='hidden' name='questionQuizId' value='<?php echo $_GET['quizid']; ?>' />
+                        <input type='hidden' name='questionQuestionId' value='<?php echo $_GET['quesid']; ?>' />
+                        <input type='hidden' name='questionQuestionNo' value='<?php echo $_GET['qno']; ?>' />
+                        <div class='quiz-header'>
+                            <?php
+                            echo "<h2>Q$row_question[qno]. &nbsp;$row_question[ques]</h2>";
+                            ?>
+                            <div class='answer__options'>
+                                <div class='option__one__three'>
+                                    <ul>
+                                        <li>
+                                            <div class='d-flex'>
+                                                <input type='radio' name='answer' id='a' class='answer m-2' value='optionA'>
+                                                <label for='a' id='a_text'><?php $row_question['a']; ?></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class='d-flex'>
+                                                <input type='radio' name='answer' id='b' class='answer m-2' value='optionB'>
+                                                <label for='b' id='b_text'><?php $row_question['b']; ?></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class='option__two__four'>
+                                    <ul>
+                                        <li>
+                                            <div class='d-flex'>
+                                                <input type='radio' name='answer' id='c' class='answer m-2' value='optionC'>
+                                                <label for='c' id='c_text'><?php $row_question['c']; ?></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class='d-flex'>
+                                                <input type='radio' name='answer' id='d' class='answer m-2' value='optionD'>
+                                                <label for='d' id='d_text'><?php $row_question['d']; ?></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+
+                             window.location.href = "http://localhost/QuizItz/OTHER/QuizCreateAttempt/quizQuestion.php?quizid="+quizidJ+"&quesid="+quesidJ+"&qno="+qnoJ+""
+
+
+                             &answerquesid=<?php echo "$row_question[quesid]"; ?>&answerquesno=<?php echo "$row_question[qno]"; ?>

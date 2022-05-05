@@ -3,28 +3,14 @@ session_start();
 require '../QuizCreateAttempt/db/dbconn.php';
 
 $quiz_result = mysqli_query($con, "SELECT * FROM quiz3 WHERE quizid='" . $_GET['quizid'] . "'");
-$row = mysqli_fetch_array($quiz_result);
+$row_quiz = mysqli_fetch_array($quiz_result);
 
-
-// if counter is not set, set to zero
-if (!isset($_SESSION['counter'])) {
-    $_SESSION['counter'] = 1;
-}
-
-// if button is pressed, increment counter
-if (isset($_POST['button'])) {
-    ++$_SESSION['counter'];
-}
-
-// reset counter
-if (isset($_POST['reset'])) {
-    $_SESSION['counter'] = 1;
-}
-?>
-<?php
+$question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" . $_GET['quizid'] . "'");
+$row_question = mysqli_fetch_array($question_result);
 
 
 $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
+$quizid = $_GET['quizid'];
 // $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
 // $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
 
@@ -43,9 +29,8 @@ $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 </head>
 
-<body class="quiz__question__body ms-20">
 
-    <!-- style="margin-left:100px; padding-left: 100px;" -->
+
     <!--Navbar-->
     <!--PLEASE DO NOT REPLACE NAVBAR OF THIS PAGE WITH NAVBAR-->
     <nav class="navbar fixed-top navbar-expand-md bg-gradient-secondary" id="grad" class="navbar_fixed">
@@ -125,144 +110,108 @@ $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
         </div>
     </nav>
 
-
+    <body class="quiz__question__body ms-20">
     <div class="container ms-20" style="display:flex; align-items:center; justify-content:center;">
         <div class="quiz-container">
+        <?php
+        // echo " <a href='./createQuiz.php#submitBtn$row_question[qno]?quizid='$quizid'><button type='button' class='btn btn-dark' id='nextQuestion'>Next Question</button></a>";
+       ?>
 
             <?php
-            $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='" . $_GET['quizid'] . "'");
-            $row_question = mysqli_fetch_array($question_result);
-           
-            // 
-
-            //     if($question_result == true){
-            //     echo "connection established question id . $_GET[quesid]";
-            // }else{
-            //     echo "Database connection not established";
-            // }
-
-                // $i = 0;if (mysqli_num_rows($question_result) > 0) {
-                // while($row_question = mysqli_fetch_array($question_result)){
-                // $row_question = mysqli_fetch_array($question_result);
-
-                if (mysqli_num_rows($question_result) > 0) {
-                    echo "<form method='post' action='../QuizCreateAttempt/scripts/submitanswerscript.php?answerquizid=<?php echo repliedquizid=$row_question[quizid];?>&answerquesid=<?php echo repliedquesid=$row_question[quesid];?>&answerquesno=<?php echo repliedqno=$row_question[qno];?>'>";
-
-                // $i = 0;
-                // while ($row_question = mysqli_fetch_array($question_result)) {
-                // echo "connection established question id . $_GET[quizid]";
-                // echo "connection established question id . $_GET[quesid]";
-                // echo "connection established question id . $_GET[qno]";
-                // $i++;
-                // }
-
-                echo "<input type='hidden' name='questionQuizId' value='<?php echo $_GET[quizid];   ?>   ' />";
-                echo "<input type='hidden' name='questionQuestionId' value='<?php echo $_GET[quesid];   ?>   ' />";
-                echo "<input type='hidden' name='questionQuestionNo' value='<?php echo $_GET[qno];   ?>   ' />";
-                
-                echo "<div class='quiz-header'>";
-                echo "<h2>Q$row_question[qno]. &nbsp;$row_question[ques]</h2>";
-                echo "<div class='answer__options'>";
-                echo "<div class='option__one__three'>";
-                echo "<ul>";
-                echo "<li>";
-                echo "<div class='d-flex'>";
-                echo "<input type='radio' name='answer' id='a' class='answer m-2' value='optionA'>";
-                //class='answer m-2';
-                echo "<label for='a' id='a_text'>$row_question[a]</label>";
-                echo "</div>";
-                echo "</li>";
-                echo "<li>";
-                echo "<div class='d-flex'>";
-                echo "<input type='radio' name='answer' id='b' class='answer m-2' value='optionB'>";
-                echo "<label for='b' id='b_text'>$row_question[b]</label>";
-                echo "</div>";
-                echo "</li>";
-                echo "</ul>";
-                echo "</div>";
-
-                echo "<div class='option__two__four'>";
-                echo "<ul>";
-                echo "<li>";
-                echo "<div class='d-flex'>";
-                echo "<input type='radio' name='answer' id='c' class='answer m-2' value='optionC'>";
-                echo "<label for='c' id='c_text'>$row_question[c]</label>";
-                echo "</div>";
-                echo "</li>";
-                echo "<li>";
-                echo "<div class='d-flex'>";
-                echo "<input type='radio' name='answer' id='d' class='answer m-2' value='optionD'>";
-                echo "<label for='d' id='d_text'>$row_question[d]</label>";
-                echo "</div>";
-                echo "</li>";
-                echo "</ul>";
-                echo "</div>";
-                echo "</div>";
-                echo "</div>";
-
-
-                echo "
-                           <button type='submit' id='submit' name='submitAnswer'>
-                                Submit This Question
-                           </button>";
-
-                echo "</form>";
-                
-             } else {
-                echo "No questions available";
-            }
-
+            $question_result = mysqli_query($con, "SELECT * FROM question3 WHERE quizid='$quizid'");
             ?>
-
-
             <?php
-
-            // if (mysqli_num_rows($question_result) > 0) {
-            // }
-            $totalQues = $row['totalques'];
-            $quesno = $_GET['qno'];
-            $questionID = $_GET['quesid'];
-            $quizID = $_GET['quizid'];
-
-            // while(){
-            // }
-
-        if($question_result == true){
-            if($quesno < $totalQues){
-                echo"<button type='button' class='btn btn-dark' id='nextQuestion'>Next Question <i class='fa-solid fa-book-arrow-right'></i></button>";
-            }else if($quesno = $totalQues){
-                echo"<button type='button' class='btn btn-dark' id='nextQuestion'>Go to Result <i class='fa-solid fa-book-arrow-right'></i></button>";
-            }else{
-                echo "No question data found";
-            }
-        }else{
-            echo "Connection not established with database. question_result query not true";
-        }
-            // echo "Total Ques. $totalQues";
+            if (mysqli_num_rows($question_result) > 0) {
             ?>
+
+                <?php
+                $i = 0;
+                while ($row_question = mysqli_fetch_array($question_result)) {
+                ?>
+                    <form method='post' action='../QuizCreateAttempt/scripts/submitanswerscript.php?answerquizid=<?php echo "$row_question[quizid]"; ?>'>
+
+                      
+
+                            <?php
+                             echo "<input type='hidden' name='questionQuizId' value='<?php echo quizid='$quizid'?>";
+                            //  echo "<input type='hidden' name='questionQuestionId' value='<?php echo $_GET[quesid];      ' />";
+                            //  echo "<input type='hidden' name='questionQuestionNo' value='<?php echo $_GET[qno];     ' />";
+                             
+                             echo "<div class='quiz-header'>";
+                             echo "<h2>Q$row_question[qno]. &nbsp;$row_question[ques]</h2>";
+                             echo "<div class='answer__options'>";
+                             echo "<div class='option__one__three'>";
+                             echo "<ul>";
+                             echo "<li>";
+                             echo "<div class='d-flex'>";
+                             echo "<input type='radio' name='answer' id='a' class='answer m-2' value='optionA'>";
+                             //class='answer m-2';
+                             echo "<label for='a' id='a_text'>$row_question[a]</label>";
+                             echo "</div>";
+                             echo "</li>";
+                             echo "<li>";
+                             echo "<div class='d-flex'>";
+                             echo "<input type='radio' name='answer' id='b' class='answer m-2' value='optionB'>";
+                             echo "<label for='b' id='b_text'>$row_question[b]</label>";
+                             echo "</div>";
+                             echo "</li>";
+                             echo "</ul>";
+                             echo "</div>";
+             
+                             echo "<div class='option__two__four'>";
+                             echo "<ul>";
+                             echo "<li>";
+                             echo "<div class='d-flex'>";
+                             echo "<input type='radio' name='answer' id='c' class='answer m-2' value='optionC'>";
+                             echo "<label for='c' id='c_text'>$row_question[c]</label>";
+                             echo "</div>";
+                             echo "</li>";
+                             echo "<li>";
+                             echo "<div class='d-flex'>";
+                             echo "<input type='radio' name='answer' id='d' class='answer m-2' value='optionD'>";
+                             echo "<label for='d' id='d_text'>$row_question[d]</label>";
+                             echo "</div>";
+                             echo "</li>";
+                             echo "</ul>";
+                             echo "</div>";
+                             echo "</div>";
+                             echo "</div>";
+             
+             
+                            //  if($row_question['qno'] < $row_quiz['totalques']){}
+                             echo "     <button type='submit' id='submitBtn$row_question[qno]' name='$row_question[qno]'>
+                                             Submit This Question
+                                        </button>";
+
+                                     
+                               
+
+
+                            $i++;
+                        }
+                            ?>
+                    </form>
+                    <a style="text-decoration: none; color:white;" href='../QuizCreateAttempt/resultPage.php?quizid=<?php echo $row_quiz['quizid'];?>'><button type='button' class='btn btn-dark' id='nextQuestion'>Go To Result <i class='fa-solid fa-book-arrow-right'></i></a>
+                <?php
+            } else {
+                echo "No result found";
+            }
+                ?>
 
 
         </div>
-        <!-- <a href="./quizQuestion.php?quizid=<?php
-                                                // echo $row['quizid'];
-                                                ?>&quesid=<?php
-                // echo $row_question['quesid'];
-                ?>&qno=<?php
-            // echo $row_question['qno'];
-            ?>"><button type="button" class="btn btn-dark" style="position:absolute; width:170px; top:750px; right:500px;" id="nextQuestion">Next Question <i class="fa-solid fa-book-arrow-right"></i></button></a> -->
     </div>
+</body>
 
 
 
 
     <!--Footer-->
+
     <footer>
         <div class="container-fluid p-lg-3">
             <br>
             <h5 class="ps-2">Follow Us</h5>
-            <!--<a href=""><img src="https://img.icons8.com/ios-glyphs/60/000000/facebook-new.png" class="icons"/></a>
-        <a href=""><img src="https://img.icons8.com/ios-glyphs/50/000000/instagram-new.png" class="icons"/></a>
-        <a href=""><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" class="icons"/></a>-->
             <a href=""><img src="https://img.icons8.com/fluency/144/000000/facebook-new.png" class="icons" /></a>
             <a href=""><img src="https://img.icons8.com/fluency/144/000000/instagram-new.png" class="icons" /></a>
             <a href=""><img src="https://img.icons8.com/fluency/144/000000/twitter.png" class="icons" /></a>
@@ -271,6 +220,5 @@ $_SESSION['attemptingQuestionQuizId'] = $_GET['quizid'];
         </div>
 
     </footer>
-</body>
 
 </html>
